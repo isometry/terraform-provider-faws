@@ -39,7 +39,7 @@ func main() {
 	}
 
 	err = tf5server.Serve(
-		"registry.terraform.io/hashicorp/aws",
+		"registry.terraform.io/isometry/aws",
 		serverFactory,
 		serveOpts...,
 	)
