@@ -33,6 +33,7 @@ terraform-provider-aws
 terraform-providers-schema/
 terraform.tfplan
 terraform.tfstate
+test/
 vendor/
 website/.bundle
 website/.vagrant
