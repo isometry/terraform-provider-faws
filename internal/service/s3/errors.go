@@ -32,7 +32,7 @@ const (
 	errCodeNoSuchWebsiteConfiguration           = "NoSuchWebsiteConfiguration"
 	errCodeNotImplemented                       = "NotImplemented"
 	// errCodeObjectLockConfigurationNotFound should be used with tfawserr.ErrCodeContains, not tfawserr.ErrCodeEquals.
-	// Reference: https://github.com/hashicorp/terraform-provider-aws/pull/26317.
+	// Reference: https://github.com/isometry/terraform-provider-faws/pull/26317.
 	errCodeObjectLockConfigurationNotFound           = "ObjectLockConfigurationNotFound"
 	errCodeObjectLockConfigurationNotFoundError      = "ObjectLockConfigurationNotFoundError"
 	errCodeOperationAborted                          = "OperationAborted"
@@ -42,8 +42,8 @@ const (
 	errCodeUnsupportedArgument                       = "UnsupportedArgument"
 	// errCodeXNotImplemented, errCodeUnsupportedOperation are returned from third-party S3 API implementations.
 	// References:
-	//   https://github.com/hashicorp/terraform-provider-aws/issues/14645.
-	//   https://github.com/hashicorp/terraform-provider-aws/pull/37801.
+	//   https://github.com/isometry/terraform-provider-faws/issues/14645.
+	//   https://github.com/isometry/terraform-provider-faws/pull/37801.
 	errCodeXNotImplemented      = "XNotImplemented"
 	errCodeUnsupportedOperation = "UnsupportedOperation"
 )

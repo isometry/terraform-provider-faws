@@ -17,13 +17,13 @@ import (
 	sdkid "github.com/hashicorp/terraform-plugin-sdk/v2/helper/id"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs/sdkdiag"
-	"github.com/hashicorp/terraform-provider-aws/internal/flex"
-	"github.com/hashicorp/terraform-provider-aws/internal/sdkv2/types/nullable"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs/sdkdiag"
+	"github.com/isometry/terraform-provider-faws/internal/flex"
+	"github.com/isometry/terraform-provider-faws/internal/sdkv2/types/nullable"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // @SDKResource("aws_accessanalyzer_archive_rule", name="Archive Rule")

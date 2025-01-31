@@ -6,9 +6,9 @@ package servicecatalog_test
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfsc "github.com/hashicorp/terraform-provider-aws/internal/service/servicecatalog"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfsc "github.com/isometry/terraform-provider-faws/internal/service/servicecatalog"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestValidSharePrincipal(t *testing.T) {

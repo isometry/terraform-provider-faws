@@ -10,10 +10,10 @@ import (
 
 	"github.com/hashicorp/go-cty/cty"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tftags "github.com/hashicorp/terraform-provider-aws/internal/tags"
-	"github.com/hashicorp/terraform-provider-aws/internal/types"
-	"github.com/hashicorp/terraform-provider-aws/internal/types/option"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tftags "github.com/isometry/terraform-provider-faws/internal/tags"
+	"github.com/isometry/terraform-provider-faws/internal/types"
+	"github.com/isometry/terraform-provider-faws/internal/types/option"
 )
 
 type mockService struct{}

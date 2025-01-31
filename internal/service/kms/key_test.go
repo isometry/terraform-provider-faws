@@ -21,11 +21,11 @@ import (
 	"github.com/hashicorp/terraform-plugin-testing/statecheck"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
 	"github.com/hashicorp/terraform-plugin-testing/tfjsonpath"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfkms "github.com/hashicorp/terraform-provider-aws/internal/service/kms"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfkms "github.com/isometry/terraform-provider-faws/internal/service/kms"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccKMSKey_basic(t *testing.T) {
@@ -325,7 +325,7 @@ func TestAccKMSKey_Policy_iamRoleUpdate(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/11801
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/11801
 func TestAccKMSKey_Policy_iamRoleOrder(t *testing.T) {
 	ctx := acctest.Context(t)
 	var key awstypes.KeyMetadata
@@ -369,7 +369,7 @@ func TestAccKMSKey_Policy_iamRoleOrder(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/7646
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/7646
 func TestAccKMSKey_Policy_iamServiceLinkedRole(t *testing.T) {
 	ctx := acctest.Context(t)
 	var key awstypes.KeyMetadata
@@ -514,7 +514,7 @@ func TestAccKMSKey_rotation(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/26174.
+// https://github.com/isometry/terraform-provider-faws/issues/26174.
 func TestAccKMSKey_tags_IgnoreTags_ModifyOutOfBand(t *testing.T) {
 	ctx := acctest.Context(t)
 	var key awstypes.KeyMetadata

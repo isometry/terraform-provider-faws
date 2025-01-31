@@ -17,11 +17,11 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfwafv2 "github.com/hashicorp/terraform-provider-aws/internal/service/wafv2"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfwafv2 "github.com/isometry/terraform-provider-faws/internal/service/wafv2"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func init() {
@@ -2234,7 +2234,7 @@ func TestAccWAFV2WebACL_RuleGroupReference_basic(t *testing.T) {
 
 // Ensure magically-added (i.e., AWS-added) rule for Shield with CF distribution DDoS auto
 // mitigation does not cause diff and provider doesn't attempt to remove.
-// See https://github.com/hashicorp/terraform-provider-aws/issues/22869
+// See https://github.com/isometry/terraform-provider-faws/issues/22869
 func TestAccWAFV2WebACL_RuleGroupReference_shieldMitigation(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v awstypes.WebACL
@@ -2391,7 +2391,7 @@ func TestAccWAFV2WebACL_RuleGroupReference_shieldMitigation(t *testing.T) {
 
 // Ensure magically-added (i.e., AWS-added) rule for Shield with CF distribution DDoS auto
 // mitigation does not cause diff and provider doesn't attempt to remove.
-// See https://github.com/hashicorp/terraform-provider-aws/issues/22869
+// See https://github.com/isometry/terraform-provider-faws/issues/22869
 func TestAccWAFV2WebACL_RuleGroupReference_manageShieldMitigationRule(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v awstypes.WebACL
@@ -2755,7 +2755,7 @@ func TestAccWAFV2WebACL_tags(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/13862
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/13862
 func TestAccWAFV2WebACL_RateBased_maxNested(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v awstypes.WebACL

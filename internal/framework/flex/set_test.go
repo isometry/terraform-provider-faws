@@ -11,8 +11,8 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/hashicorp/terraform-plugin-framework/attr"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/hashicorp/terraform-provider-aws/internal/framework/flex"
-	itypes "github.com/hashicorp/terraform-provider-aws/internal/types"
+	"github.com/isometry/terraform-provider-faws/internal/framework/flex"
+	itypes "github.com/isometry/terraform-provider-faws/internal/types"
 )
 
 func TestExpandFrameworkInt32Set(t *testing.T) {

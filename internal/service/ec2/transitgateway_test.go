@@ -21,13 +21,13 @@ import (
 	"github.com/hashicorp/terraform-plugin-testing/statecheck"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
 	"github.com/hashicorp/terraform-plugin-testing/tfjsonpath"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfstatecheck "github.com/hashicorp/terraform-provider-aws/internal/acctest/statecheck"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfsync "github.com/hashicorp/terraform-provider-aws/internal/experimental/sync"
-	tfec2 "github.com/hashicorp/terraform-provider-aws/internal/service/ec2"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfstatecheck "github.com/isometry/terraform-provider-faws/internal/acctest/statecheck"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfsync "github.com/isometry/terraform-provider-faws/internal/experimental/sync"
+	tfec2 "github.com/isometry/terraform-provider-faws/internal/service/ec2"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccTransitGateway_serial(t *testing.T) {

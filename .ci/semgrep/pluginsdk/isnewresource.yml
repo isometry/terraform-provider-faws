@@ -1,7 +1,7 @@
 rules:
   - id: helper-schema-ResourceData-SetId-empty-without-IsNewResource-check
     languages: [go]
-    message: Calling `d.SetId("")` should ensure `!d.IsNewResource()` is also checked. See https://github.com/hashicorp/terraform-provider-aws/blob/main/docs/contributing/error-handling.md#disnewresource-checks
+    message: Calling `d.SetId("")` should ensure `!d.IsNewResource()` is also checked. See https://github.com/isometry/terraform-provider-faws/blob/main/docs/contributing/error-handling.md#disnewresource-checks
     paths:
       include:
         - internal/service

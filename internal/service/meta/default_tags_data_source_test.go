@@ -10,9 +10,9 @@ import (
 	"github.com/hashicorp/terraform-plugin-testing/knownvalue"
 	"github.com/hashicorp/terraform-plugin-testing/statecheck"
 	"github.com/hashicorp/terraform-plugin-testing/tfjsonpath"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfmeta "github.com/hashicorp/terraform-provider-aws/internal/service/meta"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfmeta "github.com/isometry/terraform-provider-faws/internal/service/meta"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccMetaDefaultTagsDataSource_basic(t *testing.T) {

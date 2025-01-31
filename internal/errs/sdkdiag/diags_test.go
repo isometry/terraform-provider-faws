@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs/sdkdiag"
+	"github.com/isometry/terraform-provider-faws/internal/errs/sdkdiag"
 )
 
 func TestErrors(t *testing.T) {

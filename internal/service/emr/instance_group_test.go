@@ -13,10 +13,10 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfemr "github.com/hashicorp/terraform-provider-aws/internal/service/emr"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfemr "github.com/isometry/terraform-provider-faws/internal/service/emr"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccEMRInstanceGroup_basic(t *testing.T) {
@@ -77,7 +77,7 @@ func TestAccEMRInstanceGroup_disappears(t *testing.T) {
 	})
 }
 
-// Regression test for https://github.com/hashicorp/terraform-provider-aws/issues/1355
+// Regression test for https://github.com/isometry/terraform-provider-faws/issues/1355
 func TestAccEMRInstanceGroup_Disappears_emrCluster(t *testing.T) {
 	ctx := acctest.Context(t)
 	var cluster awstypes.Cluster
@@ -259,7 +259,7 @@ func TestAccEMRInstanceGroup_autoScalingPolicy(t *testing.T) {
 }
 
 // Confirm we can scale down the instance count.
-// See https://github.com/hashicorp/terraform-provider-aws/issues/1264.
+// See https://github.com/isometry/terraform-provider-faws/issues/1264.
 func TestAccEMRInstanceGroup_instanceCountDecrease(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v awstypes.InstanceGroup
@@ -298,7 +298,7 @@ func TestAccEMRInstanceGroup_instanceCountDecrease(t *testing.T) {
 }
 
 // Confirm we can create with a 0 instance count.
-// See https://github.com/hashicorp/terraform-provider-aws/issues/38837.
+// See https://github.com/isometry/terraform-provider-faws/issues/38837.
 func TestAccEMRInstanceGroup_instanceCountCreateZero(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v awstypes.InstanceGroup

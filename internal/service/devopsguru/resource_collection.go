@@ -19,13 +19,13 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
-	"github.com/hashicorp/terraform-provider-aws/internal/create"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/internal/framework"
-	"github.com/hashicorp/terraform-provider-aws/internal/framework/flex"
-	fwtypes "github.com/hashicorp/terraform-provider-aws/internal/framework/types"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/create"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/framework"
+	"github.com/isometry/terraform-provider-faws/internal/framework/flex"
+	fwtypes "github.com/isometry/terraform-provider-faws/internal/framework/types"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // @FrameworkResource("aws_devopsguru_resource_collection", name="Resource Collection")
@@ -128,7 +128,7 @@ func (r *resourceResourceCollection) Create(ctx context.Context, req resource.Cr
 		// into the request structs Tags field is a temporary workaround until the AutoFlex
 		// options implementation can be merged.
 		//
-		// Ref: https://github.com/hashicorp/terraform-provider-aws/pull/36437
+		// Ref: https://github.com/isometry/terraform-provider-faws/pull/36437
 		resp.Diagnostics.Append(flex.Expand(ctx, plan.Tags, &rc.Tags)...)
 		if resp.Diagnostics.HasError() {
 			return
@@ -190,7 +190,7 @@ func (r *resourceResourceCollection) Read(ctx context.Context, req resource.Read
 	// struct from the response into state.Tags is a temporary workaround until the AutoFlex
 	// options implementation can be merged.
 	//
-	// Ref: https://github.com/hashicorp/terraform-provider-aws/pull/36437
+	// Ref: https://github.com/isometry/terraform-provider-faws/pull/36437
 	resp.Diagnostics.Append(flex.Flatten(ctx, out.Tags, &state.Tags)...)
 	if resp.Diagnostics.HasError() {
 		return
@@ -226,7 +226,7 @@ func (r *resourceResourceCollection) Delete(ctx context.Context, req resource.De
 		// into the request structs Tags field is a temporary workaround until the AutoFlex
 		// options implementation can be merged.
 		//
-		// Ref: https://github.com/hashicorp/terraform-provider-aws/pull/36437
+		// Ref: https://github.com/isometry/terraform-provider-faws/pull/36437
 		resp.Diagnostics.Append(flex.Expand(ctx, state.Tags, &rc.Tags)...)
 		if resp.Diagnostics.HasError() {
 			return

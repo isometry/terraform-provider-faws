@@ -8,7 +8,7 @@ import (
 
 	"github.com/YakDriver/regexache"
 	awstypes "github.com/aws/aws-sdk-go-v2/service/cognitoidentity/types"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func validIdentityPoolName(v interface{}, k string) (ws []string, errors []error) {

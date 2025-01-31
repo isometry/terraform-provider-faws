@@ -1,10 +1,10 @@
-module github.com/hashicorp/terraform-provider-aws/skaff
+module github.com/isometry/terraform-provider-faws/skaff
 
 go 1.23.5
 
 require (
 	github.com/YakDriver/regexache v0.24.0
-	github.com/hashicorp/terraform-provider-aws v1.60.1-0.20220322001452-8f7a597d0c24
+	github.com/isometry/terraform-provider-faws v1.60.1-0.20220322001452-8f7a597d0c24
 	github.com/spf13/cobra v1.8.1
 )
 
@@ -25,4 +25,4 @@ require (
 	golang.org/x/tools v0.29.0 // indirect
 )
 
-replace github.com/hashicorp/terraform-provider-aws => ../
+replace github.com/isometry/terraform-provider-faws => ../

@@ -13,7 +13,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/generate/common"
+	"github.com/isometry/terraform-provider-faws/internal/generate/common"
 )
 
 //go:embed header.tmpl

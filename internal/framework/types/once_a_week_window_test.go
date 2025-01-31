@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-framework/attr/xattr"
-	fwtypes "github.com/hashicorp/terraform-provider-aws/internal/framework/types"
+	fwtypes "github.com/isometry/terraform-provider-faws/internal/framework/types"
 )
 
 func TestOnceAWeekWindowValidateAttribute(t *testing.T) {

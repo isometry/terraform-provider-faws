@@ -14,14 +14,14 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs/sdkdiag"
-	"github.com/hashicorp/terraform-provider-aws/internal/flex"
-	tftags "github.com/hashicorp/terraform-provider-aws/internal/tags"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/internal/verify"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs/sdkdiag"
+	"github.com/isometry/terraform-provider-faws/internal/flex"
+	tftags "github.com/isometry/terraform-provider-faws/internal/tags"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/verify"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // @SDKResource("aws_iam_openid_connect_provider", name="OIDC Provider")
@@ -160,7 +160,7 @@ func resourceOpenIDConnectProviderUpdate(ctx context.Context, d *schema.Resource
 			//   **creation** or at least one thumbprint on update).
 			// - Removing the thumbprint_list attribute entirely doesn’t work because it won’t register as
 			//   a change (no diff is detected).
-			// See https://github.com/hashicorp/terraform-provider-aws/issues/40509
+			// See https://github.com/isometry/terraform-provider-faws/issues/40509
 			input := &iam.UpdateOpenIDConnectProviderThumbprintInput{
 				OpenIDConnectProviderArn: aws.String(d.Id()),
 				ThumbprintList:           flex.ExpandStringValueList(v),

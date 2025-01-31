@@ -1,4 +1,4 @@
-module github.com/hashicorp/terraform-provider-aws/ci/providerlint
+module github.com/isometry/terraform-provider-faws/ci/providerlint
 
 go 1.23
 

@@ -5,7 +5,7 @@ package lightsail
 
 import (
 	"github.com/aws/aws-sdk-go-v2/service/lightsail/types"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
 )
 
 // Some Operations do not properly return the types.NotFoundException error

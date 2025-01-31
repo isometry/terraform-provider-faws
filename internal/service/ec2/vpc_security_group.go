@@ -24,14 +24,14 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/id"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/create"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs/sdkdiag"
-	"github.com/hashicorp/terraform-provider-aws/internal/logging"
-	tftags "github.com/hashicorp/terraform-provider-aws/internal/tags"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/internal/verify"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/create"
+	"github.com/isometry/terraform-provider-faws/internal/errs/sdkdiag"
+	"github.com/isometry/terraform-provider-faws/internal/logging"
+	tftags "github.com/isometry/terraform-provider-faws/internal/tags"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/verify"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // @SDKResource("aws_security_group", name="Security Group")
@@ -1346,7 +1346,7 @@ func securityGroupCollapseRules(ruleset string, rules []interface{}) []interface
 // securityGroupExpandRules works in pair with
 // securityGroupCollapseRules and is used as a
 // workaround for the problem explained in
-// https://github.com/hashicorp/terraform-provider-aws/pull/4726
+// https://github.com/isometry/terraform-provider-faws/pull/4726
 //
 // This function converts every ingress/egress block that
 // contains multiple rules to multiple blocks with only one

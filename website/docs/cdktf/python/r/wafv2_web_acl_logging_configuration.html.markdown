@@ -12,7 +12,7 @@ description: |-
 
 This resource creates a WAFv2 Web ACL Logging Configuration.
 
-!> **WARNING:** When logging from a WAFv2 Web ACL to a CloudWatch Log Group, the WAFv2 service tries to create or update a generic Log Resource Policy named `AWSWAF-LOGS`. However, if there are a large number of Web ACLs or if the account frequently creates and deletes Web ACLs, this policy may exceed the maximum policy size. As a result, this resource type will fail to be created. More details about this issue can be found in [this issue](https://github.com/hashicorp/terraform-provider-aws/issues/25296). To prevent this issue, you can manage a specific resource policy. Please refer to the [example](#with-cloudwatch-log-group-and-managed-cloudwatch-log-resource-policy) below for managing a CloudWatch Log Group with a managed CloudWatch Log Resource Policy.
+!> **WARNING:** When logging from a WAFv2 Web ACL to a CloudWatch Log Group, the WAFv2 service tries to create or update a generic Log Resource Policy named `AWSWAF-LOGS`. However, if there are a large number of Web ACLs or if the account frequently creates and deletes Web ACLs, this policy may exceed the maximum policy size. As a result, this resource type will fail to be created. More details about this issue can be found in [this issue](https://github.com/isometry/terraform-provider-faws/issues/25296). To prevent this issue, you can manage a specific resource policy. Please refer to the [example](#with-cloudwatch-log-group-and-managed-cloudwatch-log-resource-policy) below for managing a CloudWatch Log Group with a managed CloudWatch Log Resource Policy.
 
 ## Example Usage
 

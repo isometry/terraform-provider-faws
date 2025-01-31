@@ -19,7 +19,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/hashicorp/terraform-provider-aws/names/data"
+	"github.com/isometry/terraform-provider-faws/names/data"
 	"golang.org/x/tools/go/packages"
 )
 

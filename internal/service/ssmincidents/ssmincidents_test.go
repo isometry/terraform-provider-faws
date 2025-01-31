@@ -6,7 +6,7 @@ package ssmincidents_test
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
 )
 
 // only one replication set resource can be active at once, so we must have serialised tests

@@ -8,8 +8,8 @@ import (
 	"testing"
 
 	"github.com/aws/aws-sdk-go-v2/service/s3tables"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
 )
 
 func testAccPreCheck(ctx context.Context, t *testing.T) {

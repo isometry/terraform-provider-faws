@@ -9,9 +9,9 @@ import (
 
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfquicksight "github.com/hashicorp/terraform-provider-aws/internal/service/quicksight"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfquicksight "github.com/isometry/terraform-provider-faws/internal/service/quicksight"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccQuickSightGroupDataSource_basic(t *testing.T) {

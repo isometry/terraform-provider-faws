@@ -9,11 +9,11 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/pipes/types"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-aws/internal/enum"
-	"github.com/hashicorp/terraform-provider-aws/internal/flex"
-	tftags "github.com/hashicorp/terraform-provider-aws/internal/tags"
-	"github.com/hashicorp/terraform-provider-aws/internal/verify"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/enum"
+	"github.com/isometry/terraform-provider-faws/internal/flex"
+	tftags "github.com/isometry/terraform-provider-faws/internal/tags"
+	"github.com/isometry/terraform-provider-faws/internal/verify"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func targetParametersSchema() *schema.Schema {

@@ -11,9 +11,9 @@ import (
 	awstypes "github.com/aws/aws-sdk-go-v2/service/fsx/types"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-aws/internal/enum"
-	tftags "github.com/hashicorp/terraform-provider-aws/internal/tags"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/enum"
+	tftags "github.com/isometry/terraform-provider-faws/internal/tags"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func resourceONTAPStorageVirtualMachineV0() *schema.Resource {

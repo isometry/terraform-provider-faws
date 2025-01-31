@@ -9,7 +9,7 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	awstypes "github.com/aws/aws-sdk-go-v2/service/grafana/types"
-	tfslices "github.com/hashicorp/terraform-provider-aws/internal/slices"
+	tfslices "github.com/isometry/terraform-provider-faws/internal/slices"
 )
 
 func updatesError(apiObjects []awstypes.UpdateError) error {

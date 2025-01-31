@@ -6,8 +6,8 @@ package s3_test
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfs3 "github.com/hashicorp/terraform-provider-aws/internal/service/s3"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfs3 "github.com/isometry/terraform-provider-faws/internal/service/s3"
 )
 
 func TestParseResourceID(t *testing.T) {

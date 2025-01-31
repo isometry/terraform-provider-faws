@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func testResourcePatchGroupStateDataV0() map[string]interface{} {

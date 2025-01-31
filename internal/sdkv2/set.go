@@ -10,7 +10,7 @@ import (
 	"strings"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-aws/internal/create"
+	"github.com/isometry/terraform-provider-faws/internal/create"
 )
 
 // StringCaseInsensitiveSetFunc hashes strings in a case insensitive manner.

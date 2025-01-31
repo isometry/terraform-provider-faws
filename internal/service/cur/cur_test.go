@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
 )
 
 // Serialize to limit API rate-limit exceeded errors.

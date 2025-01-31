@@ -7,9 +7,9 @@ import (
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfcloudtrail "github.com/hashicorp/terraform-provider-aws/internal/service/cloudtrail"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfcloudtrail "github.com/isometry/terraform-provider-faws/internal/service/cloudtrail"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccCloudTrailServiceAccountDataSource_basic(t *testing.T) {

@@ -9,7 +9,7 @@ import (
 	"github.com/YakDriver/regexache"
 	"github.com/aws/aws-sdk-go-v2/aws/arn"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-aws/internal/verify"
+	"github.com/isometry/terraform-provider-faws/internal/verify"
 )
 
 const (

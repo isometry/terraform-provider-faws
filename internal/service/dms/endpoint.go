@@ -20,15 +20,15 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/enum"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs/sdkdiag"
-	tfkms "github.com/hashicorp/terraform-provider-aws/internal/service/kms"
-	tftags "github.com/hashicorp/terraform-provider-aws/internal/tags"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/internal/verify"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/enum"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs/sdkdiag"
+	tfkms "github.com/isometry/terraform-provider-faws/internal/service/kms"
+	tftags "github.com/isometry/terraform-provider-faws/internal/tags"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/verify"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // @SDKResource("aws_dms_endpoint", name="Endpoint")
@@ -799,7 +799,7 @@ func resourceEndpointCreate(ctx context.Context, d *schema.ResourceData, meta in
 	}
 
 	// Send ExtraConnectionAttributes in the API request for all resource types
-	// per https://github.com/hashicorp/terraform-provider-aws/issues/8009
+	// per https://github.com/isometry/terraform-provider-faws/issues/8009
 	if v, ok := d.GetOk("extra_connection_attributes"); ok {
 		input.ExtraConnectionAttributes = aws.String(v.(string))
 	}

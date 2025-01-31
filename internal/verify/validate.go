@@ -21,10 +21,10 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/structure"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	tfmaps "github.com/hashicorp/terraform-provider-aws/internal/maps"
-	itypes "github.com/hashicorp/terraform-provider-aws/internal/types"
-	"github.com/hashicorp/terraform-provider-aws/internal/types/timestamp"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	tfmaps "github.com/isometry/terraform-provider-faws/internal/maps"
+	itypes "github.com/isometry/terraform-provider-faws/internal/types"
+	"github.com/isometry/terraform-provider-faws/internal/types/timestamp"
 )
 
 var accountIDRegexp = regexache.MustCompile(`^(aws|aws-managed|third-party|\d{12}|cw.{10})$`)
@@ -71,7 +71,7 @@ func ValidAmazonSideASN(v interface{}, k string) (ws []string, errors []error) {
 		return
 	}
 
-	// https://github.com/hashicorp/terraform-provider-aws/issues/5263
+	// https://github.com/isometry/terraform-provider-faws/issues/5263
 	isLegacyAsn := func(a int64) bool {
 		return a == 7224 || a == 9059 || a == 10124 || a == 17493
 	}

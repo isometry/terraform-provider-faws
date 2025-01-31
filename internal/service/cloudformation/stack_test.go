@@ -15,11 +15,11 @@ import (
 	"github.com/hashicorp/terraform-plugin-testing/plancheck"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
 	"github.com/hashicorp/terraform-plugin-testing/tfjsonpath"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfcloudformation "github.com/hashicorp/terraform-provider-aws/internal/service/cloudformation"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfcloudformation "github.com/isometry/terraform-provider-faws/internal/service/cloudformation"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccCloudFormationStack_basic(t *testing.T) {
@@ -452,7 +452,7 @@ func TestAccCloudFormationStack_withTransform(t *testing.T) {
 	})
 }
 
-// TestAccCloudFormationStack_onFailure verifies https://github.com/hashicorp/terraform-provider-aws/issues/5204
+// TestAccCloudFormationStack_onFailure verifies https://github.com/isometry/terraform-provider-faws/issues/5204
 func TestAccCloudFormationStack_onFailure(t *testing.T) {
 	ctx := acctest.Context(t)
 	var stack awstypes.Stack

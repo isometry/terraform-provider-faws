@@ -16,11 +16,11 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfrds "github.com/hashicorp/terraform-provider-aws/internal/service/rds"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfrds "github.com/isometry/terraform-provider-faws/internal/service/rds"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccRDSOptionGroup_basic(t *testing.T) {
@@ -427,7 +427,7 @@ func TestAccRDSOptionGroup_oracleOptionsUpdate(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/1876
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/1876
 func TestAccRDSOptionGroup_OptionOptionSettings_multipleNonDefault(t *testing.T) {
 	ctx := acctest.Context(t)
 	var optionGroup1, optionGroup2 types.OptionGroup
@@ -497,7 +497,7 @@ func TestAccRDSOptionGroup_multipleOptions(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/7114
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/7114
 func TestAccRDSOptionGroup_Tags_withOptions(t *testing.T) {
 	ctx := acctest.Context(t)
 	var optionGroup1, optionGroup2, optionGroup3 types.OptionGroup
@@ -548,7 +548,7 @@ func TestAccRDSOptionGroup_Tags_withOptions(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/21367
+// https://github.com/isometry/terraform-provider-faws/issues/21367
 func TestAccRDSOptionGroup_badDiffs(t *testing.T) {
 	ctx := acctest.Context(t)
 	var optionGroup1 types.OptionGroup

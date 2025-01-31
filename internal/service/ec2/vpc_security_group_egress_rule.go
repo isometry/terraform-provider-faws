@@ -10,7 +10,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ec2"
 	awstypes "github.com/aws/aws-sdk-go-v2/service/ec2/types"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
-	fwflex "github.com/hashicorp/terraform-provider-aws/internal/framework/flex"
+	fwflex "github.com/isometry/terraform-provider-faws/internal/framework/flex"
 )
 
 // @FrameworkResource("aws_vpc_security_group_egress_rule", name="Security Group Egress Rule")

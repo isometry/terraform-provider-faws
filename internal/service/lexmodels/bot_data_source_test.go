@@ -8,8 +8,8 @@ import (
 
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccLexModelsBotDataSource_basic(t *testing.T) {
@@ -85,7 +85,7 @@ func testAccBotDataSource_withVersion(t *testing.T) {
 					resource.TestCheckResourceAttrPair(dataSourceName, "failure_reason", resourceName, "failure_reason"),
 					resource.TestCheckResourceAttrPair(dataSourceName, "idle_session_ttl_in_seconds", resourceName, "idle_session_ttl_in_seconds"),
 					//Removed due to race condition when bots build/read/not_ready. Modified the bot status to read true status:
-					//https://github.com/hashicorp/terraform-provider-aws/issues/21107
+					//https://github.com/isometry/terraform-provider-faws/issues/21107
 					//resource.TestCheckResourceAttrPair(dataSourceName, "created_date", resourceName, "created_date"),
 					//resource.TestCheckResourceAttrPair(dataSourceName, "last_updated_date", resourceName, "last_updated_date"),
 					//resource.TestCheckResourceAttrPair(dataSourceName, "status", resourceName, "status"),

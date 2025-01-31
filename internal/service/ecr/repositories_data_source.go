@@ -13,12 +13,12 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/datasource/schema"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/internal/framework"
-	fwflex "github.com/hashicorp/terraform-provider-aws/internal/framework/flex"
-	fwtypes "github.com/hashicorp/terraform-provider-aws/internal/framework/types"
-	tfslices "github.com/hashicorp/terraform-provider-aws/internal/slices"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/framework"
+	fwflex "github.com/isometry/terraform-provider-faws/internal/framework/flex"
+	fwtypes "github.com/isometry/terraform-provider-faws/internal/framework/types"
+	tfslices "github.com/isometry/terraform-provider-faws/internal/slices"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // @FrameworkDataSource("aws_ecr_repositories", name="Repositories")

@@ -9,7 +9,7 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-framework/attr"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs/fwdiag"
+	"github.com/isometry/terraform-provider-faws/internal/errs/fwdiag"
 )
 
 func newMapValueMust(elements map[string]attr.Value) Map {

@@ -14,14 +14,14 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/enum"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs/sdkdiag"
-	"github.com/hashicorp/terraform-provider-aws/internal/flex"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/internal/verify"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/enum"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs/sdkdiag"
+	"github.com/isometry/terraform-provider-faws/internal/flex"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/verify"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // @SDKResource("aws_autoscalingplans_scaling_plan", name="Scaling Plan")
@@ -553,7 +553,7 @@ func expandScalingInstructions(vScalingInstructions *schema.Set) []awstypes.Scal
 		if v, ok := mScalingInstruction["service_namespace"].(string); ok && v != "" {
 			scalingInstruction.ServiceNamespace = awstypes.ServiceNamespace(v)
 		} else {
-			// https://github.com/hashicorp/terraform-provider-aws/issues/17929
+			// https://github.com/isometry/terraform-provider-faws/issues/17929
 			// https://github.com/hashicorp/terraform-plugin-sdk/issues/588
 			continue
 		}

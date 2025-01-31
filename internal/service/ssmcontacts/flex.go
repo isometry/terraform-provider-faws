@@ -6,7 +6,7 @@ package ssmcontacts
 import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/service/ssmcontacts/types"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func expandContactChannelAddress(deliveryAddress []interface{}) *types.ContactChannelAddress {

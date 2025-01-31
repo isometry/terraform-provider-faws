@@ -15,8 +15,8 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-framework/types/basetypes"
-	fwtypes "github.com/hashicorp/terraform-provider-aws/internal/framework/types"
-	smithyjson "github.com/hashicorp/terraform-provider-aws/internal/json"
+	fwtypes "github.com/isometry/terraform-provider-faws/internal/framework/types"
+	smithyjson "github.com/isometry/terraform-provider-faws/internal/json"
 )
 
 type emptyStruct struct{}

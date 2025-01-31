@@ -12,11 +12,11 @@ import (
 	"github.com/hashicorp/terraform-plugin-testing/knownvalue"
 	"github.com/hashicorp/terraform-plugin-testing/statecheck"
 	"github.com/hashicorp/terraform-plugin-testing/tfjsonpath"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfstatecheck "github.com/hashicorp/terraform-provider-aws/internal/acctest/statecheck"
-	tfapigatewayv2 "github.com/hashicorp/terraform-provider-aws/internal/service/apigatewayv2"
-	"github.com/hashicorp/terraform-provider-aws/internal/types"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfstatecheck "github.com/isometry/terraform-provider-faws/internal/acctest/statecheck"
+	tfapigatewayv2 "github.com/isometry/terraform-provider-faws/internal/service/apigatewayv2"
+	"github.com/isometry/terraform-provider-faws/internal/types"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccAPIGatewayV2VPCLinkDataSource_tags(t *testing.T) {

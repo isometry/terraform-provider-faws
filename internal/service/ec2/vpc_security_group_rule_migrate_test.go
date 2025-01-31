@@ -7,9 +7,9 @@ import (
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfec2 "github.com/hashicorp/terraform-provider-aws/internal/service/ec2"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfec2 "github.com/isometry/terraform-provider-faws/internal/service/ec2"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestSecurityGroupRuleMigrateState(t *testing.T) {

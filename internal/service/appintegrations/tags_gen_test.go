@@ -7,8 +7,8 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-testing/knownvalue"
 	"github.com/hashicorp/terraform-plugin-testing/statecheck"
-	tfstatecheck "github.com/hashicorp/terraform-provider-aws/internal/acctest/statecheck"
-	tfappintegrations "github.com/hashicorp/terraform-provider-aws/internal/service/appintegrations"
+	tfstatecheck "github.com/isometry/terraform-provider-faws/internal/acctest/statecheck"
+	tfappintegrations "github.com/isometry/terraform-provider-faws/internal/service/appintegrations"
 )
 
 func expectFullResourceTags(resourceAddress string, knownValue knownvalue.Check) statecheck.StateCheck {

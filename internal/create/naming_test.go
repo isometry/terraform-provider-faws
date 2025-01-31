@@ -263,7 +263,7 @@ func TestNamePrefixFromName(t *testing.T) {
 			Input:    "test-200601021504050000000000f1",
 			Expected: strPtr("test-"),
 		},
-		// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/17017
+		// Reference: https://github.com/isometry/terraform-provider-faws/issues/17017
 		{
 			TestName: "terraform prefix, correct suffix",
 			Input:    "terraform-20060102150405000000000001",
@@ -364,7 +364,7 @@ func TestNamePrefixFromNameWithSuffix(t *testing.T) {
 			Input:    "test-200601021504050000000000f1suffix",
 			Expected: strPtr("test-"),
 		},
-		// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/17017
+		// Reference: https://github.com/isometry/terraform-provider-faws/issues/17017
 		{
 			TestName: "terraform prefix, missing additional suffix",
 			Input:    "terraform-20060102150405000000000001",

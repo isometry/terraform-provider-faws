@@ -6,7 +6,7 @@ package kms
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestDiffSuppressKeyID(t *testing.T) {

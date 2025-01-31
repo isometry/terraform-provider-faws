@@ -4,7 +4,7 @@
 package framework
 
 import (
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
 )
 
 var (

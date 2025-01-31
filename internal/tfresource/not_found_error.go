@@ -8,8 +8,8 @@ import (
 	"fmt"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
-	tfslices "github.com/hashicorp/terraform-provider-aws/internal/slices"
-	"github.com/hashicorp/terraform-provider-aws/internal/types/option"
+	tfslices "github.com/isometry/terraform-provider-faws/internal/slices"
+	"github.com/isometry/terraform-provider-faws/internal/types/option"
 )
 
 type EmptyResultError struct {

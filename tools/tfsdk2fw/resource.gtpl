@@ -21,8 +21,8 @@ import (
 	{{if gt (len .FrameworkValidatorsPackages) 0 }}"github.com/hashicorp/terraform-plugin-framework/schema/validator"{{- end}}
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
-	"github.com/hashicorp/terraform-provider-aws/internal/framework"
-	{{if .ImportProviderFrameworkTypes }}fwtypes "github.com/hashicorp/terraform-provider-aws/internal/framework/types"{{- end}}
+	"github.com/isometry/terraform-provider-faws/internal/framework"
+	{{if .ImportProviderFrameworkTypes }}fwtypes "github.com/isometry/terraform-provider-faws/internal/framework/types"{{- end}}
 	{{ range .GoImports -}}
 	{{ if .Alias }}{{ .Alias }} {{ end }}"{{ .Path }}"
 	{{ end }}

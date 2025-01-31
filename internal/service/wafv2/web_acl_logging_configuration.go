@@ -17,15 +17,15 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/create"
-	"github.com/hashicorp/terraform-provider-aws/internal/enum"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs/sdkdiag"
-	"github.com/hashicorp/terraform-provider-aws/internal/flex"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/internal/verify"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/create"
+	"github.com/isometry/terraform-provider-faws/internal/enum"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs/sdkdiag"
+	"github.com/isometry/terraform-provider-faws/internal/flex"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/verify"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // @SDKResource("aws_wafv2_web_acl_logging_configuration", name="Web ACL Logging Configuration")
@@ -427,7 +427,7 @@ func expandRedactedField(field interface{}) awstypes.FieldToMatch {
 	// While the FieldToMatch struct allows more than 1 of its fields to be set,
 	// the WAFv2 API does not. In addition, in the context of Logging Configuration requests,
 	// the WAFv2 API only supports the following redacted fields.
-	// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/14244
+	// Reference: https://github.com/isometry/terraform-provider-faws/issues/14244
 	if v, ok := m["method"]; ok && len(v.([]interface{})) > 0 {
 		f.Method = &awstypes.Method{}
 	}
@@ -536,7 +536,7 @@ func flattenRedactedField(f awstypes.FieldToMatch) map[string]interface{} {
 
 	// In the context of Logging Configuration requests,
 	// the WAFv2 API only supports the following redacted fields.
-	// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/14244
+	// Reference: https://github.com/isometry/terraform-provider-faws/issues/14244
 	if f.Method != nil {
 		m["method"] = make([]map[string]interface{}, 1)
 	}

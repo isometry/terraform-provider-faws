@@ -6,7 +6,7 @@ package naming_test
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-aws/tools/tfsdk2fw/naming"
+	"github.com/isometry/terraform-provider-faws/tools/tfsdk2fw/naming"
 )
 
 func TestToCamelCase(t *testing.T) {

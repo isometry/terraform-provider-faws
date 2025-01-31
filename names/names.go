@@ -20,7 +20,7 @@ import (
 	"log"
 
 	"github.com/hashicorp/aws-sdk-go-base/v2/endpoints"
-	"github.com/hashicorp/terraform-provider-aws/names/data"
+	"github.com/isometry/terraform-provider-faws/names/data"
 )
 
 // Endpoint constants defined by the AWS SDK v1 but not defined in the AWS SDK v2.

@@ -12,10 +12,10 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfopsworks "github.com/hashicorp/terraform-provider-aws/internal/service/opsworks"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfopsworks "github.com/isometry/terraform-provider-faws/internal/service/opsworks"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccOpsWorksPermission_basic(t *testing.T) {
@@ -72,7 +72,7 @@ func TestAccOpsWorksPermission_basic(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/4804
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/4804
 func TestAccOpsWorksPermission_self(t *testing.T) {
 	acctest.Skip(t, "skipping test; Amazon OpsWorks has been deprecated and will be removed in the next major release")
 

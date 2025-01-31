@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	tflambda "github.com/hashicorp/terraform-provider-aws/internal/service/lambda"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	tflambda "github.com/isometry/terraform-provider-faws/internal/service/lambda"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestValidFunctionName(t *testing.T) {

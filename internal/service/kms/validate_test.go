@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	tfkms "github.com/hashicorp/terraform-provider-aws/internal/service/kms"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	tfkms "github.com/isometry/terraform-provider-faws/internal/service/kms"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestValidGrantName(t *testing.T) {

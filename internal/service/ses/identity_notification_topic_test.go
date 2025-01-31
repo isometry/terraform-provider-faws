@@ -11,10 +11,10 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfses "github.com/hashicorp/terraform-provider-aws/internal/service/ses"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfses "github.com/isometry/terraform-provider-faws/internal/service/ses"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccSESIdentityNotificationTopic_basic(t *testing.T) {
@@ -59,7 +59,7 @@ func TestAccSESIdentityNotificationTopic_basic(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/36275.
+// https://github.com/isometry/terraform-provider-faws/issues/36275.
 func TestAccSESIdentityNotificationTopic_Disappears_domainIdentity(t *testing.T) {
 	ctx := acctest.Context(t)
 	domain := acctest.RandomDomainName()

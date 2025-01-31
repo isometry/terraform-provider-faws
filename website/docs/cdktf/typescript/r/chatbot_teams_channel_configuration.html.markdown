@@ -12,7 +12,7 @@ description: |-
 
 Terraform resource for managing an AWS Chatbot Microsoft Teams Channel Configuration.
 
-~> **NOTE:** We provide this resource on a best-effort basis. If you are able to test it and find it useful, we welcome your input at [GitHub](https://github.com/hashicorp/terraform-provider-aws).
+~> **NOTE:** We provide this resource on a best-effort basis. If you are able to test it and find it useful, we welcome your input at [GitHub](https://github.com/isometry/terraform-provider-faws).
 
 ## Example Usage
 

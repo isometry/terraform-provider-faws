@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	tfappmesh "github.com/hashicorp/terraform-provider-aws/internal/service/appmesh"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	tfappmesh "github.com/isometry/terraform-provider-faws/internal/service/appmesh"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestVirtualRouterMigrateState(t *testing.T) {

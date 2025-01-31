@@ -11,7 +11,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/lexmodelsv2"
 	smithyendpoints "github.com/aws/smithy-go/endpoints"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
 )
 
 var _ lexmodelsv2.EndpointResolverV2 = resolverV2{}

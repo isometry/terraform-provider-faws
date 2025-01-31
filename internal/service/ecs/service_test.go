@@ -17,11 +17,11 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfecs "github.com/hashicorp/terraform-provider-aws/internal/service/ecs"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfecs "github.com/isometry/terraform-provider-faws/internal/service/ecs"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func Test_GetRoleNameFromARN(t *testing.T) {
@@ -421,7 +421,7 @@ func TestAccECSService_VolumeConfiguration_update(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/38475
+// https://github.com/isometry/terraform-provider-faws/issues/38475
 func TestAccECSService_VolumeConfiguration_throughputTypeChange(t *testing.T) {
 	ctx := acctest.Context(t)
 	var service awstypes.Service
@@ -763,7 +763,7 @@ func TestAccECSService_DeploymentValues_basic(t *testing.T) {
 	})
 }
 
-// Regression for https://github.com/hashicorp/terraform-provider-aws/issues/6315
+// Regression for https://github.com/isometry/terraform-provider-faws/issues/6315
 func TestAccECSService_DeploymentValues_minZeroMaxOneHundred(t *testing.T) {
 	ctx := acctest.Context(t)
 	var service awstypes.Service
@@ -1038,7 +1038,7 @@ func TestAccECSService_PlacementStrategy_basic(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/13146
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/13146
 func TestAccECSService_PlacementStrategy_missing(t *testing.T) {
 	ctx := acctest.Context(t)
 	rName := sdkacctest.RandomWithPrefix(acctest.ResourcePrefix)

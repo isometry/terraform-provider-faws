@@ -20,12 +20,12 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/create"
-	tfec2 "github.com/hashicorp/terraform-provider-aws/internal/service/ec2"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/create"
+	tfec2 "github.com/isometry/terraform-provider-faws/internal/service/ec2"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestProtocolStateFunc(t *testing.T) {
@@ -1003,7 +1003,7 @@ func TestAccVPCSecurityGroup_nameGenerated(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/17017
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/17017
 func TestAccVPCSecurityGroup_nameTerraformPrefix(t *testing.T) {
 	ctx := acctest.Context(t)
 	var group awstypes.SecurityGroup
@@ -1064,7 +1064,7 @@ func TestAccVPCSecurityGroup_namePrefix(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/17017
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/17017
 func TestAccVPCSecurityGroup_namePrefixTerraform(t *testing.T) {
 	ctx := acctest.Context(t)
 	var group awstypes.SecurityGroup

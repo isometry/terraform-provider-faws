@@ -13,15 +13,15 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/internal/framework/flex"
-	"github.com/hashicorp/terraform-provider-aws/internal/slices"
-	tftags "github.com/hashicorp/terraform-provider-aws/internal/tags"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/internal/types"
-	"github.com/hashicorp/terraform-provider-aws/internal/types/option"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/framework/flex"
+	"github.com/isometry/terraform-provider-faws/internal/slices"
+	tftags "github.com/isometry/terraform-provider-faws/internal/tags"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/types"
+	"github.com/isometry/terraform-provider-faws/internal/types/option"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 type interceptorFunc[Request, Response any] func(context.Context, Request, *Response, *conns.AWSClient, when, diag.Diagnostics) (context.Context, diag.Diagnostics)
@@ -403,7 +403,7 @@ func (r tagsResourceInterceptor) read(ctx context.Context, request resource.Read
 				}
 
 				// Some old resources may not have the required attribute set after Read:
-				// https://github.com/hashicorp/terraform-provider-aws/issues/31180
+				// https://github.com/isometry/terraform-provider-faws/issues/31180
 				if identifier != "" {
 					// If the service package has a generic resource list tags methods, call it.
 					var err error
@@ -538,7 +538,7 @@ func (r tagsResourceInterceptor) update(ctx context.Context, request resource.Up
 				}
 
 				// Some old resources may not have the required attribute set after Read:
-				// https://github.com/hashicorp/terraform-provider-aws/issues/31180
+				// https://github.com/isometry/terraform-provider-faws/issues/31180
 				if identifier != "" {
 					// If the service package has a generic resource update tags methods, call it.
 					var err error

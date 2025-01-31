@@ -11,7 +11,7 @@ import (
 	guardduty_v2 "github.com/aws/aws-sdk-go-v2/service/guardduty"
 	"github.com/aws/aws-sdk-go-v2/service/guardduty/types"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
 )
 
 func FindMalwareProtectionPlanByID(ctx context.Context, conn *guardduty_v2.Client, id string) (*guardduty_v2.GetMalwareProtectionPlanOutput, error) {

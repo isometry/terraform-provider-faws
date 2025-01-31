@@ -10,7 +10,7 @@ import (
 
 	"github.com/hashicorp/go-cty/cty"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
-	tfslices "github.com/hashicorp/terraform-provider-aws/internal/slices"
+	tfslices "github.com/isometry/terraform-provider-faws/internal/slices"
 )
 
 // Errors returns all the Diagnostic in Diagnostics that are SeverityError.

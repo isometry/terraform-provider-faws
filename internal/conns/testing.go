@@ -4,7 +4,7 @@
 package conns
 
 import (
-	tftags "github.com/hashicorp/terraform-provider-aws/internal/tags"
+	tftags "github.com/isometry/terraform-provider-faws/internal/tags"
 )
 
 // SetDefaultTagsConfig is only intended for use in tests

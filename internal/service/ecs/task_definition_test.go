@@ -16,11 +16,11 @@ import (
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/plancheck"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfecs "github.com/hashicorp/terraform-provider-aws/internal/service/ecs"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfecs "github.com/isometry/terraform-provider-faws/internal/service/ecs"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func init() {
@@ -929,7 +929,7 @@ func TestAccECSTaskDefinition_changeVolumesForcesNewResource(t *testing.T) {
 	})
 }
 
-// Regression for https://github.com/hashicorp/terraform-provider-aws/issues/2336
+// Regression for https://github.com/isometry/terraform-provider-faws/issues/2336
 func TestAccECSTaskDefinition_arrays(t *testing.T) {
 	ctx := acctest.Context(t)
 	var def awstypes.TaskDefinition
@@ -1256,7 +1256,7 @@ func TestAccECSTaskDefinition_trackLatest(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/38461.
+// https://github.com/isometry/terraform-provider-faws/issues/38461.
 func TestAccECSTaskDefinition_unknownContainerDefinitions(t *testing.T) {
 	ctx := acctest.Context(t)
 	var def awstypes.TaskDefinition
@@ -1279,7 +1279,7 @@ func TestAccECSTaskDefinition_unknownContainerDefinitions(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/38543.
+// https://github.com/isometry/terraform-provider-faws/issues/38543.
 func TestAccECSTaskDefinition_v5590ContainerDefinitionsRegression(t *testing.T) {
 	ctx := acctest.Context(t)
 	var def awstypes.TaskDefinition
@@ -1372,7 +1372,7 @@ func TestAccECSTaskDefinition_v5590ContainerDefinitionsRegression(t *testing.T) 
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/38779.
+// https://github.com/isometry/terraform-provider-faws/issues/38779.
 func TestAccECSTaskDefinition_containerDefinitionEmptyPortMappings(t *testing.T) {
 	ctx := acctest.Context(t)
 	var def awstypes.TaskDefinition
@@ -1462,7 +1462,7 @@ func TestAccECSTaskDefinition_containerDefinitionEmptyPortMappings(t *testing.T)
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/38782.
+// https://github.com/isometry/terraform-provider-faws/issues/38782.
 func TestAccECSTaskDefinition_containerDefinitionDockerLabels(t *testing.T) {
 	ctx := acctest.Context(t)
 	var def awstypes.TaskDefinition
@@ -1499,7 +1499,7 @@ func TestAccECSTaskDefinition_containerDefinitionDockerLabels(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/38779.
+// https://github.com/isometry/terraform-provider-faws/issues/38779.
 func TestAccECSTaskDefinition_containerDefinitionNullPortMapping(t *testing.T) {
 	ctx := acctest.Context(t)
 	var def awstypes.TaskDefinition
@@ -1629,7 +1629,7 @@ func TestAccECSTaskDefinition_containerDefinitionVersionConsistency_nullToEnable
 	})
 }
 
-// See https://github.com/hashicorp/terraform-provider-aws/issues/40801.
+// See https://github.com/isometry/terraform-provider-faws/issues/40801.
 func TestAccECSTaskDefinition_DockerVolume_detectChangeInDriverOpts(t *testing.T) {
 	ctx := acctest.Context(t)
 	var def awstypes.TaskDefinition
@@ -1674,7 +1674,7 @@ func TestAccECSTaskDefinition_DockerVolume_detectChangeInDriverOpts(t *testing.T
 	})
 }
 
-// See https://github.com/hashicorp/terraform-provider-aws/issues/38153.
+// See https://github.com/isometry/terraform-provider-faws/issues/38153.
 func TestAccECSTaskDefinition_Volume_detectChangeInConfigureAtLaunch(t *testing.T) {
 	ctx := acctest.Context(t)
 	var def awstypes.TaskDefinition

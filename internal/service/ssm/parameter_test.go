@@ -18,11 +18,11 @@ import (
 	"github.com/hashicorp/terraform-plugin-testing/statecheck"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
 	"github.com/hashicorp/terraform-plugin-testing/tfjsonpath"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfssm "github.com/hashicorp/terraform-provider-aws/internal/service/ssm"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfssm "github.com/isometry/terraform-provider-faws/internal/service/ssm"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccSSMParameter_basic(t *testing.T) {
@@ -60,7 +60,7 @@ func TestAccSSMParameter_basic(t *testing.T) {
 				ImportStateVerify: true,
 			},
 			// Test import with version.
-			// https://github.com/hashicorp/terraform-provider-aws/issues/37812.
+			// https://github.com/isometry/terraform-provider-faws/issues/37812.
 			{
 				ResourceName:                         resourceName,
 				ImportState:                          true,
@@ -478,7 +478,7 @@ func TestAccSSMParameter_Overwrite_basic(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/12213
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/12213
 func TestAccSSMParameter_Overwrite_cascade(t *testing.T) {
 	ctx := acctest.Context(t)
 	name := fmt.Sprintf("%s_%s", t.Name(), sdkacctest.RandString(10))
@@ -504,7 +504,7 @@ func TestAccSSMParameter_Overwrite_cascade(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/18550
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/18550
 func TestAccSSMParameter_Overwrite_tags(t *testing.T) {
 	ctx := acctest.Context(t)
 	var param awstypes.Parameter
@@ -538,7 +538,7 @@ func TestAccSSMParameter_Overwrite_tags(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/18550
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/18550
 func TestAccSSMParameter_Overwrite_noOverwriteTags(t *testing.T) {
 	ctx := acctest.Context(t)
 	var param awstypes.Parameter
@@ -572,7 +572,7 @@ func TestAccSSMParameter_Overwrite_noOverwriteTags(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/18550
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/18550
 func TestAccSSMParameter_Overwrite_updateToTags(t *testing.T) {
 	ctx := acctest.Context(t)
 	var param awstypes.Parameter
@@ -1073,7 +1073,7 @@ func TestAccSSMParameter_importByARN(t *testing.T) {
 				),
 			},
 			// Test import by ARN.
-			// https://github.com/hashicorp/terraform-provider-aws/issues/39050.
+			// https://github.com/isometry/terraform-provider-faws/issues/39050.
 			{
 				ResourceName: resourceName,
 				ImportState:  true,

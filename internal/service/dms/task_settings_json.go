@@ -10,7 +10,7 @@ import (
 	"github.com/hashicorp/go-cty/cty"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
 )
 
 func suppressEquivalentTaskSettings(k, state, proposed string, d *schema.ResourceData) bool {

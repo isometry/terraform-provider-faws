@@ -1,4 +1,4 @@
-module github.com/hashicorp/terraform-provider-aws/tools
+module github.com/isometry/terraform-provider-faws/tools
 
 go 1.23.5
 

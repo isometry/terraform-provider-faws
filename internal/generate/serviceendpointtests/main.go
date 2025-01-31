@@ -12,9 +12,9 @@ import (
 	"strings"
 
 	"github.com/hashicorp/aws-sdk-go-base/v2/endpoints"
-	"github.com/hashicorp/terraform-provider-aws/internal/generate/common"
-	"github.com/hashicorp/terraform-provider-aws/names/data"
-	namesgen "github.com/hashicorp/terraform-provider-aws/names/generate"
+	"github.com/isometry/terraform-provider-faws/internal/generate/common"
+	"github.com/isometry/terraform-provider-faws/names/data"
+	namesgen "github.com/isometry/terraform-provider-faws/names/generate"
 )
 
 const (

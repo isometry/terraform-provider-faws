@@ -14,10 +14,10 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/generate/common"
-	"github.com/hashicorp/terraform-provider-aws/internal/generate/tags/templates"
-	"github.com/hashicorp/terraform-provider-aws/names"
-	"github.com/hashicorp/terraform-provider-aws/names/data"
+	"github.com/isometry/terraform-provider-faws/internal/generate/common"
+	"github.com/isometry/terraform-provider-faws/internal/generate/tags/templates"
+	"github.com/isometry/terraform-provider-faws/names"
+	"github.com/isometry/terraform-provider-faws/names/data"
 )
 
 const (

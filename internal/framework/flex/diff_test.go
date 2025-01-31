@@ -9,7 +9,7 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	fwflex "github.com/hashicorp/terraform-provider-aws/internal/framework/flex"
+	fwflex "github.com/isometry/terraform-provider-faws/internal/framework/flex"
 )
 
 type testResourceData1 struct {

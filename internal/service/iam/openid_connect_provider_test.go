@@ -11,11 +11,11 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfiam "github.com/hashicorp/terraform-provider-aws/internal/service/iam"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfiam "github.com/isometry/terraform-provider-faws/internal/service/iam"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccIAMOpenIDConnectProvider_basic(t *testing.T) {
@@ -130,7 +130,7 @@ func TestAccIAMOpenIDConnectProvider_Thumbprints_withToWithout(t *testing.T) {
 						"266362248691-342342xasdasdasda-apps.googleusercontent.com"),
 					resource.TestCheckResourceAttr(resourceName, "thumbprint_list.#", "1"),
 					// This is a bug: the thumbprint should be the AWS provided for the top intermediate CA of the OIDC IdP
-					// See https://github.com/hashicorp/terraform-provider-aws/issues/40509
+					// See https://github.com/isometry/terraform-provider-faws/issues/40509
 					//resource.TestCheckResourceAttr(resourceName, "thumbprint_list.0", "08745487e891c19e3078c1f2a07e452950ef36f6"),
 					resource.TestCheckResourceAttr(resourceName, acctest.CtTagsPercent, "0"),
 				),

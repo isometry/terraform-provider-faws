@@ -8,7 +8,7 @@ import (
 	"time"
 
 	awstypes "github.com/aws/aws-sdk-go-v2/service/kms/types"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
 )
 
 const (

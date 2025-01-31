@@ -16,11 +16,11 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs/sdkdiag"
-	tfslices "github.com/hashicorp/terraform-provider-aws/internal/slices"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/internal/verify"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/errs/sdkdiag"
+	tfslices "github.com/isometry/terraform-provider-faws/internal/slices"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/verify"
 )
 
 // @SDKResource("aws_storagegateway_upload_buffer", name="Upload Buffer")
@@ -73,7 +73,7 @@ func resourceUploadBufferCreate(ctx context.Context, d *schema.ResourceData, met
 		input.DiskIds = []string{diskID}
 	}
 
-	// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/17809.
+	// Reference: https://github.com/isometry/terraform-provider-faws/issues/17809.
 	var diskPath string
 	if v, ok := d.GetOk("disk_path"); ok {
 		diskPath = v.(string)

@@ -12,8 +12,8 @@ import (
 	awstypes "github.com/aws/aws-sdk-go-v2/service/synthetics/types"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-aws/internal/enum"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/enum"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
 )
 
 func retryCreateCanary(ctx context.Context, conn *synthetics.Client, d *schema.ResourceData, input *synthetics.CreateCanaryInput) (*awstypes.Canary, error) {

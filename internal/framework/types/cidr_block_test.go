@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/attr/xattr"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-go/tftypes"
-	fwtypes "github.com/hashicorp/terraform-provider-aws/internal/framework/types"
+	fwtypes "github.com/isometry/terraform-provider-faws/internal/framework/types"
 )
 
 func TestCIDRBlockTypeValueFromTerraform(t *testing.T) {

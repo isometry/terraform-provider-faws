@@ -18,11 +18,11 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfelbv2 "github.com/hashicorp/terraform-provider-aws/internal/service/elbv2"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfelbv2 "github.com/isometry/terraform-provider-faws/internal/service/elbv2"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestLBListenerARNFromRuleARN(t *testing.T) {
@@ -1349,7 +1349,7 @@ func TestAccELBV2ListenerRule_Action_specifyOrder(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/6171
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/6171
 func TestAccELBV2ListenerRule_Action_actionDisappears(t *testing.T) {
 	ctx := acctest.Context(t)
 	var rule awstypes.Rule
@@ -1453,7 +1453,7 @@ func TestAccELBV2ListenerRule_EmptyAction(t *testing.T) {
 	}
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/35668.
+// https://github.com/isometry/terraform-provider-faws/issues/35668.
 func TestAccELBV2ListenerRule_redirectWithTargetGroupARN(t *testing.T) {
 	ctx := acctest.Context(t)
 	var conf awstypes.Rule

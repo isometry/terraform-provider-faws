@@ -10,9 +10,9 @@ import (
 	awstypes "github.com/aws/aws-sdk-go-v2/service/opensearch/types"
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfopensearch "github.com/hashicorp/terraform-provider-aws/internal/service/opensearch"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfopensearch "github.com/isometry/terraform-provider-faws/internal/service/opensearch"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccOpenSearchOutboundConnection_basic(t *testing.T) {

@@ -36,7 +36,7 @@ import (
 	"github.com/hashicorp/go-version"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/tfversion"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
 )
 {{ if .IncludeComments }}
 // TIP: File Structure. The basic outline for all test files should be as

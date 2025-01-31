@@ -6,9 +6,9 @@ package dms_test
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfdms "github.com/hashicorp/terraform-provider-aws/internal/service/dms"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfdms "github.com/isometry/terraform-provider-faws/internal/service/dms"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestTaskSettingsEqual(t *testing.T) {

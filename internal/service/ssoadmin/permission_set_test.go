@@ -11,11 +11,11 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfssoadmin "github.com/hashicorp/terraform-provider-aws/internal/service/ssoadmin"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfssoadmin "github.com/isometry/terraform-provider-faws/internal/service/ssoadmin"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccSSOAdminPermissionSet_basic(t *testing.T) {
@@ -204,7 +204,7 @@ func TestAccSSOAdminPermissionSet_updateSessionDuration(t *testing.T) {
 
 // TestAccSSOAdminPermissionSet_RelayState_updateSessionDuration validates
 // the resource's unchanged values (primarily relay_state) after updating the session_duration argument
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/17411
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/17411
 func TestAccSSOAdminPermissionSet_RelayState_updateSessionDuration(t *testing.T) {
 	ctx := acctest.Context(t)
 	resourceName := "aws_ssoadmin_permission_set.test"

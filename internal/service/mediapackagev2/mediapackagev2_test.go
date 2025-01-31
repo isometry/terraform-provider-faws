@@ -6,7 +6,7 @@ package mediapackagev2_test
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
 )
 
 // The Default AWS Quota for how many MediaPackage V2 Channel Groups you can have is 3

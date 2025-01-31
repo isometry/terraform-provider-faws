@@ -14,8 +14,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/hashicorp/terraform-provider-aws/names"
-	"github.com/hashicorp/terraform-provider-aws/skaff/convert"
+	"github.com/isometry/terraform-provider-faws/names"
+	"github.com/isometry/terraform-provider-faws/skaff/convert"
 )
 
 //go:embed function.gtpl

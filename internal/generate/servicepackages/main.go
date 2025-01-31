@@ -14,8 +14,8 @@ import (
 	"os"
 	"slices"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/generate/common"
-	"github.com/hashicorp/terraform-provider-aws/names/data"
+	"github.com/isometry/terraform-provider-faws/internal/generate/common"
+	"github.com/isometry/terraform-provider-faws/names/data"
 )
 
 func main() {

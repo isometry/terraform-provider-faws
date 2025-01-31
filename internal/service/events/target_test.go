@@ -17,11 +17,11 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfevents "github.com/hashicorp/terraform-provider-aws/internal/service/events"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfevents "github.com/isometry/terraform-provider-faws/internal/service/events"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestTargetParseImportID(t *testing.T) {
@@ -522,7 +522,7 @@ func TestAccEventsTarget_http(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/23805
+// https://github.com/isometry/terraform-provider-faws/issues/23805
 func TestAccEventsTarget_http_params(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v types.Target
@@ -649,7 +649,7 @@ func TestAccEventsTarget_redshift(t *testing.T) {
 
 // TestAccEventsTarget_ecsWithoutLaunchType verifies Event Target resources
 // can be created without a specified LaunchType
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/16078
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/16078
 func TestAccEventsTarget_ecsWithoutLaunchType(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v types.Target

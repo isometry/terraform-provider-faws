@@ -8,7 +8,7 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-framework-validators/helpers/validatordiag"
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
-	itypes "github.com/hashicorp/terraform-provider-aws/internal/types"
+	itypes "github.com/isometry/terraform-provider-faws/internal/types"
 )
 
 // awsAccountIDValidator validates that a string Attribute's value is a valid AWS account ID.

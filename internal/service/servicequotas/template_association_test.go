@@ -14,11 +14,11 @@ import (
 	"github.com/hashicorp/aws-sdk-go-base/v2/endpoints"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/create"
-	tfservicequotas "github.com/hashicorp/terraform-provider-aws/internal/service/servicequotas"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/create"
+	tfservicequotas "github.com/isometry/terraform-provider-faws/internal/service/servicequotas"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func testAccTemplateAssociation_basic(t *testing.T) {

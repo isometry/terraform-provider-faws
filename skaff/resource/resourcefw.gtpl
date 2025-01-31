@@ -53,16 +53,16 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
-	"github.com/hashicorp/terraform-provider-aws/internal/create"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/internal/framework"
-	"github.com/hashicorp/terraform-provider-aws/internal/framework/flex"
-	fwtypes "github.com/hashicorp/terraform-provider-aws/internal/framework/types"
+	"github.com/isometry/terraform-provider-faws/internal/create"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/framework"
+	"github.com/isometry/terraform-provider-faws/internal/framework/flex"
+	fwtypes "github.com/isometry/terraform-provider-faws/internal/framework/types"
 {{- if .IncludeTags }}
-	tftags "github.com/hashicorp/terraform-provider-aws/internal/tags"
+	tftags "github.com/isometry/terraform-provider-faws/internal/tags"
 {{- end }}
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 {{- if .IncludeComments }}
 // TIP: ==== FILE STRUCTURE ====
@@ -162,7 +162,7 @@ func (r *resource{{ .Resource }}) Schema(ctx context.Context, req resource.Schem
 			{{- if .IncludeComments }}
 			// TIP: ==== "ID" ATTRIBUTE ====
 			// When using the Terraform Plugin Framework, there is no required "id" attribute.
-			// This is different from the Terraform Plugin SDK. 
+			// This is different from the Terraform Plugin SDK.
 			//
 			// Only include an "id" attribute if the AWS API has an "Id" field, such as "{{ .Resource }}Id"
 			{{- end }}
@@ -173,8 +173,8 @@ func (r *resource{{ .Resource }}) Schema(ctx context.Context, req resource.Schem
 				// TIP: ==== PLAN MODIFIERS ====
 				// Plan modifiers were introduced with Plugin-Framework to provide a mechanism
 				// for adjusting planned changes prior to apply. The planmodifier subpackage
-				// provides built-in modifiers for many common use cases such as 
-				// requiring replacement on a value change ("ForceNew: true" in Plugin-SDK 
+				// provides built-in modifiers for many common use cases such as
+				// requiring replacement on a value change ("ForceNew: true" in Plugin-SDK
 				// resources).
 				//
 				// See more:
@@ -201,12 +201,12 @@ func (r *resource{{ .Resource }}) Schema(ctx context.Context, req resource.Schem
 				CustomType: fwtypes.NewListNestedObjectTypeOf[complexArgumentModel](ctx),
 				{{- if .IncludeComments }}
 				// TIP: ==== LIST VALIDATORS ====
-				// List and set validators take the place of MaxItems and MinItems in 
+				// List and set validators take the place of MaxItems and MinItems in
 				// Plugin-Framework based resources. Use listvalidator.SizeAtLeast(1) to
-				// make a nested object required. Similar to Plugin-SDK, complex objects 
+				// make a nested object required. Similar to Plugin-SDK, complex objects
 				// can be represented as lists or sets with listvalidator.SizeAtMost(1).
 				//
-				// For a complete mapping of Plugin-SDK to Plugin-Framework schema fields, 
+				// For a complete mapping of Plugin-SDK to Plugin-Framework schema fields,
 				// see:
 				// https://developer.hashicorp.com/terraform/plugin/framework/migrating/attributes-blocks/blocks
 				{{- end }}
@@ -248,7 +248,7 @@ func (r *resource{{ .Resource }}) Create(ctx context.Context, req resource.Creat
 	// 4. Call the AWS create/put function
 	// 5. Using the output from the create function, set the minimum arguments
 	//    and attributes for the Read function to work, as well as any computed
-	//    only attributes. 
+	//    only attributes.
 	// 6. Use a waiter to wait for create to complete
 	// 7. Save the request plan to response state
 	{{- end }}
@@ -716,9 +716,9 @@ func find{{ .Resource }}ByID(ctx context.Context, conn *{{ .ServiceLower }}.Clie
 // With Terraform Plugin-Framework configurations are deserialized into
 // Go types, providing type safety without the need for type assertions.
 // These structs should match the schema definition exactly, and the `tfsdk`
-// tag value should match the attribute name. 
+// tag value should match the attribute name.
 //
-// Nested objects are represented in their own data struct. These will 
+// Nested objects are represented in their own data struct. These will
 // also have a corresponding attribute type mapping for use inside flex
 // functions.
 //

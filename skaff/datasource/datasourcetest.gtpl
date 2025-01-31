@@ -50,17 +50,17 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/create"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/create"
 {{- if .IncludeComments }}
 
 	// TIP: You will often need to import the package that this test file lives
     // in. Since it is in the "test" context, it must import the package to use
     // any normal context constants, variables, or functions.
 {{- end }}
-	tf{{ .ServicePackage }} "github.com/hashicorp/terraform-provider-aws/internal/service/{{ .ServicePackage }}"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	tf{{ .ServicePackage }} "github.com/isometry/terraform-provider-faws/internal/service/{{ .ServicePackage }}"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 {{ if .IncludeComments }}
 // TIP: File Structure. The basic outline for all test files should be as

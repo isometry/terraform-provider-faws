@@ -9,7 +9,7 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-framework/attr"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	fwtypes "github.com/hashicorp/terraform-provider-aws/internal/framework/types"
+	fwtypes "github.com/isometry/terraform-provider-faws/internal/framework/types"
 )
 
 func TestMultisetListSemanticEquals(t *testing.T) {

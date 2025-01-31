@@ -126,7 +126,7 @@ function analysis {
         cputime_emoji=":white_check_mark:"
     fi
 
-    printf "##teamcity[notification notifier='slack' message='*Performance changes from latest version (%%s) to main* |nAllocated memory: %%.1f%%%% (%%.1fMB to %%.1fMB) (%%s) %%s |nIn-use memory: %%.1f%%%% (%%.1fMB to %%.1fMB) (%%s) (wide-fluctuations normal) |nCPU time: %%.1f%%%% (%%.1fs to %%.1fs) (%%s) %%s' sendTo='CN0G9S7M4' connectionId='PROJECT_EXT_8']\n" "$(basename $(curl -Ls -o /dev/null -w %%{url_effective} https://github.com/hashicorp/terraform-provider-aws/releases/latest))" "${alloc}" "${alloc_mb_latest}" "${alloc_mb_main}" "${alloc_bw}" "${alloc_emoji}" "${inuse}" "${inuse_mb_latest}" "${inuse_mb_main}" "${inuse_bw}" "${cputime}" "${cputime_s_latest}" "${cputime_s_main}" "${cputime_bw}" "${cputime_emoji}"
+    printf "##teamcity[notification notifier='slack' message='*Performance changes from latest version (%%s) to main* |nAllocated memory: %%.1f%%%% (%%.1fMB to %%.1fMB) (%%s) %%s |nIn-use memory: %%.1f%%%% (%%.1fMB to %%.1fMB) (%%s) (wide-fluctuations normal) |nCPU time: %%.1f%%%% (%%.1fs to %%.1fs) (%%s) %%s' sendTo='CN0G9S7M4' connectionId='PROJECT_EXT_8']\n" "$(basename $(curl -Ls -o /dev/null -w %%{url_effective} https://github.com/isometry/terraform-provider-faws/releases/latest))" "${alloc}" "${alloc_mb_latest}" "${alloc_mb_main}" "${alloc_bw}" "${alloc_emoji}" "${inuse}" "${inuse_mb_latest}" "${inuse_mb_main}" "${inuse_bw}" "${cputime}" "${cputime_s_latest}" "${cputime_s_main}" "${cputime_bw}" "${cputime_emoji}"
 }
 
 if [ -f "memvpcmain.prof" -a -f "memssmmain.prof" -a -f "memvpclatest.prof" -a -f "memssmlatest.prof" ]; then
@@ -135,13 +135,13 @@ if [ -f "memvpcmain.prof" -a -f "memssmmain.prof" -a -f "memvpclatest.prof" -a -
 fi
 
 if [ -f "memvpcmain.prof" -a -f "memssmmain.prof" -a -f "memvpclatest.prof" -a ! -f "memssmlatest.prof" ]; then
-    echo "Running SSM latest version ($(basename $(curl -Ls -o /dev/null -w %%{url_effective} https://github.com/hashicorp/terraform-provider-aws/releases/latest))) test..."
+    echo "Running SSM latest version ($(basename $(curl -Ls -o /dev/null -w %%{url_effective} https://github.com/isometry/terraform-provider-faws/releases/latest))) test..."
     ssmtest ssmlatest
 fi
 
 if [ -f "memvpcmain.prof" -a -f "memssmmain.prof" -a ! -f "memvpclatest.prof" ]; then
-    echo "Running VPC latest version ($(basename $(curl -Ls -o /dev/null -w %%{url_effective} https://github.com/hashicorp/terraform-provider-aws/releases/latest))) test..."
-    git checkout $(basename $(curl -Ls -o /dev/null -w %%{url_effective} https://github.com/hashicorp/terraform-provider-aws/releases/latest))
+    echo "Running VPC latest version ($(basename $(curl -Ls -o /dev/null -w %%{url_effective} https://github.com/isometry/terraform-provider-faws/releases/latest))) test..."
+    git checkout $(basename $(curl -Ls -o /dev/null -w %%{url_effective} https://github.com/isometry/terraform-provider-faws/releases/latest))
     vpctest vpclatest
 fi
 

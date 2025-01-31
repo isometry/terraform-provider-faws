@@ -8,7 +8,7 @@ import (
 
 	r53rcc "github.com/aws/aws-sdk-go-v2/service/route53recoverycontrolconfig"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
 )
 
 func statusCluster(ctx context.Context, conn *r53rcc.Client, clusterArn string) retry.StateRefreshFunc {

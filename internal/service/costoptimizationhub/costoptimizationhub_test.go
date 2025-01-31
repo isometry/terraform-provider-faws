@@ -6,7 +6,7 @@ package costoptimizationhub_test
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
 )
 
 func TestAccCostOptimizationHub_serial(t *testing.T) {

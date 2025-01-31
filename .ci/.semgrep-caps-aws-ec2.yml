@@ -59,7 +59,7 @@ rules:
   - id: caps0-in-func-name
     languages:
       - go
-    message: Use correct caps in func name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in func name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal
@@ -74,7 +74,7 @@ rules:
   - id: caps0-in-const-name
     languages:
       - go
-    message: Use correct caps in const name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in const name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal
@@ -88,7 +88,7 @@ rules:
   - id: caps0-in-var-name
     languages:
       - go
-    message: Use correct caps in var name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in var name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal
@@ -102,7 +102,7 @@ rules:
   - id: caps1-in-func-name
     languages:
       - go
-    message: Use correct caps in func name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in func name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal
@@ -117,7 +117,7 @@ rules:
   - id: caps1-in-const-name
     languages:
       - go
-    message: Use correct caps in const name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in const name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal
@@ -131,7 +131,7 @@ rules:
   - id: caps1-in-var-name
     languages:
       - go
-    message: Use correct caps in var name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in var name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal
@@ -145,7 +145,7 @@ rules:
   - id: caps2-in-func-name
     languages:
       - go
-    message: Use correct caps in func name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in func name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal
@@ -160,7 +160,7 @@ rules:
   - id: caps2-in-const-name
     languages:
       - go
-    message: Use correct caps in const name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in const name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal
@@ -174,7 +174,7 @@ rules:
   - id: caps2-in-var-name
     languages:
       - go
-    message: Use correct caps in var name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in var name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal
@@ -188,7 +188,7 @@ rules:
   - id: caps3-in-func-name
     languages:
       - go
-    message: Use correct caps in func name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in func name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal
@@ -203,7 +203,7 @@ rules:
   - id: caps3-in-const-name
     languages:
       - go
-    message: Use correct caps in const name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in const name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal
@@ -217,7 +217,7 @@ rules:
   - id: caps3-in-var-name
     languages:
       - go
-    message: Use correct caps in var name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in var name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal
@@ -231,7 +231,7 @@ rules:
   - id: caps4-in-func-name
     languages:
       - go
-    message: Use correct caps in func name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in func name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal
@@ -246,7 +246,7 @@ rules:
   - id: caps4-in-const-name
     languages:
       - go
-    message: Use correct caps in const name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in const name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal
@@ -260,7 +260,7 @@ rules:
   - id: caps4-in-var-name
     languages:
       - go
-    message: Use correct caps in var name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in var name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal
@@ -274,7 +274,7 @@ rules:
   - id: caps5-in-func-name
     languages:
       - go
-    message: Use correct caps in func name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in func name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal
@@ -289,7 +289,7 @@ rules:
   - id: caps5-in-const-name
     languages:
       - go
-    message: Use correct caps in const name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in const name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal
@@ -303,7 +303,7 @@ rules:
   - id: caps5-in-var-name
     languages:
       - go
-    message: Use correct caps in var name (i.e., HTTPS or https, not Https) (see list at https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md)
+    message: Use correct caps in var name (i.e., HTTPS or https, not Https) (see list at https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md)
     paths:
       include:
         - internal

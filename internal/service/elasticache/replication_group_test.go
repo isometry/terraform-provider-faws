@@ -23,12 +23,12 @@ import (
 	"github.com/hashicorp/terraform-plugin-testing/statecheck"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
 	"github.com/hashicorp/terraform-plugin-testing/tfjsonpath"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfelasticache "github.com/hashicorp/terraform-provider-aws/internal/service/elasticache"
-	tfslices "github.com/hashicorp/terraform-provider-aws/internal/slices"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfelasticache "github.com/isometry/terraform-provider-faws/internal/service/elasticache"
+	tfslices "github.com/isometry/terraform-provider-faws/internal/slices"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccElastiCacheReplicationGroup_Redis_basic(t *testing.T) {
@@ -741,7 +741,7 @@ func TestAccElastiCacheReplicationGroup_stateUpgrade5270(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/38464.
+// https://github.com/isometry/terraform-provider-faws/issues/38464.
 func TestAccElastiCacheReplicationGroup_stateUpgrade5590(t *testing.T) {
 	ctx := acctest.Context(t)
 	if testing.Short() {

@@ -8,7 +8,7 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-framework/datasource/schema"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	fwtypes "github.com/hashicorp/terraform-provider-aws/internal/framework/types"
+	fwtypes "github.com/isometry/terraform-provider-faws/internal/framework/types"
 )
 
 // DataSourceComputedListOfObjectAttribute returns a new schema.ListAttribute for objects of the specified type.

@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
-	tfroute53resolver "github.com/hashicorp/terraform-provider-aws/internal/service/route53resolver"
+	tfroute53resolver "github.com/isometry/terraform-provider-faws/internal/service/route53resolver"
 )
 
 func TestValidResolverName(t *testing.T) {

@@ -15,8 +15,8 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/s3/types"
 	smithy "github.com/aws/smithy-go"
 	"github.com/hashicorp/aws-sdk-go-base/v2/tfawserr"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	tfslices "github.com/hashicorp/terraform-provider-aws/internal/slices"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	tfslices "github.com/isometry/terraform-provider-faws/internal/slices"
 )
 
 // emptyBucket empties the specified S3 general purpose bucket by deleting all object versions and delete markers.

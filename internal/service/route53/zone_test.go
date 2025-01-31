@@ -15,11 +15,11 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfroute53 "github.com/hashicorp/terraform-provider-aws/internal/service/route53"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfroute53 "github.com/isometry/terraform-provider-faws/internal/service/route53"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccRoute53Zone_basic(t *testing.T) {
@@ -53,7 +53,7 @@ func TestAccRoute53Zone_basic(t *testing.T) {
 				ImportStateVerifyIgnore: []string{names.AttrForceDestroy},
 			},
 			// Test import using an ID with "/hosrtezone/" prefix.
-			// https://github.com/hashicorp/terraform-provider-aws/issues/37817.
+			// https://github.com/isometry/terraform-provider-faws/issues/37817.
 			{
 				ResourceName: resourceName,
 				ImportState:  true,
@@ -400,7 +400,7 @@ func TestAccRoute53Zone_VPC_updates(t *testing.T) {
 // Excercises exception handling during forced destruction in partitions
 // which do no support DNSSEC (e.g. GovCloud).
 //
-// Ref: https://github.com/hashicorp/terraform-provider-aws/issues/22334
+// Ref: https://github.com/isometry/terraform-provider-faws/issues/22334
 func TestAccRoute53Zone_VPC_single_forceDestroy(t *testing.T) {
 	ctx := acctest.Context(t)
 	var zone route53.GetHostedZoneOutput

@@ -8,9 +8,9 @@ import (
 	"testing"
 
 	awstypes "github.com/aws/aws-sdk-go-v2/service/computeoptimizer/types"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfcomputeoptimizer "github.com/hashicorp/terraform-provider-aws/internal/service/computeoptimizer"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfcomputeoptimizer "github.com/isometry/terraform-provider-faws/internal/service/computeoptimizer"
 )
 
 func TestAccComputeOptimizer_serial(t *testing.T) {

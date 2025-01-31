@@ -11,7 +11,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/kinesis"
 	smithyendpoints "github.com/aws/smithy-go/endpoints"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
 )
 
 var _ kinesis.EndpointResolverV2 = resolverV2{}

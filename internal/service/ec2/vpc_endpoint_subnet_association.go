@@ -16,10 +16,10 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs/sdkdiag"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/errs/sdkdiag"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // @SDKResource("aws_vpc_endpoint_subnet_association", name="VPC Endpoint Subnet Association")
@@ -68,7 +68,7 @@ func resourceVPCEndpointSubnetAssociationCreate(ctx context.Context, d *schema.R
 
 	log.Printf("[DEBUG] Creating VPC Endpoint Subnet Association: %v", input)
 
-	// See https://github.com/hashicorp/terraform-provider-aws/issues/3382.
+	// See https://github.com/isometry/terraform-provider-faws/issues/3382.
 	// Prevent concurrent subnet association requests and delay between requests.
 	mk := "vpc_endpoint_subnet_association_" + endpointID
 	conns.GlobalMutexKV.Lock(mk)

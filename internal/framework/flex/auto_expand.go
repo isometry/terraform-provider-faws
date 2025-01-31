@@ -14,8 +14,8 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/types/basetypes"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
-	fwtypes "github.com/hashicorp/terraform-provider-aws/internal/framework/types"
-	smithyjson "github.com/hashicorp/terraform-provider-aws/internal/json"
+	fwtypes "github.com/isometry/terraform-provider-faws/internal/framework/types"
+	smithyjson "github.com/isometry/terraform-provider-faws/internal/json"
 )
 
 // Expand  = TF -->  AWS

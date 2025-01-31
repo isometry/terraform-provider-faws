@@ -19,11 +19,11 @@ import (
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/plancheck"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfelbv2 "github.com/hashicorp/terraform-provider-aws/internal/service/elbv2"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfelbv2 "github.com/isometry/terraform-provider-faws/internal/service/elbv2"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccELBV2Listener_Application_basic(t *testing.T) {
@@ -377,7 +377,7 @@ func TestAccELBV2Listener_Forward_ingest(t *testing.T) {
 			// The config just applied does not include default_action.0.target_group_arn as verified above.
 			// This cannot be imported without changes because default_action.0.target_group_arn will be set and
 			// will show as a diff.
-			// See: https://github.com/hashicorp/terraform-provider-aws/issues/37211
+			// See: https://github.com/isometry/terraform-provider-faws/issues/37211
 			{
 				ResourceName: resourceName,
 				ImportState:  true,
@@ -1866,7 +1866,7 @@ func TestAccELBV2Listener_DefaultAction_specifyOrder(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/6171
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/6171
 func TestAccELBV2Listener_DefaultAction_actionDisappears(t *testing.T) {
 	ctx := acctest.Context(t)
 	var listener awstypes.Listener
@@ -1977,7 +1977,7 @@ func TestAccELBV2Listener_DefaultAction_empty(t *testing.T) {
 	}
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/35668.
+// https://github.com/isometry/terraform-provider-faws/issues/35668.
 func TestAccELBV2Listener_redirectWithTargetGroupARN(t *testing.T) {
 	ctx := acctest.Context(t)
 	var conf awstypes.Listener

@@ -6,7 +6,7 @@ package conns
 import (
 	"context"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/types"
+	"github.com/isometry/terraform-provider-faws/internal/types"
 )
 
 // ServicePackage is the minimal interface exported from each AWS service package.

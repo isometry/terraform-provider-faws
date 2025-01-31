@@ -19,14 +19,14 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs/sdkdiag"
-	"github.com/hashicorp/terraform-provider-aws/internal/flex"
-	tftags "github.com/hashicorp/terraform-provider-aws/internal/tags"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/internal/verify"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs/sdkdiag"
+	"github.com/isometry/terraform-provider-faws/internal/flex"
+	tftags "github.com/isometry/terraform-provider-faws/internal/tags"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/verify"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // @SDKResource("aws_servicecatalog_provisioned_product", name="Provisioned Product")
@@ -442,7 +442,7 @@ func resourceProvisionedProductRead(ctx context.Context, d *schema.ResourceData,
 	// Previously, we waited for the record to only return a target state of 'SUCCEEDED' or 'AVAILABLE'
 	// but this can interfere complete reads of this resource when an error occurs after initial creation
 	// or after an invalid update that returns a 'FAILED' record state. Thus, waiters are now present in the CREATE and UPDATE methods of this resource instead.
-	// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/24574#issuecomment-1126339193
+	// Reference: https://github.com/isometry/terraform-provider-faws/issues/24574#issuecomment-1126339193
 	recordInput := &servicecatalog.DescribeRecordInput{
 		Id:             detail.LastProvisioningRecordId,
 		AcceptLanguage: aws.String(acceptLanguage),
@@ -517,7 +517,7 @@ func resourceProvisionedProductUpdate(ctx context.Context, d *schema.ResourceDat
 
 	// check provisioning_artifact_name first. provisioning_artrifact_id is optional/computed
 	// and will always be set by the time update is called
-	// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/26271
+	// Reference: https://github.com/isometry/terraform-provider-faws/issues/26271
 	if v, ok := d.GetOk("provisioning_artifact_name"); ok {
 		input.ProvisioningArtifactName = aws.String(v.(string))
 	} else if v, ok := d.GetOk("provisioning_artifact_id"); ok {

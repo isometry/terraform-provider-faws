@@ -14,11 +14,11 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfnetworkfirewall "github.com/hashicorp/terraform-provider-aws/internal/service/networkfirewall"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfnetworkfirewall "github.com/isometry/terraform-provider-faws/internal/service/networkfirewall"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccNetworkFirewallRuleGroup_Basic_rulesSourceList(t *testing.T) {
@@ -415,7 +415,7 @@ func TestAccNetworkFirewallRuleGroup_statelessRuleWithCustomAction(t *testing.T)
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/19414
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/19414
 func TestAccNetworkFirewallRuleGroup_updateRules(t *testing.T) {
 	ctx := acctest.Context(t)
 	var ruleGroup networkfirewall.DescribeRuleGroupOutput
@@ -641,7 +641,7 @@ func TestAccNetworkFirewallRuleGroup_updateStatefulRule(t *testing.T) {
 
 // TestAccNetworkFirewallRuleGroup_updateMultipleStatefulRules validates
 // in-place updates to stateful_rule configuration blocks
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/16868
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/16868
 func TestAccNetworkFirewallRuleGroup_updateMultipleStatefulRules(t *testing.T) {
 	ctx := acctest.Context(t)
 	var ruleGroup networkfirewall.DescribeRuleGroupOutput
@@ -718,7 +718,7 @@ func TestAccNetworkFirewallRuleGroup_updateMultipleStatefulRules(t *testing.T) {
 
 // TestAccNetworkFirewallRuleGroup_StatefulRule_action validates in-place
 // updates to the "action" argument within 1 stateful_rule configuration block
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/16868
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/16868
 func TestAccNetworkFirewallRuleGroup_StatefulRule_action(t *testing.T) {
 	ctx := acctest.Context(t)
 	var ruleGroup networkfirewall.DescribeRuleGroupOutput
@@ -787,7 +787,7 @@ func TestAccNetworkFirewallRuleGroup_StatefulRule_action(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/16470
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/16470
 func TestAccNetworkFirewallRuleGroup_StatefulRule_header(t *testing.T) {
 	ctx := acctest.Context(t)
 	var ruleGroup networkfirewall.DescribeRuleGroupOutput

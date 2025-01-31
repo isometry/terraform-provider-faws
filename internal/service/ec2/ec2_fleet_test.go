@@ -18,11 +18,11 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfec2 "github.com/hashicorp/terraform-provider-aws/internal/service/ec2"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfec2 "github.com/isometry/terraform-provider-faws/internal/service/ec2"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccEC2Fleet_basic(t *testing.T) {
@@ -3112,7 +3112,7 @@ func TestAccEC2Fleet_type_instant(t *testing.T) {
 	})
 }
 
-// Test for the bug described in https://github.com/hashicorp/terraform-provider-aws/issues/6777
+// Test for the bug described in https://github.com/isometry/terraform-provider-faws/issues/6777
 func TestAccEC2Fleet_templateMultipleNetworkInterfaces(t *testing.T) {
 	ctx := acctest.Context(t)
 	var fleet1 awstypes.FleetData

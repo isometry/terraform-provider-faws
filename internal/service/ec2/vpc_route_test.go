@@ -14,11 +14,11 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfec2 "github.com/hashicorp/terraform-provider-aws/internal/service/ec2"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfec2 "github.com/isometry/terraform-provider-faws/internal/service/ec2"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // IPv4 to Internet Gateway.
@@ -1603,7 +1603,7 @@ func TestAccVPCRoute_localRouteCreateError(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/11455.
+// https://github.com/isometry/terraform-provider-faws/issues/11455.
 func TestAccVPCRoute_localRouteImport(t *testing.T) {
 	ctx := acctest.Context(t)
 	var routeTable awstypes.RouteTable
@@ -1644,7 +1644,7 @@ func TestAccVPCRoute_localRouteImport(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/21350.
+// https://github.com/isometry/terraform-provider-faws/issues/21350.
 func TestAccVPCRoute_localRouteImportAndUpdate(t *testing.T) {
 	ctx := acctest.Context(t)
 	var routeTable awstypes.RouteTable

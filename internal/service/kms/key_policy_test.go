@@ -11,9 +11,9 @@ import (
 	awstypes "github.com/aws/aws-sdk-go-v2/service/kms/types"
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfkms "github.com/hashicorp/terraform-provider-aws/internal/service/kms"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfkms "github.com/isometry/terraform-provider-faws/internal/service/kms"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccKMSKeyPolicy_basic(t *testing.T) {
@@ -219,7 +219,7 @@ func TestAccKMSKeyPolicy_iamRoleUpdate(t *testing.T) {
 	})
 }
 
-// // Reference: https://github.com/hashicorp/terraform-provider-aws/issues/11801
+// // Reference: https://github.com/isometry/terraform-provider-faws/issues/11801
 func TestAccKMSKeyPolicy_iamRoleOrder(t *testing.T) {
 	ctx := acctest.Context(t)
 	var key awstypes.KeyMetadata
@@ -263,7 +263,7 @@ func TestAccKMSKeyPolicy_iamRoleOrder(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/7646.
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/7646.
 func TestAccKMSKeyPolicy_iamServiceLinkedRole(t *testing.T) {
 	ctx := acctest.Context(t)
 	var key awstypes.KeyMetadata

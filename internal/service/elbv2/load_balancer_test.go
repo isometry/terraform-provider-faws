@@ -18,11 +18,11 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfelbv2 "github.com/hashicorp/terraform-provider-aws/internal/service/elbv2"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfelbv2 "github.com/isometry/terraform-provider-faws/internal/service/elbv2"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func init() {
@@ -2289,7 +2289,7 @@ resource "aws_lb" "test" {
   }
 }
 
-# See https://github.com/hashicorp/terraform-provider-aws/issues/2498
+# See https://github.com/isometry/terraform-provider-faws/issues/2498
 output "lb_name" {
   value = aws_lb.test.name
 }

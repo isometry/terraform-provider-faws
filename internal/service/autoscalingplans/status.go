@@ -8,7 +8,7 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/service/autoscalingplans"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
 )
 
 func statusScalingPlanCode(ctx context.Context, conn *autoscalingplans.Client, scalingPlanName string, scalingPlanVersion int) retry.StateRefreshFunc {

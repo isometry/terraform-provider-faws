@@ -10,9 +10,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/rds/types"
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfrds "github.com/hashicorp/terraform-provider-aws/internal/service/rds"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfrds "github.com/isometry/terraform-provider-faws/internal/service/rds"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccRDSClustersDataSource_filter(t *testing.T) {

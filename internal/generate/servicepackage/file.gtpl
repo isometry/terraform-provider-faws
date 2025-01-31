@@ -12,10 +12,10 @@ import (
 {{- if gt (len .EndpointRegionOverrides) 0 }}
 	"github.com/hashicorp/aws-sdk-go-base/v2/endpoints"
 {{- end }}
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/types"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/types"
 {{- if ne .ProviderPackage "meta" }}
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/names"
 {{- end }}
 )
 

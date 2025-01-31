@@ -11,9 +11,9 @@ import (
 	"slices"
 	"text/template"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/generate/common"
-	namevaluesfilters "github.com/hashicorp/terraform-provider-aws/internal/namevaluesfilters"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/generate/common"
+	namevaluesfilters "github.com/isometry/terraform-provider-faws/internal/namevaluesfilters"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 type TemplateData struct {

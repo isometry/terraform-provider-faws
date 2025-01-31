@@ -303,7 +303,7 @@ The CloudFront distribution argument layout is a complex structure composed of s
 
 #### Cache Behavior Arguments
 
-~> **NOTE:** To achieve the setting of 'Use origin cache headers' without a linked cache policy, use the following TTL values: `minTtl` = 0, `maxTtl` = 31536000, `defaultTtl` = 86400. See [this issue](https://github.com/hashicorp/terraform-provider-aws/issues/19382) for additional context.
+~> **NOTE:** To achieve the setting of 'Use origin cache headers' without a linked cache policy, use the following TTL values: `minTtl` = 0, `maxTtl` = 31536000, `defaultTtl` = 86400. See [this issue](https://github.com/isometry/terraform-provider-faws/issues/19382) for additional context.
 
 * `allowedMethods` (Required) - Controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin.
 * `cachedMethods` (Required) - Controls whether CloudFront caches the response to requests using the specified HTTP methods.

@@ -14,7 +14,7 @@ import (
 	appconfigtypes "github.com/aws/aws-sdk-go-v2/service/appconfig/types"
 	smithy "github.com/aws/smithy-go"
 	smithyhttp "github.com/aws/smithy-go/transport/http"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
 )
 
 func TestAddIsErrorRetryables(t *testing.T) {
@@ -48,7 +48,7 @@ func TestAddIsErrorRetryables(t *testing.T) {
 			expected: true,
 		},
 		{
-			// https://github.com/hashicorp/terraform-provider-aws/issues/36975.
+			// https://github.com/isometry/terraform-provider-faws/issues/36975.
 			name: "appconfig ConflictException",
 			err: &smithy.OperationError{
 				ServiceID:     "AppConfig",

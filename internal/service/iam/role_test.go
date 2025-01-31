@@ -16,12 +16,12 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	tfiam "github.com/hashicorp/terraform-provider-aws/internal/service/iam"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	tfiam "github.com/isometry/terraform-provider-faws/internal/service/iam"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccIAMRole_basic(t *testing.T) {
@@ -188,8 +188,8 @@ func TestAccIAMRole_testNameChange(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/23288
-// https://github.com/hashicorp/terraform-provider-aws/issues/28833
+// https://github.com/isometry/terraform-provider-faws/issues/23288
+// https://github.com/isometry/terraform-provider-faws/issues/28833
 func TestAccIAMRole_diffs(t *testing.T) {
 	ctx := acctest.Context(t)
 	var conf awstypes.Role
@@ -326,7 +326,7 @@ func TestAccIAMRole_diffs(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/28835
+// https://github.com/isometry/terraform-provider-faws/issues/28835
 func TestAccIAMRole_diffsCondition(t *testing.T) {
 	ctx := acctest.Context(t)
 	var conf awstypes.Role
@@ -638,7 +638,7 @@ func TestAccIAMRole_InlinePolicy_basic(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/19444
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/19444
 func TestAccIAMRole_InlinePolicy_ignoreOrder(t *testing.T) {
 	ctx := acctest.Context(t)
 	var role awstypes.Role

@@ -60,7 +60,7 @@ class MyConvertedCode extends TerraformStack {
       codeRepositoryName: "my-notebook-instance-code-repo",
       gitConfig: {
         repositoryUrl:
-          "https://github.com/hashicorp/terraform-provider-aws.git",
+          "https://github.com/isometry/terraform-provider-faws.git",
       },
     });
     new SagemakerNotebookInstance(this, "ni", {

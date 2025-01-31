@@ -6,7 +6,7 @@ package sfn
 import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	awstypes "github.com/aws/aws-sdk-go-v2/service/sfn/types"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func expandEncryptionConfiguration(tfMap map[string]interface{}) *awstypes.EncryptionConfiguration {

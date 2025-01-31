@@ -9,7 +9,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/apigateway/types"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-aws/internal/enum"
+	"github.com/isometry/terraform-provider-faws/internal/enum"
 )
 
 func validHTTPMethod() schema.SchemaValidateFunc {

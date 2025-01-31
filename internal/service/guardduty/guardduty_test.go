@@ -8,10 +8,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfguardduty "github.com/hashicorp/terraform-provider-aws/internal/service/guardduty"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfguardduty "github.com/isometry/terraform-provider-faws/internal/service/guardduty"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
 )
 
 func TestAccGuardDuty_serial(t *testing.T) {

@@ -14,10 +14,10 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/verify"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/verify"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccLambdaInvocation_basic(t *testing.T) {
@@ -371,8 +371,8 @@ func TestAccLambdaInvocation_terraformKey(t *testing.T) {
 // This causes unintentional invocations and/or issues processing input which is
 // valid type for CREATE_ONLY lifecycle_scope.
 //
-// https://github.com/hashicorp/terraform-provider-aws/issues/40954
-// https://github.com/hashicorp/terraform-provider-aws/issues/31786
+// https://github.com/isometry/terraform-provider-faws/issues/40954
+// https://github.com/isometry/terraform-provider-faws/issues/31786
 func TestAccLambdaInvocation_UpgradeState_Pre_v5_1_0(t *testing.T) {
 	ctx := acctest.Context(t)
 	resourceName := "aws_lambda_invocation.test"

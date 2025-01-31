@@ -10,10 +10,10 @@ import (
 	awstypes "github.com/aws/aws-sdk-go-v2/service/directconnect/types"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfdirectconnect "github.com/hashicorp/terraform-provider-aws/internal/service/directconnect"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfdirectconnect "github.com/isometry/terraform-provider-faws/internal/service/directconnect"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
 )
 
 func testAccCheckVirtualInterfaceExists(ctx context.Context, n string, v *awstypes.VirtualInterface) resource.TestCheckFunc {

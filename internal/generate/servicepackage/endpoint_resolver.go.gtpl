@@ -11,7 +11,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/{{ .GoV2Package }}"
 	smithyendpoints "github.com/aws/smithy-go/endpoints"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
 )
 
 var _ {{ .GoV2Package }}.EndpointResolverV2 = resolverV2{}

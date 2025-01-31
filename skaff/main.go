@@ -3,7 +3,7 @@
 
 package main
 
-import "github.com/hashicorp/terraform-provider-aws/skaff/cmd"
+import "github.com/isometry/terraform-provider-faws/skaff/cmd"
 
 func main() {
 	cmd.Execute()

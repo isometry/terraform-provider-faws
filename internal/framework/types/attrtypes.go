@@ -10,7 +10,7 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-framework/attr"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs/fwdiag"
+	"github.com/isometry/terraform-provider-faws/internal/errs/fwdiag"
 )
 
 // AttributeTypes returns a map of attribute types for the specified type T.

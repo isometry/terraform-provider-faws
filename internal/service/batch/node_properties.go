@@ -9,7 +9,7 @@ import (
 	_ "github.com/aws/aws-sdk-go-v2/service/batch" // Required for go:linkname
 	awstypes "github.com/aws/aws-sdk-go-v2/service/batch/types"
 	smithyjson "github.com/aws/smithy-go/encoding/json"
-	tfjson "github.com/hashicorp/terraform-provider-aws/internal/json"
+	tfjson "github.com/isometry/terraform-provider-faws/internal/json"
 )
 
 type nodeProperties struct {

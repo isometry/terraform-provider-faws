@@ -7,10 +7,10 @@ import (
 	"fmt"
 
 	awstypes "github.com/aws/aws-sdk-go-v2/service/dynamodb/types"
-	tfjson "github.com/hashicorp/terraform-provider-aws/internal/json"
-	tfmaps "github.com/hashicorp/terraform-provider-aws/internal/maps"
-	tfslices "github.com/hashicorp/terraform-provider-aws/internal/slices"
-	itypes "github.com/hashicorp/terraform-provider-aws/internal/types"
+	tfjson "github.com/isometry/terraform-provider-faws/internal/json"
+	tfmaps "github.com/isometry/terraform-provider-faws/internal/maps"
+	tfslices "github.com/isometry/terraform-provider-faws/internal/slices"
+	itypes "github.com/isometry/terraform-provider-faws/internal/types"
 )
 
 func expandTableItemAttributes(jsonStream string) (map[string]awstypes.AttributeValue, error) {

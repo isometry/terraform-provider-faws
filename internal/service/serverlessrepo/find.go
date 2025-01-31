@@ -10,7 +10,7 @@ import (
 	serverlessrepo "github.com/aws/aws-sdk-go-v2/service/serverlessapplicationrepository"
 	awstypes "github.com/aws/aws-sdk-go-v2/service/serverlessapplicationrepository/types"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
 )
 
 func findApplication(ctx context.Context, conn *serverlessrepo.Client, applicationID, version string) (*serverlessrepo.GetApplicationOutput, error) {

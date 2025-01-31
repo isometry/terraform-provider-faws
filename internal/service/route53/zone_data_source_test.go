@@ -9,8 +9,8 @@ import (
 
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccRoute53ZoneDataSource_id(t *testing.T) {
@@ -74,7 +74,7 @@ func TestAccRoute53ZoneDataSource_name(t *testing.T) {
 // constraint, but because we've historically allowed it we need to continue
 // doing so until a major version bump.
 //
-// Ref: https://github.com/hashicorp/terraform-provider-aws/issues/37683
+// Ref: https://github.com/isometry/terraform-provider-faws/issues/37683
 func TestAccRoute53ZoneDataSource_name_idEmptyString(t *testing.T) {
 	ctx := acctest.Context(t)
 	resourceName := "aws_route53_zone.test"

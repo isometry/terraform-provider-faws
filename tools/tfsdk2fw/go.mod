@@ -1,10 +1,10 @@
-module github.com/hashicorp/terraform-provider-aws/tools/tfsdk2fw
+module github.com/isometry/terraform-provider-faws/tools/tfsdk2fw
 
 go 1.23.5
 
 require (
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.35.0
-	github.com/hashicorp/terraform-provider-aws v1.60.1-0.20220322001452-8f7a597d0c24
+	github.com/isometry/terraform-provider-faws v1.60.1-0.20220322001452-8f7a597d0c24
 	golang.org/x/exp v0.0.0-20241210194714-1829a127f884
 )
 
@@ -372,6 +372,6 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/hashicorp/terraform-provider-aws => ../..
+replace github.com/isometry/terraform-provider-faws => ../..
 
 replace github.com/hashicorp/terraform-plugin-log => github.com/gdavison/terraform-plugin-log v0.0.0-20230928191232-6c653d8ef8fb

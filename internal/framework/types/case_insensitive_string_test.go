@@ -7,7 +7,7 @@ import (
 	"context"
 	"testing"
 
-	fwtypes "github.com/hashicorp/terraform-provider-aws/internal/framework/types"
+	fwtypes "github.com/isometry/terraform-provider-faws/internal/framework/types"
 )
 
 func TestCaseInsensitiveStringSemanticEquals(t *testing.T) {

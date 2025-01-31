@@ -6,9 +6,9 @@ package lakeformation_test
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tflf "github.com/hashicorp/terraform-provider-aws/internal/service/lakeformation"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tflf "github.com/isometry/terraform-provider-faws/internal/service/lakeformation"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestValidPrincipal(t *testing.T) {

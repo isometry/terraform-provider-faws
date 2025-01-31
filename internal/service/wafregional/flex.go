@@ -6,7 +6,7 @@ package wafregional
 import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	awstypes "github.com/aws/aws-sdk-go-v2/service/wafregional/types"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func expandFieldToMatch(d map[string]interface{}) *awstypes.FieldToMatch {

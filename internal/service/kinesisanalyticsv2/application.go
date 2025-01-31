@@ -21,15 +21,15 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/enum"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs/sdkdiag"
-	"github.com/hashicorp/terraform-provider-aws/internal/flex"
-	tftags "github.com/hashicorp/terraform-provider-aws/internal/tags"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/internal/verify"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/enum"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs/sdkdiag"
+	"github.com/isometry/terraform-provider-faws/internal/flex"
+	tftags "github.com/isometry/terraform-provider-faws/internal/tags"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/verify"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // @SDKResource("aws_kinesisanalyticsv2_application", name="Application")
@@ -1740,12 +1740,12 @@ func waitIAMPropagation[T any](ctx context.Context, f func() (*T, error)) (*T, e
 			return f()
 		},
 		func(err error) (bool, error) {
-			// Kinesis Stream: https://github.com/hashicorp/terraform-provider-aws/issues/7032
+			// Kinesis Stream: https://github.com/isometry/terraform-provider-faws/issues/7032
 			if errs.IsAErrorMessageContains[*awstypes.InvalidArgumentException](err, "Kinesis Analytics service doesn't have sufficient privileges") {
 				return true, err
 			}
 
-			// Kinesis Firehose: https://github.com/hashicorp/terraform-provider-aws/issues/7394
+			// Kinesis Firehose: https://github.com/isometry/terraform-provider-faws/issues/7394
 			if errs.IsAErrorMessageContains[*awstypes.InvalidArgumentException](err, "Kinesis Analytics doesn't have sufficient privileges") {
 				return true, err
 			}
@@ -1755,7 +1755,7 @@ func waitIAMPropagation[T any](ctx context.Context, f func() (*T, error)) (*T, e
 				return true, err
 			}
 
-			// S3: https://github.com/hashicorp/terraform-provider-aws/issues/16104
+			// S3: https://github.com/isometry/terraform-provider-faws/issues/16104
 			if errs.IsAErrorMessageContains[*awstypes.InvalidArgumentException](err, "Please check the role provided or validity of S3 location you provided") {
 				return true, err
 			}

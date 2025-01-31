@@ -19,15 +19,15 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/enum"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs/sdkdiag"
-	"github.com/hashicorp/terraform-provider-aws/internal/flex"
-	"github.com/hashicorp/terraform-provider-aws/internal/sdkv2"
-	tfslices "github.com/hashicorp/terraform-provider-aws/internal/slices"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/enum"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs/sdkdiag"
+	"github.com/isometry/terraform-provider-faws/internal/flex"
+	"github.com/isometry/terraform-provider-faws/internal/sdkv2"
+	tfslices "github.com/isometry/terraform-provider-faws/internal/slices"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // @SDKResource("aws_route53_record", name="Record")
@@ -45,7 +45,7 @@ func resourceRecord() *schema.Resource {
 				// We check that we have parsed the id into the correct number of segments.
 				// We need at least 3 segments!
 				// However, parts[1] can be the empty string if it is the root domain of the zone,
-				// and isn't using a FQDN. See https://github.com/hashicorp/terraform-provider-aws/issues/4792
+				// and isn't using a FQDN. See https://github.com/isometry/terraform-provider-faws/issues/4792
 				if parts[0] == "" || parts[2] == "" {
 					return nil, fmt.Errorf("unexpected format of ID (%q), expected ZONEID_RECORDNAME_TYPE_SET-IDENTIFIER (e.g. Z4KAPRWWNC7JR_dev.example.com_NS_dev), where SET-IDENTIFIER is optional", d.Id())
 				}
@@ -745,7 +745,7 @@ func resourceRecordDelete(ctx context.Context, d *schema.ResourceData, meta inte
 	output, err := conn.ChangeResourceRecordSets(ctx, input)
 
 	// Pre-AWS SDK for Go v2 migration compatibility.
-	// https://github.com/hashicorp/terraform-provider-aws/issues/37806.
+	// https://github.com/isometry/terraform-provider-faws/issues/37806.
 	if errs.IsA[*awstypes.InvalidChangeBatch](err) {
 		return diags
 	}

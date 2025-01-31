@@ -25,19 +25,19 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/create"
-	"github.com/hashicorp/terraform-provider-aws/internal/enum"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs/sdkdiag"
-	"github.com/hashicorp/terraform-provider-aws/internal/flex"
-	tfmaps "github.com/hashicorp/terraform-provider-aws/internal/maps"
-	"github.com/hashicorp/terraform-provider-aws/internal/sdkv2"
-	"github.com/hashicorp/terraform-provider-aws/internal/service/kms"
-	tftags "github.com/hashicorp/terraform-provider-aws/internal/tags"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/internal/verify"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/create"
+	"github.com/isometry/terraform-provider-faws/internal/enum"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs/sdkdiag"
+	"github.com/isometry/terraform-provider-faws/internal/flex"
+	tfmaps "github.com/isometry/terraform-provider-faws/internal/maps"
+	"github.com/isometry/terraform-provider-faws/internal/sdkv2"
+	"github.com/isometry/terraform-provider-faws/internal/service/kms"
+	tftags "github.com/isometry/terraform-provider-faws/internal/tags"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/verify"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 const (
@@ -120,7 +120,7 @@ func resourceTable() *schema.Resource {
 			},
 			customdiff.ForceNewIfChange("restore_source_name", func(_ context.Context, old, new, meta interface{}) bool {
 				// If they differ force new unless new is cleared
-				// https://github.com/hashicorp/terraform-provider-aws/issues/25214
+				// https://github.com/isometry/terraform-provider-faws/issues/25214
 				return old.(string) != new.(string) && new.(string) != ""
 			}),
 			customdiff.ForceNewIfChange("restore_source_table_arn", func(_ context.Context, old, new, meta interface{}) bool {
@@ -2278,7 +2278,7 @@ func expandLocalSecondaryIndexes(cfg []interface{}, keySchemaM map[string]interf
 		m := lsi.(map[string]interface{})
 		idxName := m[names.AttrName].(string)
 
-		// TODO: See https://github.com/hashicorp/terraform-provider-aws/issues/3176
+		// TODO: See https://github.com/isometry/terraform-provider-faws/issues/3176
 		if _, ok := m["hash_key"]; !ok {
 			m["hash_key"] = keySchemaM["hash_key"]
 		}

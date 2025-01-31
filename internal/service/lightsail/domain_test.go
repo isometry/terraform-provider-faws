@@ -16,10 +16,10 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfsync "github.com/hashicorp/terraform-provider-aws/internal/experimental/sync"
-	tflightsail "github.com/hashicorp/terraform-provider-aws/internal/service/lightsail"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfsync "github.com/isometry/terraform-provider-faws/internal/experimental/sync"
+	tflightsail "github.com/isometry/terraform-provider-faws/internal/service/lightsail"
 )
 
 func testAccDomain_basic(t *testing.T, semaphore tfsync.Semaphore) {

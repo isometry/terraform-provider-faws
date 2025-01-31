@@ -18,10 +18,10 @@ import (
 	"text/template"
 
 	"github.com/YakDriver/regexache"
-	"github.com/hashicorp/terraform-provider-aws/internal/generate/common"
-	"github.com/hashicorp/terraform-provider-aws/names"
-	"github.com/hashicorp/terraform-provider-aws/names/data"
-	namesgen "github.com/hashicorp/terraform-provider-aws/names/generate"
+	"github.com/isometry/terraform-provider-faws/internal/generate/common"
+	"github.com/isometry/terraform-provider-faws/names"
+	"github.com/isometry/terraform-provider-faws/names/data"
+	namesgen "github.com/isometry/terraform-provider-faws/names/generate"
 )
 
 func main() {

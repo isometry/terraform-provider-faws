@@ -6,7 +6,7 @@ import (
 	"github.com/bflad/tfproviderlint/helper/astutils"
 	"github.com/bflad/tfproviderlint/passes/commentignore"
 	"github.com/bflad/tfproviderlint/passes/helper/schema/resourcedatasetcallexpr"
-	"github.com/hashicorp/terraform-provider-aws/ci/providerlint/helper/awsprovidertype/keyvaluetags"
+	"github.com/isometry/terraform-provider-faws/ci/providerlint/helper/awsprovidertype/keyvaluetags"
 	"golang.org/x/tools/go/analysis"
 )
 

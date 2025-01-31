@@ -12,10 +12,10 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfkinesis "github.com/hashicorp/terraform-provider-aws/internal/service/kinesis"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfkinesis "github.com/isometry/terraform-provider-faws/internal/service/kinesis"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccKinesisStreamDataSource_basic(t *testing.T) {
@@ -84,7 +84,7 @@ func TestAccKinesisStreamDataSource_encryption(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/40494
+// https://github.com/isometry/terraform-provider-faws/issues/40494
 func TestAccKinesisStreamDataSource_pagedShards(t *testing.T) {
 	ctx := acctest.Context(t)
 	rName := sdkacctest.RandomWithPrefix(acctest.ResourcePrefix)

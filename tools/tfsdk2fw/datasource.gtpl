@@ -9,8 +9,8 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/datasource/schema"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/hashicorp/terraform-provider-aws/internal/framework"
-	{{if .ImportProviderFrameworkTypes }}fwtypes "github.com/hashicorp/terraform-provider-aws/internal/framework/types"{{- end}}
+	"github.com/isometry/terraform-provider-faws/internal/framework"
+	{{if .ImportProviderFrameworkTypes }}fwtypes "github.com/isometry/terraform-provider-faws/internal/framework/types"{{- end}}
 )
 
 // @FrameworkDataSource("{{ .TFTypeName }}")

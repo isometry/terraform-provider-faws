@@ -25,11 +25,11 @@ import (
 	"time"
 
 	"github.com/dlclark/regexp2"
-	acctestgen "github.com/hashicorp/terraform-provider-aws/internal/acctest/generate"
-	"github.com/hashicorp/terraform-provider-aws/internal/generate/common"
-	tfmaps "github.com/hashicorp/terraform-provider-aws/internal/maps"
-	"github.com/hashicorp/terraform-provider-aws/names/data"
-	namesgen "github.com/hashicorp/terraform-provider-aws/names/generate"
+	acctestgen "github.com/isometry/terraform-provider-faws/internal/acctest/generate"
+	"github.com/isometry/terraform-provider-faws/internal/generate/common"
+	tfmaps "github.com/isometry/terraform-provider-faws/internal/maps"
+	"github.com/isometry/terraform-provider-faws/names/data"
+	namesgen "github.com/isometry/terraform-provider-faws/names/generate"
 )
 
 func main() {
@@ -605,7 +605,7 @@ func (v *visitor) processFuncDecl(funcDecl *ast.FuncDecl) {
 						d.CheckDestroyNoop = b
 						d.GoImports = append(d.GoImports,
 							goImport{
-								Path: "github.com/hashicorp/terraform-provider-aws/internal/acctest",
+								Path: "github.com/isometry/terraform-provider-faws/internal/acctest",
 							},
 						)
 					}
@@ -784,7 +784,7 @@ func (v *visitor) processFuncDecl(funcDecl *ast.FuncDecl) {
 			tlsKeyCN = "acctest.RandomDomain().String()"
 			d.GoImports = append(d.GoImports,
 				goImport{
-					Path: "github.com/hashicorp/terraform-provider-aws/internal/acctest",
+					Path: "github.com/isometry/terraform-provider-faws/internal/acctest",
 				},
 			)
 		}
@@ -814,7 +814,7 @@ func (v *visitor) processFuncDecl(funcDecl *ast.FuncDecl) {
 						Alias: "sdkacctest",
 					},
 					goImport{
-						Path: "github.com/hashicorp/terraform-provider-aws/internal/acctest",
+						Path: "github.com/isometry/terraform-provider-faws/internal/acctest",
 					},
 				)
 			}

@@ -6,7 +6,7 @@ package oam_test
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
 )
 
 func TestAccObservabilityAccessManager_serial(t *testing.T) {

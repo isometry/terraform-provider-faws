@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfcloudfront "github.com/hashicorp/terraform-provider-aws/internal/service/cloudfront"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfcloudfront "github.com/isometry/terraform-provider-faws/internal/service/cloudfront"
 )
 
 func TestDistributionMigrateState(t *testing.T) {

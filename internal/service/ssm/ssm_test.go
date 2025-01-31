@@ -6,7 +6,7 @@ package ssm_test
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
 )
 
 // These tests affect regional defaults, so they needs to be serialized

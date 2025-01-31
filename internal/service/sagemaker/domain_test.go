@@ -14,11 +14,11 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfsagemaker "github.com/hashicorp/terraform-provider-aws/internal/service/sagemaker"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfsagemaker "github.com/isometry/terraform-provider-faws/internal/service/sagemaker"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func testAccDomain_basic(t *testing.T) {
@@ -1211,7 +1211,7 @@ func testAccDomain_jupyterServerAppSettings_code(t *testing.T) {
 					resource.TestCheckResourceAttr(resourceName, "default_user_settings.0.jupyter_server_app_settings.0.default_resource_spec.0.instance_type", "system"),
 					resource.TestCheckResourceAttr(resourceName, "default_user_settings.0.jupyter_server_app_settings.0.code_repository.#", "1"),
 					resource.TestCheckTypeSetElemNestedAttrs(resourceName, "default_user_settings.0.jupyter_server_app_settings.0.code_repository.*", map[string]string{
-						"repository_url": "https://github.com/hashicorp/terraform-provider-aws.git",
+						"repository_url": "https://github.com/isometry/terraform-provider-faws.git",
 					}),
 				),
 			},
@@ -2413,7 +2413,7 @@ resource "aws_sagemaker_domain" "test" {
 
     jupyter_server_app_settings {
       code_repository {
-        repository_url = "https://github.com/hashicorp/terraform-provider-aws.git"
+        repository_url = "https://github.com/isometry/terraform-provider-faws.git"
       }
 
       default_resource_spec {

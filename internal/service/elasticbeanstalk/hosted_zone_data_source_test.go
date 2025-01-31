@@ -10,9 +10,9 @@ import (
 	"github.com/YakDriver/regexache"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfelasticbeanstalk "github.com/hashicorp/terraform-provider-aws/internal/service/elasticbeanstalk"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfelasticbeanstalk "github.com/isometry/terraform-provider-faws/internal/service/elasticbeanstalk"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccElasticBeanstalkHostedZoneDataSource_basic(t *testing.T) {

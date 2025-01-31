@@ -11,10 +11,10 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/account/types"
 	"github.com/hashicorp/aws-sdk-go-base/v2/endpoints"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfaccount "github.com/hashicorp/terraform-provider-aws/internal/service/account"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfaccount "github.com/isometry/terraform-provider-faws/internal/service/account"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func testAccRegion_basic(t *testing.T) {

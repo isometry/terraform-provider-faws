@@ -15,8 +15,8 @@ import (
 	"github.com/YakDriver/regexache"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfmeta "github.com/hashicorp/terraform-provider-aws/internal/service/meta"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfmeta "github.com/isometry/terraform-provider-faws/internal/service/meta"
 )
 
 func TestAccMetaIPRangesDataSource_basic(t *testing.T) {

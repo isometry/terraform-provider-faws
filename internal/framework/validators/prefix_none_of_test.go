@@ -11,7 +11,7 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/hashicorp/terraform-provider-aws/internal/framework/validators"
+	"github.com/isometry/terraform-provider-faws/internal/framework/validators"
 )
 
 func TestPrefixNoneOfValidator(t *testing.T) {

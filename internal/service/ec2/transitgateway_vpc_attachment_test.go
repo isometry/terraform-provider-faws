@@ -18,14 +18,14 @@ import (
 	"github.com/hashicorp/terraform-plugin-testing/statecheck"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
 	"github.com/hashicorp/terraform-plugin-testing/tfjsonpath"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfplancheck "github.com/hashicorp/terraform-provider-aws/internal/acctest/plancheck"
-	tfstatecheck "github.com/hashicorp/terraform-provider-aws/internal/acctest/statecheck"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfsync "github.com/hashicorp/terraform-provider-aws/internal/experimental/sync"
-	tfec2 "github.com/hashicorp/terraform-provider-aws/internal/service/ec2"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfplancheck "github.com/isometry/terraform-provider-faws/internal/acctest/plancheck"
+	tfstatecheck "github.com/isometry/terraform-provider-faws/internal/acctest/statecheck"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfsync "github.com/isometry/terraform-provider-faws/internal/experimental/sync"
+	tfec2 "github.com/isometry/terraform-provider-faws/internal/service/ec2"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func testAccTransitGatewayVPCAttachment_basic(t *testing.T, semaphore tfsync.Semaphore) {
@@ -260,7 +260,7 @@ func testAccTransitGatewayVPCAttachment_SecurityGroupReferencingSupport(t *testi
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/39518.
+// https://github.com/isometry/terraform-provider-faws/issues/39518.
 // Resources created at <= v5.58.0 show drift after upgrade to v5.69.0.
 func testAccTransitGatewayVPCAttachment_SecurityGroupReferencingSupportV5690Diff(t *testing.T, semaphore tfsync.Semaphore) {
 	ctx := acctest.Context(t)

@@ -12,10 +12,10 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfstoragegateway "github.com/hashicorp/terraform-provider-aws/internal/service/storagegateway"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfstoragegateway "github.com/isometry/terraform-provider-faws/internal/service/storagegateway"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestUploadBufferParseResourceID(t *testing.T) {
@@ -108,7 +108,7 @@ func TestAccStorageGatewayUploadBuffer_basic(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/17809.
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/17809.
 func TestAccStorageGatewayUploadBuffer_diskPath(t *testing.T) {
 	ctx := acctest.Context(t)
 	rName := sdkacctest.RandomWithPrefix(acctest.ResourcePrefix)

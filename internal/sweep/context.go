@@ -7,7 +7,7 @@ import (
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-log/tfsdklog"
-	"github.com/hashicorp/terraform-provider-aws/internal/sweep/internal/log"
+	"github.com/isometry/terraform-provider-faws/internal/sweep/internal/log"
 )
 
 func Context(region string) context.Context {

@@ -14,11 +14,11 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfapigateway "github.com/hashicorp/terraform-provider-aws/internal/service/apigateway"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfapigateway "github.com/isometry/terraform-provider-faws/internal/service/apigateway"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccAPIGatewayDeployment_basic(t *testing.T) {
@@ -307,7 +307,7 @@ func TestAccAPIGatewayDeployment_variables(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/28997.
+// https://github.com/isometry/terraform-provider-faws/issues/28997.
 func TestAccAPIGatewayDeployment_conflictingConnectionType(t *testing.T) {
 	ctx := acctest.Context(t)
 	var deployment apigateway.GetDeploymentOutput

@@ -11,7 +11,7 @@ import (
 	"testing"
 
 	ec2types "github.com/aws/aws-sdk-go-v2/service/ec2/types"
-	"github.com/hashicorp/terraform-provider-aws/internal/envvar"
+	"github.com/isometry/terraform-provider-faws/internal/envvar"
 )
 
 // ConfigCompose can be called to concatenate multiple strings to build test configurations

@@ -28,13 +28,13 @@ import (
 	"github.com/hashicorp/terraform-plugin-testing/statecheck"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
 	"github.com/hashicorp/terraform-plugin-testing/tfjsonpath"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfstatecheck "github.com/hashicorp/terraform-provider-aws/internal/acctest/statecheck"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/flex"
-	tfec2 "github.com/hashicorp/terraform-provider-aws/internal/service/ec2"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfstatecheck "github.com/isometry/terraform-provider-faws/internal/acctest/statecheck"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/flex"
+	tfec2 "github.com/isometry/terraform-provider-faws/internal/service/ec2"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // func TestFetchRootDevice(t *testing.T) {
@@ -363,7 +363,7 @@ func TestAccEC2Instance_EBSBlockDevice_kmsKeyARN(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/12667
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/12667
 func TestAccEC2Instance_EBSBlockDevice_invalidIopsForVolumeType(t *testing.T) {
 	ctx := acctest.Context(t)
 	resource.ParallelTest(t, resource.TestCase{
@@ -398,7 +398,7 @@ func TestAccEC2Instance_EBSBlockDevice_invalidThroughputForVolumeType(t *testing
 
 // TestAccEC2Instance_EBSBlockDevice_RootBlockDevice_removed verifies block device mappings
 // removed outside terraform no longer result in a panic.
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/20821
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/20821
 func TestAccEC2Instance_EBSBlockDevice_RootBlockDevice_removed(t *testing.T) {
 	ctx := acctest.Context(t)
 	var instance awstypes.Instance
@@ -644,7 +644,7 @@ func TestAccEC2Instance_gp2IopsDevice(t *testing.T) {
 
 // TestAccEC2Instance_gp2WithIopsValue updated in v3.0.0
 // to account for apply-time validation of the root_block_device.iops attribute for supported volume types
-// Reference: https://github.com/hashicorp/terraform-provider-aws/pull/14310
+// Reference: https://github.com/isometry/terraform-provider-faws/pull/14310
 func TestAccEC2Instance_gp2WithIopsValue(t *testing.T) {
 	ctx := acctest.Context(t)
 	rName := sdkacctest.RandomWithPrefix(acctest.ResourcePrefix)
@@ -1569,7 +1569,7 @@ func TestAccEC2Instance_BlockDeviceTags_attachedVolume(t *testing.T) {
 				),
 			},
 			{
-				//https://github.com/hashicorp/terraform-provider-aws/issues/17074
+				//https://github.com/isometry/terraform-provider-faws/issues/17074
 				Config: testAccInstanceConfig_blockDeviceTagsAttachedVolumeTags(rName),
 				Check: resource.ComposeTestCheckFunc(
 					testAccCheckInstanceExists(ctx, resourceName, &v),
@@ -2039,7 +2039,7 @@ func TestAccEC2Instance_iamInstanceProfile(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/17719
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/17719
 func TestAccEC2Instance_iamInstanceProfilePath(t *testing.T) {
 	ctx := acctest.Context(t)
 	var instance awstypes.Instance
@@ -2147,7 +2147,7 @@ func TestAccEC2Instance_associatePublicIPAndPrivateIP(t *testing.T) {
 }
 
 // Allow Empty Private IP
-// https://github.com/hashicorp/terraform-provider-aws/issues/13626
+// https://github.com/isometry/terraform-provider-faws/issues/13626
 func TestAccEC2Instance_Empty_privateIP(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v awstypes.Instance
@@ -3317,7 +3317,7 @@ func TestAccEC2Instance_addSecurityGroupNetworkInterface(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/7063
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/7063
 func TestAccEC2Instance_NewNetworkInterface_publicIPAndSecondaryPrivateIPs(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v awstypes.Instance
@@ -3358,7 +3358,7 @@ func TestAccEC2Instance_NewNetworkInterface_publicIPAndSecondaryPrivateIPs(t *te
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/7063
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/7063
 func TestAccEC2Instance_NewNetworkInterface_emptyPrivateIPAndSecondaryPrivateIPs(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v awstypes.Instance
@@ -3390,7 +3390,7 @@ func TestAccEC2Instance_NewNetworkInterface_emptyPrivateIPAndSecondaryPrivateIPs
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/7063
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/7063
 func TestAccEC2Instance_NewNetworkInterface_emptyPrivateIPAndSecondaryPrivateIPsUpdate(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v awstypes.Instance
@@ -3439,7 +3439,7 @@ func TestAccEC2Instance_NewNetworkInterface_emptyPrivateIPAndSecondaryPrivateIPs
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/7063
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/7063
 func TestAccEC2Instance_NewNetworkInterface_privateIPAndSecondaryPrivateIPs(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v awstypes.Instance
@@ -3472,7 +3472,7 @@ func TestAccEC2Instance_NewNetworkInterface_privateIPAndSecondaryPrivateIPs(t *t
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/7063
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/7063
 func TestAccEC2Instance_NewNetworkInterface_privateIPAndSecondaryPrivateIPsUpdate(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v awstypes.Instance
@@ -3522,7 +3522,7 @@ func TestAccEC2Instance_NewNetworkInterface_privateIPAndSecondaryPrivateIPsUpdat
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/227
+// https://github.com/isometry/terraform-provider-faws/issues/227
 func TestAccEC2Instance_AssociatePublic_defaultPrivate(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v awstypes.Instance
@@ -3553,7 +3553,7 @@ func TestAccEC2Instance_AssociatePublic_defaultPrivate(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/227
+// https://github.com/isometry/terraform-provider-faws/issues/227
 func TestAccEC2Instance_AssociatePublic_defaultPublic(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v awstypes.Instance
@@ -3584,7 +3584,7 @@ func TestAccEC2Instance_AssociatePublic_defaultPublic(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/227
+// https://github.com/isometry/terraform-provider-faws/issues/227
 func TestAccEC2Instance_AssociatePublic_explicitPublic(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v awstypes.Instance
@@ -3615,7 +3615,7 @@ func TestAccEC2Instance_AssociatePublic_explicitPublic(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/227
+// https://github.com/isometry/terraform-provider-faws/issues/227
 func TestAccEC2Instance_AssociatePublic_explicitPrivate(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v awstypes.Instance
@@ -3646,7 +3646,7 @@ func TestAccEC2Instance_AssociatePublic_explicitPrivate(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/227
+// https://github.com/isometry/terraform-provider-faws/issues/227
 func TestAccEC2Instance_AssociatePublic_overridePublic(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v awstypes.Instance
@@ -3677,7 +3677,7 @@ func TestAccEC2Instance_AssociatePublic_overridePublic(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/227
+// https://github.com/isometry/terraform-provider-faws/issues/227
 func TestAccEC2Instance_AssociatePublic_overridePrivate(t *testing.T) {
 	ctx := acctest.Context(t)
 	var v awstypes.Instance
@@ -4521,7 +4521,7 @@ func TestAccEC2Instance_CreditSpecificationEmpty_nonBurstable(t *testing.T) {
 	})
 }
 
-// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/10203
+// Reference: https://github.com/isometry/terraform-provider-faws/issues/10203
 func TestAccEC2Instance_CreditSpecificationUnspecifiedToEmpty_nonBurstable(t *testing.T) {
 	ctx := acctest.Context(t)
 	var instance awstypes.Instance
@@ -7143,7 +7143,7 @@ resource "aws_instance" "test" {
 }
 
 func testAccInstanceConfig_blockDeviceTagsAttachedVolumeTags(rName string) string {
-	// https://github.com/hashicorp/terraform-provider-aws/issues/17074
+	// https://github.com/isometry/terraform-provider-faws/issues/17074
 	return acctest.ConfigCompose(
 		acctest.ConfigLatestAmazonLinux2HVMEBSX8664AMI(),
 		acctest.ConfigAvailableAZsNoOptIn(),
@@ -7179,7 +7179,7 @@ resource "aws_volume_attachment" "test" {
 }
 
 func testAccInstanceConfig_blockDeviceTagsAttachedVolumeTagsUpdate(rName string) string {
-	// https://github.com/hashicorp/terraform-provider-aws/issues/17074
+	// https://github.com/isometry/terraform-provider-faws/issues/17074
 	return acctest.ConfigCompose(
 		acctest.ConfigLatestAmazonLinux2HVMEBSX8664AMI(),
 		acctest.ConfigAvailableAZsNoOptIn(),

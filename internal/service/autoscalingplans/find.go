@@ -10,8 +10,8 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/autoscalingplans"
 	awstypes "github.com/aws/aws-sdk-go-v2/service/autoscalingplans/types"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
 )
 
 func FindScalingPlanByNameAndVersion(ctx context.Context, conn *autoscalingplans.Client, scalingPlanName string, scalingPlanVersion int) (*awstypes.ScalingPlan, error) {

@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	tffirehose "github.com/hashicorp/terraform-provider-aws/internal/service/firehose"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	tffirehose "github.com/isometry/terraform-provider-faws/internal/service/firehose"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestMigrateState(t *testing.T) {

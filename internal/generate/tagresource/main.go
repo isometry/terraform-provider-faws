@@ -13,9 +13,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/generate/common"
-	"github.com/hashicorp/terraform-provider-aws/names"
-	namesgen "github.com/hashicorp/terraform-provider-aws/names/generate"
+	"github.com/isometry/terraform-provider-faws/internal/generate/common"
+	"github.com/isometry/terraform-provider-faws/names"
+	namesgen "github.com/isometry/terraform-provider-faws/names/generate"
 )
 
 var (

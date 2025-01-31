@@ -6,9 +6,9 @@ package lightsail_test
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfsync "github.com/hashicorp/terraform-provider-aws/internal/experimental/sync"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfsync "github.com/isometry/terraform-provider-faws/internal/experimental/sync"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // serializing tests so that we do not hit the lightsail rate limit for distributions

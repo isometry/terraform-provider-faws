@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/hashicorp/terraform-provider-aws/internal/yaml"
+	"github.com/isometry/terraform-provider-faws/internal/yaml"
 )
 
 func TestDecodeFromString(t *testing.T) {

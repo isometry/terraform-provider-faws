@@ -14,9 +14,9 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfopsworks "github.com/hashicorp/terraform-provider-aws/internal/service/opsworks"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfopsworks "github.com/isometry/terraform-provider-faws/internal/service/opsworks"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccOpsWorksRailsAppLayer_basic(t *testing.T) {

@@ -10,8 +10,8 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/kinesisanalytics"
 	awstypes "github.com/aws/aws-sdk-go-v2/service/kinesisanalytics/types"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
 )
 
 func findApplicationDetailByName(ctx context.Context, conn *kinesisanalytics.Client, name string) (*awstypes.ApplicationDetail, error) {

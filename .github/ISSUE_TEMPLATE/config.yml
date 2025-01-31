@@ -13,5 +13,5 @@ contact_links:
     about: Please ask and answer language or workflow related questions through the Terraform Core Community Forum.
 
   - name: Terraform AWS Provider Roadmap
-    url: https://github.com/hashicorp/terraform-provider-aws/blob/main/ROADMAP.md
+    url: https://github.com/isometry/terraform-provider-faws/blob/main/ROADMAP.md
     about: View the Roadmap for the upcoming work planned on the AWS provider.

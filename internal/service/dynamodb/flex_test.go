@@ -13,9 +13,9 @@ import (
 
 	awstypes "github.com/aws/aws-sdk-go-v2/service/dynamodb/types"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/structure"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfdynamodb "github.com/hashicorp/terraform-provider-aws/internal/service/dynamodb"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfdynamodb "github.com/isometry/terraform-provider-faws/internal/service/dynamodb"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestExpandTableItemAttributes(t *testing.T) {

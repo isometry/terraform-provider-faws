@@ -36,7 +36,7 @@ func TestFullTypeName_primitive(t *testing.T) {
 func TestFullTypeName_type(t *testing.T) {
 	t.Parallel()
 
-	expected := "github.com/hashicorp/terraform-provider-aws/internal/framework/flex.emptyStruct"
+	expected := "github.com/isometry/terraform-provider-faws/internal/framework/flex.emptyStruct"
 	result := fullTypeName(reflect.TypeFor[emptyStruct]())
 
 	if result != expected {
@@ -58,7 +58,7 @@ func TestFullTypeName_pointerToPrimitive(t *testing.T) {
 func TestFullTypeName_pointerToType(t *testing.T) {
 	t.Parallel()
 
-	expected := "*github.com/hashicorp/terraform-provider-aws/internal/framework/flex.emptyStruct"
+	expected := "*github.com/isometry/terraform-provider-faws/internal/framework/flex.emptyStruct"
 	result := fullTypeName(reflect.TypeFor[*emptyStruct]())
 
 	if result != expected {
@@ -80,7 +80,7 @@ func TestFullTypeName_sliceOfPrimitive(t *testing.T) {
 func TestFullTypeName_sliceOfType(t *testing.T) {
 	t.Parallel()
 
-	expected := "[]github.com/hashicorp/terraform-provider-aws/internal/framework/flex.emptyStruct"
+	expected := "[]github.com/isometry/terraform-provider-faws/internal/framework/flex.emptyStruct"
 	result := fullTypeName(reflect.TypeFor[[]emptyStruct]())
 
 	if result != expected {
@@ -102,7 +102,7 @@ func TestFullTypeName_sliceOfPointerToPrimitive(t *testing.T) {
 func TestFullTypeName_sliceOfPointerToType(t *testing.T) {
 	t.Parallel()
 
-	expected := "[]*github.com/hashicorp/terraform-provider-aws/internal/framework/flex.emptyStruct"
+	expected := "[]*github.com/isometry/terraform-provider-faws/internal/framework/flex.emptyStruct"
 	result := fullTypeName(reflect.TypeFor[[]*emptyStruct]())
 
 	if result != expected {
@@ -124,7 +124,7 @@ func TestFullTypeName_mapPrimitiveKeyPrimitiveValue(t *testing.T) {
 func TestFullTypeName_mapTypedKeyPrimitiveValue(t *testing.T) {
 	t.Parallel()
 
-	expected := "map[github.com/hashicorp/terraform-provider-aws/internal/framework/flex.testEnum]string"
+	expected := "map[github.com/isometry/terraform-provider-faws/internal/framework/flex.testEnum]string"
 	result := fullTypeName(reflect.TypeFor[map[testEnum]string]())
 
 	if result != expected {
@@ -135,7 +135,7 @@ func TestFullTypeName_mapTypedKeyPrimitiveValue(t *testing.T) {
 func TestFullTypeName_mapPrimitiveKeyTypedValue(t *testing.T) {
 	t.Parallel()
 
-	expected := "map[string]github.com/hashicorp/terraform-provider-aws/internal/framework/flex.testEnum"
+	expected := "map[string]github.com/isometry/terraform-provider-faws/internal/framework/flex.testEnum"
 	result := fullTypeName(reflect.TypeFor[map[string]testEnum]())
 
 	if result != expected {

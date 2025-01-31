@@ -15,9 +15,9 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-aws/internal/create"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs/sdkdiag"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/create"
+	"github.com/isometry/terraform-provider-faws/internal/errs/sdkdiag"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 var dataSourcePolicyDocumentVarReplacer = strings.NewReplacer("&{", "${")
@@ -68,7 +68,7 @@ func dataSourcePolicyDocument() *schema.Resource {
 					Type:     schema.TypeString,
 					Computed: true,
 				},
-				// https://github.com/hashicorp/terraform-provider-aws/issues/31637.
+				// https://github.com/isometry/terraform-provider-faws/issues/31637.
 				"override_json": {
 					Type:         schema.TypeString,
 					Optional:     true,
@@ -87,7 +87,7 @@ func dataSourcePolicyDocument() *schema.Resource {
 					Type:     schema.TypeString,
 					Optional: true,
 				},
-				// https://github.com/hashicorp/terraform-provider-aws/issues/31637.
+				// https://github.com/isometry/terraform-provider-faws/issues/31637.
 				"source_json": {
 					Type:         schema.TypeString,
 					Optional:     true,

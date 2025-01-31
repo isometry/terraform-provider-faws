@@ -8,7 +8,7 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	awstypes "github.com/aws/aws-sdk-go-v2/service/route53profiles/types"
-	tftags "github.com/hashicorp/terraform-provider-aws/internal/tags"
+	tftags "github.com/isometry/terraform-provider-faws/internal/tags"
 )
 
 // TagsSlice returns a slice variant of route53profiles service tags.

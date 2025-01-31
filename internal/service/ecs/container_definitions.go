@@ -13,10 +13,10 @@ import (
 	_ "github.com/aws/aws-sdk-go-v2/service/ecs" // Required for go:linkname
 	awstypes "github.com/aws/aws-sdk-go-v2/service/ecs/types"
 	smithyjson "github.com/aws/smithy-go/encoding/json"
-	"github.com/hashicorp/terraform-provider-aws/internal/enum"
-	tfjson "github.com/hashicorp/terraform-provider-aws/internal/json"
-	tfslices "github.com/hashicorp/terraform-provider-aws/internal/slices"
-	itypes "github.com/hashicorp/terraform-provider-aws/internal/types"
+	"github.com/isometry/terraform-provider-faws/internal/enum"
+	tfjson "github.com/isometry/terraform-provider-faws/internal/json"
+	tfslices "github.com/isometry/terraform-provider-faws/internal/slices"
+	itypes "github.com/isometry/terraform-provider-faws/internal/types"
 )
 
 func containerDefinitionsAreEquivalent(def1, def2 string, isAWSVPC bool) (bool, error) {

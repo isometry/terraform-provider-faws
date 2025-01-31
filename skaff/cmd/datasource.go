@@ -4,7 +4,7 @@
 package cmd
 
 import (
-	"github.com/hashicorp/terraform-provider-aws/skaff/datasource"
+	"github.com/isometry/terraform-provider-faws/skaff/datasource"
 	"github.com/spf13/cobra"
 )
 

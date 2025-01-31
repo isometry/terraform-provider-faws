@@ -7,8 +7,8 @@ import (
 {{ range .Services }}
 	"github.com/aws/aws-sdk-go-v2/service/{{ .GoPackage }}"
 {{- end }}
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 {{ range .Services }}

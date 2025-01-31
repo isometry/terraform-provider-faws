@@ -10,7 +10,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/dataexchange"
 	awstypes "github.com/aws/aws-sdk-go-v2/service/dataexchange/types"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
 )
 
 func FindDataSetById(ctx context.Context, conn *dataexchange.Client, id string) (*dataexchange.GetDataSetOutput, error) {

@@ -6,7 +6,7 @@ package rds
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestCompareActualEngineVersion(t *testing.T) {

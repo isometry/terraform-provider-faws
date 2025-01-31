@@ -6,7 +6,7 @@ package opsworks
 import (
 	awstypes "github.com/aws/aws-sdk-go-v2/service/opsworks/types"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // @SDKResource("aws_opsworks_ganglia_layer", name="Ganglia Layer")

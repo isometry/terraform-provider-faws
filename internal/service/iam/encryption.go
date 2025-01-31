@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"strings"
 
-	itypes "github.com/hashicorp/terraform-provider-aws/internal/types"
-	"github.com/hashicorp/terraform-provider-aws/internal/vault/helper/pgpkeys"
+	itypes "github.com/isometry/terraform-provider-faws/internal/types"
+	"github.com/isometry/terraform-provider-faws/internal/vault/helper/pgpkeys"
 )
 
 // retrieveGPGKey returns the PGP key specified as the pgpKey parameter, or queries

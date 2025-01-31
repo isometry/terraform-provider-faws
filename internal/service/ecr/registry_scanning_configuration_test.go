@@ -11,10 +11,10 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ecr"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfecr "github.com/hashicorp/terraform-provider-aws/internal/service/ecr"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfecr "github.com/isometry/terraform-provider-faws/internal/service/ecr"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccECRScanningConfiguration_serial(t *testing.T) {

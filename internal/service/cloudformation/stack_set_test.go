@@ -17,11 +17,11 @@ import (
 	sdkacctest "github.com/hashicorp/terraform-plugin-testing/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	tfcloudformation "github.com/hashicorp/terraform-provider-aws/internal/service/cloudformation"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	tfcloudformation "github.com/isometry/terraform-provider-faws/internal/service/cloudformation"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccCloudFormationStackSet_basic(t *testing.T) {
@@ -531,7 +531,7 @@ func TestAccCloudFormationStackSet_Parameters_default(t *testing.T) {
 func TestAccCloudFormationStackSet_Parameters_noEcho(t *testing.T) {
 	acctest.Skip(t, "this resource does not currently ignore CloudFormation template parameters with the NoEcho property")
 	// Additional references:
-	//  * https://github.com/hashicorp/terraform-provider-aws/issues/55
+	//  * https://github.com/isometry/terraform-provider-faws/issues/55
 
 	ctx := acctest.Context(t)
 	var stackSet1, stackSet2 awstypes.StackSet
@@ -750,7 +750,7 @@ func TestAccCloudFormationStackSet_templateURL(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/19015.
+// https://github.com/isometry/terraform-provider-faws/issues/19015.
 func TestAccCloudFormationStackSet_autoDeploymentEnabled(t *testing.T) {
 	ctx := acctest.Context(t)
 	var stackSet awstypes.StackSet
@@ -789,7 +789,7 @@ func TestAccCloudFormationStackSet_autoDeploymentEnabled(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/19015.
+// https://github.com/isometry/terraform-provider-faws/issues/19015.
 func TestAccCloudFormationStackSet_autoDeploymentDisabled(t *testing.T) {
 	ctx := acctest.Context(t)
 	var stackSet awstypes.StackSet
@@ -828,7 +828,7 @@ func TestAccCloudFormationStackSet_autoDeploymentDisabled(t *testing.T) {
 	})
 }
 
-// https://github.com/hashicorp/terraform-provider-aws/issues/32536.
+// https://github.com/isometry/terraform-provider-faws/issues/32536.
 // Prerequisites:
 // * Organizations management account
 // * Organization member account

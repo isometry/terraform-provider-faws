@@ -31,7 +31,7 @@ class MyConvertedCode(TerraformStack):
         SagemakerCodeRepository(self, "example",
             code_repository_name="example",
             git_config=SagemakerCodeRepositoryGitConfig(
-                repository_url="https://github.com/hashicorp/terraform-provider-aws.git"
+                repository_url="https://github.com/isometry/terraform-provider-faws.git"
             )
         )
 ```
@@ -70,7 +70,7 @@ class MyConvertedCode(TerraformStack):
             code_repository_name="example",
             depends_on=[aws_secretsmanager_secret_version_example],
             git_config=SagemakerCodeRepositoryGitConfig(
-                repository_url="https://github.com/hashicorp/terraform-provider-aws.git",
+                repository_url="https://github.com/isometry/terraform-provider-faws.git",
                 secret_arn=example.arn
             )
         )

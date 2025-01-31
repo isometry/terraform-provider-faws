@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/attr"
 	"github.com/hashicorp/terraform-plugin-framework/types/basetypes"
 	"github.com/hashicorp/terraform-plugin-go/tftypes"
-	tfmaps "github.com/hashicorp/terraform-provider-aws/internal/maps"
+	tfmaps "github.com/isometry/terraform-provider-faws/internal/maps"
 )
 
 // NullValueOf returns a null attr.Value for the specified `v`.

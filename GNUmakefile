@@ -557,7 +557,7 @@ semgrep-validate: ## Validate Semgrep configuration files
 
 skaff: prereq-go ## Install skaff
 	@echo "make: Installing skaff..."
-	cd skaff && $(GO_VER) install github.com/hashicorp/terraform-provider-aws/skaff
+	cd skaff && $(GO_VER) install github.com/isometry/terraform-provider-faws/skaff
 
 skaff-check-compile: ## [CI] Skaff Checks / Compile skaff
 	@echo "make: Skaff Checks / Compile skaff..."
@@ -680,7 +680,7 @@ tfproviderdocs: go-build ## [CI] Provider Checks / tfproviderdocs
 
 tfsdk2fw: prereq-go ## Install tfsdk2fw
 	@echo "make: Installing tfsdk2fw..."
-	cd tools/tfsdk2fw && $(GO_VER) install github.com/hashicorp/terraform-provider-aws/tools/tfsdk2fw
+	cd tools/tfsdk2fw && $(GO_VER) install github.com/isometry/terraform-provider-faws/tools/tfsdk2fw
 
 tools: prereq-go ## Install tools
 	@echo "make: Installing tools..."

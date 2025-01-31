@@ -56,7 +56,7 @@ class MyConvertedCode(TerraformStack):
         example = SagemakerCodeRepository(self, "example",
             code_repository_name="my-notebook-instance-code-repo",
             git_config=SagemakerCodeRepositoryGitConfig(
-                repository_url="https://github.com/hashicorp/terraform-provider-aws.git"
+                repository_url="https://github.com/isometry/terraform-provider-faws.git"
             )
         )
         SagemakerNotebookInstance(self, "ni",

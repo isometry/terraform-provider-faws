@@ -8,9 +8,9 @@ import (
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfmeta "github.com/hashicorp/terraform-provider-aws/internal/service/meta"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfmeta "github.com/isometry/terraform-provider-faws/internal/service/meta"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 func TestAccMetaARNDataSource_basic(t *testing.T) {

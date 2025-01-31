@@ -10,9 +10,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/kinesisanalytics"
 	awstypes "github.com/aws/aws-sdk-go-v2/service/kinesisanalytics/types"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
-	"github.com/hashicorp/terraform-provider-aws/internal/enum"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
+	"github.com/isometry/terraform-provider-faws/internal/enum"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
 )
 
 func waitApplicationDeleted(ctx context.Context, conn *kinesisanalytics.Client, name string) (*awstypes.ApplicationDetail, error) {
@@ -103,12 +103,12 @@ func waitIAMPropagation(ctx context.Context, f func() (interface{}, error)) (int
 
 		output, err = f()
 
-		// Kinesis Stream: https://github.com/hashicorp/terraform-provider-aws/issues/7032
+		// Kinesis Stream: https://github.com/isometry/terraform-provider-faws/issues/7032
 		if errs.IsAErrorMessageContains[*awstypes.InvalidArgumentException](err, "Kinesis Analytics service doesn't have sufficient privileges") {
 			return retry.RetryableError(err)
 		}
 
-		// Kinesis Firehose: https://github.com/hashicorp/terraform-provider-aws/issues/7394
+		// Kinesis Firehose: https://github.com/isometry/terraform-provider-faws/issues/7394
 		if errs.IsAErrorMessageContains[*awstypes.InvalidArgumentException](err, "Kinesis Analytics doesn't have sufficient privileges") {
 			return retry.RetryableError(err)
 		}
@@ -118,7 +118,7 @@ func waitIAMPropagation(ctx context.Context, f func() (interface{}, error)) (int
 			return retry.RetryableError(err)
 		}
 
-		// S3: https://github.com/hashicorp/terraform-provider-aws/issues/16104
+		// S3: https://github.com/isometry/terraform-provider-faws/issues/16104
 		if errs.IsAErrorMessageContains[*awstypes.InvalidArgumentException](err, "Please check the role provided or validity of S3 location you provided") {
 			return retry.RetryableError(err)
 		}

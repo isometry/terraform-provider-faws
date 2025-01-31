@@ -6,8 +6,8 @@ package ec2_test
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	tfsync "github.com/hashicorp/terraform-provider-aws/internal/experimental/sync"
+	"github.com/isometry/terraform-provider-faws/internal/acctest"
+	tfsync "github.com/isometry/terraform-provider-faws/internal/experimental/sync"
 )
 
 func TestAccVerifiedAccess_serial(t *testing.T) {

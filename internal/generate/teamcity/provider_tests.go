@@ -11,7 +11,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/generate/common"
+	"github.com/isometry/terraform-provider-faws/internal/generate/common"
 )
 
 type ServiceDatum struct {

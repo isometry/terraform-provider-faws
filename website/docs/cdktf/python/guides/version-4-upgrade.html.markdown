@@ -12,7 +12,7 @@ description: |-
 
 Version 4.0.0 of the AWS provider for Terraform is a major release and includes some changes that you will need to consider when upgrading. We intend this guide to help with that process and focus only on changes from version 3.X to version 4.0.0. See the [Version 3 Upgrade Guide](/docs/providers/aws/guides/version-3-upgrade.html) for information about upgrading from 2.X to version 3.0.0.
 
-We previously marked most of the changes we outline in this guide as deprecated in the Terraform plan/apply output throughout previous provider releases. You can find these changes, including deprecation notices, in the [Terraform AWS Provider CHANGELOG](https://github.com/hashicorp/terraform-provider-aws/blob/main/CHANGELOG.md).
+We previously marked most of the changes we outline in this guide as deprecated in the Terraform plan/apply output throughout previous provider releases. You can find these changes, including deprecation notices, in the [Terraform AWS Provider CHANGELOG](https://github.com/isometry/terraform-provider-faws/blob/main/CHANGELOG.md).
 
 ~> **NOTE:** Versions 4.0.0 through v4.8.0 of the AWS Provider introduce significant breaking changes to the `aws_s3_bucket` resource. See [S3 Bucket Refactor](#s3-bucket-refactor) for more details.
 We recommend upgrading to v4.9.0 or later of the AWS Provider instead, where only non-breaking changes and deprecation notices are introduced to the `aws_s3_bucket`. See  [Changes to S3 Bucket Drift Detection](#changes-to-s3-bucket-drift-detection) for additional considerations when upgrading to v4.9.0 or later.

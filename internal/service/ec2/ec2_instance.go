@@ -29,17 +29,17 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
-	"github.com/hashicorp/terraform-provider-aws/internal/create"
-	"github.com/hashicorp/terraform-provider-aws/internal/enum"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs"
-	"github.com/hashicorp/terraform-provider-aws/internal/errs/sdkdiag"
-	"github.com/hashicorp/terraform-provider-aws/internal/flex"
-	tftags "github.com/hashicorp/terraform-provider-aws/internal/tags"
-	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
-	itypes "github.com/hashicorp/terraform-provider-aws/internal/types"
-	"github.com/hashicorp/terraform-provider-aws/internal/verify"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/internal/conns"
+	"github.com/isometry/terraform-provider-faws/internal/create"
+	"github.com/isometry/terraform-provider-faws/internal/enum"
+	"github.com/isometry/terraform-provider-faws/internal/errs"
+	"github.com/isometry/terraform-provider-faws/internal/errs/sdkdiag"
+	"github.com/isometry/terraform-provider-faws/internal/flex"
+	tftags "github.com/isometry/terraform-provider-faws/internal/tags"
+	"github.com/isometry/terraform-provider-faws/internal/tfresource"
+	itypes "github.com/isometry/terraform-provider-faws/internal/types"
+	"github.com/isometry/terraform-provider-faws/internal/verify"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // @SDKResource("aws_instance", name="Instance")
@@ -1456,12 +1456,12 @@ func resourceInstanceRead(ctx context.Context, d *schema.ResourceData, meta inte
 	}
 
 	// AWS Standard will return InstanceCreditSpecification.NotSupported errors for EC2 Instance IDs outside T2 and T3 instance types
-	// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/8055
+	// Reference: https://github.com/isometry/terraform-provider-faws/issues/8055
 	if aws.ToBool(instanceTypeInfo.BurstablePerformanceSupported) {
 		instanceCreditSpecification, err := findInstanceCreditSpecificationByID(ctx, conn, d.Id())
 
 		// Ignore UnsupportedOperation errors for AWS China and GovCloud (US).
-		// Reference: https://github.com/hashicorp/terraform-provider-aws/pull/4362.
+		// Reference: https://github.com/isometry/terraform-provider-faws/pull/4362.
 		if tfawserr.ErrCodeEquals(err, errCodeUnsupportedOperation) {
 			err = nil
 		}
@@ -2047,7 +2047,7 @@ func resourceInstanceUpdate(ctx context.Context, d *schema.ResourceData, meta in
 		if d.HasChange("root_block_device.0.iops") {
 			if v, ok := d.Get("root_block_device.0.iops").(int); ok && v != 0 {
 				// Enforce IOPs usage with a valid volume type
-				// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/12667
+				// Reference: https://github.com/isometry/terraform-provider-faws/issues/12667
 				if t, ok := d.Get("root_block_device.0.volume_type").(string); ok && t != string(awstypes.VolumeTypeIo1) && t != string(awstypes.VolumeTypeIo2) && t != string(awstypes.VolumeTypeGp3) {
 					if t == "" {
 						// Volume defaults to gp2
@@ -2674,7 +2674,7 @@ func readBlockDeviceMappingsFromConfig(ctx context.Context, d *schema.ResourceDa
 						ebs.Iops = aws.Int32(int32(iops))
 					} else {
 						// Enforce IOPs usage with a valid volume type
-						// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/12667
+						// Reference: https://github.com/isometry/terraform-provider-faws/issues/12667
 						return nil, fmt.Errorf("creating resource: iops attribute not supported for ebs_block_device with volume_type %s", v)
 					}
 				}
@@ -2749,7 +2749,7 @@ func readBlockDeviceMappingsFromConfig(ctx context.Context, d *schema.ResourceDa
 						ebs.Iops = aws.Int32(int32(iops))
 					} else {
 						// Enforce IOPs usage with a valid volume type
-						// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/12667
+						// Reference: https://github.com/isometry/terraform-provider-faws/issues/12667
 						return nil, fmt.Errorf("creating resource: iops attribute not supported for root_block_device with volume_type %s", v)
 					}
 				}
@@ -3220,7 +3220,7 @@ func startInstance(ctx context.Context, conn *ec2.Client, id string, retry bool,
 		"ec2_instance_id": id,
 	})
 	if retry {
-		// Reference: https://github.com/hashicorp/terraform-provider-aws/issues/16433.
+		// Reference: https://github.com/isometry/terraform-provider-faws/issues/16433.
 		_, err = tfresource.RetryWhenAWSErrMessageContains(ctx, ec2PropagationTimeout,
 			func() (interface{}, error) {
 				return conn.StartInstances(ctx, &ec2.StartInstancesInput{
