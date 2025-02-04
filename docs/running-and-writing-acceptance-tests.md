@@ -82,7 +82,7 @@ TF_ACC=1 go test ./internal/service/cloudwatch/... -v -count 1 -parallel 20 -run
 === CONT  TestAccCloudWatchDashboard_updateName
 --- PASS: TestAccCloudWatchDashboard_updateName (25.33s)
 PASS
-ok  	github.com/hashicorp/terraform-provider-aws/internal/service/cloudwatch	25.387s
+ok  	github.com/isometry/terraform-provider-faws/internal/service/cloudwatch	25.387s
 ```
 
 Entire resource test suites can be targeted by using the naming convention to
@@ -110,7 +110,7 @@ TF_ACC=1 go test ./internal/service/cloudwatch/... -v -count 1 -parallel 20 -run
 --- PASS: TestAccCloudWatchDashboard_updateName (26.69s)
 --- PASS: TestAccCloudWatchDashboard_update (27.72s)
 PASS
-ok  	github.com/hashicorp/terraform-provider-aws/internal/service/cloudwatch	27.783s
+ok  	github.com/isometry/terraform-provider-faws/internal/service/cloudwatch	27.783s
 ```
 
 Running acceptance tests requires version 0.12.26 or higher of the Terraform CLI to be installed.
@@ -135,7 +135,7 @@ TF_ACC=1 go test ./internal/service/rds/... -v -count 1 -parallel 20 -run=TestAc
     acctest.go:674: skipping test because at least one environment variable of [AWS_ALTERNATE_PROFILE AWS_ALTERNATE_ACCESS_KEY_ID] must be set. Usage: credentials for running acceptance testing in alternate AWS account.
 --- SKIP: TestAccRDSInstance_DBSubnetGroupName_ramShared (0.85s)
 PASS
-ok      github.com/hashicorp/terraform-provider-aws/internal/service/rds        0.888s
+ok      github.com/isometry/terraform-provider-faws/internal/service/rds        0.888s
 ```
 
 Running these acceptance tests is the same as before, except the following additional AWS credential information is required:
@@ -1203,7 +1203,7 @@ func sweepThings(region string) error {
 ```
 
 If no paginated SDK call is available,
-consider generating one using the [`listpages` generator](https://github.com/hashicorp/terraform-provider-aws/blob/main/internal/generate/listpages/README.md),
+consider generating one using the [`listpages` generator](https://github.com/isometry/terraform-provider-faws/blob/main/internal/generate/listpages/README.md),
 or implement the sweeper as follows:
 
 ```go

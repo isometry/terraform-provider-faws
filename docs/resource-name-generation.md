@@ -11,7 +11,7 @@ Implementing name generation requires modifying the following:
 
 ## Resource Code
 
-- In the resource file (e.g., `internal/service/{service}/{thing}.go`), add the following import: `"github.com/hashicorp/terraform-provider-aws/internal/create"`.
+- In the resource file (e.g., `internal/service/{service}/{thing}.go`), add the following import: `"github.com/isometry/terraform-provider-faws/internal/create"`.
 - Inside the resource schema, add the new `name_prefix` attribute and adjust the `name` attribute to be `Optional`, `Computed`, and conflict with the `name_prefix` attribute. Be sure to keep any existing validation functions already present on the `name`.
 
 === "Terraform Plugin Framework (Preferred)"
@@ -90,7 +90,7 @@ Implementing name generation requires modifying the following:
 
 ## Resource Acceptance Tests
 
-- In the resource test file (e.g., `internal/service/{service}/{thing}_test.go`), add the following import: `"github.com/hashicorp/terraform-provider-aws/internal/create"`.
+- In the resource test file (e.g., `internal/service/{service}/{thing}_test.go`), add the following import: `"github.com/isometry/terraform-provider-faws/internal/create"`.
 - Implement two new tests named `_nameGenerated` and `_namePrefix` which verify the creation of the resource without `name` and `name_prefix` arguments, and with only the `name_prefix` argument, respectively.
 
 ```go

@@ -89,7 +89,7 @@ Idiomatic Go uses [_Mixed Caps_](https://go.dev/wiki/CodeReviewComments#initiali
 
 An acronym such as "VPC" should either be all capitalized ("VPC") or all lowercase ("vpc"), never "Vpc" or "vPC." Similarly, in mixedCaps, "DynamoDB" should either be "DynamoDB" or "dynamoDB", depending on whether an initial cap is needed or not, and never "dynamoDb" or "DynamoDb."
 
-For more details on capitalizations we enforce with CI Semgrep tests, see the [Caps List](https://github.com/hashicorp/terraform-provider-aws/blob/main/names/caps.md).
+For more details on capitalizations we enforce with CI Semgrep tests, see the [Caps List](https://github.com/isometry/terraform-provider-faws/blob/main/names/caps.md).
 
 ### Rule
 

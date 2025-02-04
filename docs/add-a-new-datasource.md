@@ -42,7 +42,7 @@ Data Sources use a self-registration process that adds them to the provider usin
 
     import (
         "github.com/hashicorp/terraform-plugin-framework/datasource"
-        "github.com/hashicorp/terraform-provider-aws/internal/framework"
+        "github.com/isometry/terraform-provider-faws/internal/framework"
     )
 
     // @FrameworkDataSource(name="Example")

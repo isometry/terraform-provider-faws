@@ -81,7 +81,7 @@ make semgrep
 make fmt
 ```
 
-The import statement in a Go file follows these rules (see [#15903](https://github.com/hashicorp/terraform-provider-aws/issues/15903)):
+The import statement in a Go file follows these rules (see [#15903](https://github.com/isometry/terraform-provider-faws/issues/15903)):
 
 1. Import declarations are grouped into a maximum of three groups in the following order:
     - Standard packages (also called short import path or built-in packages)
@@ -125,7 +125,7 @@ This Contribution Guide also includes separate sections on topics such as [Error
 - __Uses AWS Go SDK Pointer Conversion Functions__: Many APIs return pointer types and these functions return the zero value for the type if the pointer is `nil`. This prevents potential panics from unchecked `*` pointer dereferences and can eliminate boilerplate `nil` checking in many cases. See also the [`aws` package in the AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/api/aws/).
 - __Uses AWS Go SDK Types__: Use available SDK structs instead of implementing custom types with indirection.
 - __Uses Existing Validation Functions__: Schema definitions including `ValidateFunc` for attribute validation should use available [Terraform `helper/validation` package](https://godoc.org/github.com/hashicorp/terraform/helper/validation) functions. `All()`/`Any()` can be used for combining multiple validation function behaviors.
-- __Uses tfresource.TimedOut() with retry.Retry()__: Resource logic implementing [`retry.Retry()`](https://godoc.org/github.com/hashicorp/terraform/helper/retry#Retry) should error check with [`tfresource.TimedOut(err error)`](https://godoc.org/github.com/hashicorp/terraform-provider-aws/internal/tfresource#TimedOut) and potentially unset the error before returning the error. For example:
+- __Uses tfresource.TimedOut() with retry.Retry()__: Resource logic implementing [`retry.Retry()`](https://godoc.org/github.com/hashicorp/terraform/helper/retry#Retry) should error check with [`tfresource.TimedOut(err error)`](https://godoc.org/github.com/isometry/terraform-provider-faws/internal/tfresource#TimedOut) and potentially unset the error before returning the error. For example:
 
   ```go
   var output *kms.CreateKeyOutput
@@ -174,4 +174,4 @@ The below are style-based items that _may_ be noted during review and are recomm
 - __Uses American English for Attribute Naming__: For any ambiguity with attribute naming, prefer American English over British English. e.g., `color` without the British `u`.
 - __Skips Timestamp Attributes__: Generally, creation and modification dates from the API should be omitted from the schema.
 - __Uses Paginated AWS Go SDK Functions When Iterating Over a Collection of Objects__: When the API for listing a collection of objects provides a paginated function, use it instead of looping until the next page token is not set. For example, with the EC2 API, [`DescribeInstancesPages`](https://docs.aws.amazon.com/sdk-for-go/api/service/ec2/#EC2.DescribeInstancesPages) should be used instead of [`DescribeInstances`](https://docs.aws.amazon.com/sdk-for-go/api/service/ec2/#EC2.DescribeInstances) when more than one result is expected.
-- __Adds Paginated Functions Missing from the AWS Go SDK to Internal Service Package__: If the AWS Go SDK does not define a paginated equivalent for a function to list a collection of objects, it should be added to a per-service internal package using the [`listpages` generator](https://github.com/hashicorp/terraform-provider-aws/blob/main/internal/generate/listpages/README.md). A support case should also be opened with AWS to have the paginated functions added to the AWS Go SDK.
+- __Adds Paginated Functions Missing from the AWS Go SDK to Internal Service Package__: If the AWS Go SDK does not define a paginated equivalent for a function to list a collection of objects, it should be added to a per-service internal package using the [`listpages` generator](https://github.com/isometry/terraform-provider-faws/blob/main/internal/generate/listpages/README.md). A support case should also be opened with AWS to have the paginated functions added to the AWS Go SDK.

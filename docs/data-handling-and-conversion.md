@@ -181,7 +181,7 @@ When using the Terraform Plugin SDK v2, flattening and expanding functions must 
 
 ### AutoFlex for Terraform Plugin Framework (Preferred)
 
-AutoFlex provides two entry-point functions, `Flatten` and `Expand` defined in the package `github.com/hashicorp/terraform-provider-aws/internal/framework/flex`.
+AutoFlex provides two entry-point functions, `Flatten` and `Expand` defined in the package `github.com/isometry/terraform-provider-faws/internal/framework/flex`.
 Without configuration, these two functions should be able to convert most provider and AWS API structures.
 
 AutoFlex uses field names to map between the source and target structures:
@@ -472,7 +472,7 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
         apiObject := &service.Structure{}
 
         // ... nested attribute handling ...
-        
+
         return apiObject
     }
 
@@ -546,27 +546,27 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
         if apiObject == nil {
             return types.ListNull(elemType), diags
         }
-        
+
         obj := map[string]attr.Value{
             // ... nested attribute handling ...
         }
         objVal, d := types.ObjectValue(structureAttrTypes, obj)
         diags.Append(d...)
-        
+
         listVal, d := types.ListValue(elemType, []attr.Value{objVal})
         diags.Append(d...)
-        
+
         return listVal, diags
     }
-    
+
     func flattenStructures(ctx context.Context, apiObjects []*service.Structure) (types.List, diag.Diagnostics) {
         var diags diag.Diagnostics
         elemType := types.ObjectType{AttrTypes: structureAttrTypes}
-        
+
         if len(apiObjects) == 0 {
             return types.ListNull(elemType), diags
         }
-        
+
         elems := []attr.Value{}
         for _, apiObject := range apiObjects {
             if apiObject == nil {
@@ -581,10 +581,10 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
             elems = append(elems, objVal)
         }
-        
+
         listVal, d := types.ListValue(elemType, elems)
         diags.Append(d...)
-        
+
         return listVal, diags
     }
     ```
@@ -597,27 +597,27 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
         }
 
         tfMap := map[string]interface{}{}
-    
+
         // ... nested attribute handling ...
-    
+
         return tfMap
     }
-    
+
     func flattenStructures(apiObjects []*service.Structure) []interface{} {
         if len(apiObjects) == 0 {
             return nil
         }
-    
+
         var tfList []interface{}
-    
+
         for _, apiObject := range apiObjects {
             if apiObject == nil {
                 continue
             }
-    
+
             tfList = append(tfList, flattenStructure(apiObject))
         }
-    
+
         return tfList
     }
     ```
@@ -632,29 +632,29 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
         AttributeName: plan.AttributeName.ValueBoolPointer()
     }
     ```
-    
+
     Alternatively, if only sending the attribute value when `true`:
-    
+
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if v := plan.AttributeName.ValueBool(); v {
         input.AttributeName = aws.Bool(v)
     }
     ```
 
     Or, if only sending the attribute value when it is known and not null:
-    
+
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if !plan.AttributeName.IsUnknown() && !plan.AttributeName.IsNull() {
         input.AttributeName = plan.AttributeName.ValueBoolPointer()
     }
     ```
-    
+
     To write:
-    
+
     ```go
     plan.AttributeName = flex.BoolToFramework(output.Thing.AttributeName)
     ```
@@ -667,19 +667,19 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
         AttributeName: aws.String(d.Get("attribute_name").(bool))
     }
     ```
-    
+
     Otherwise to read, if only sending the attribute value when `true` is preferred (`!ok` for opposite):
-    
+
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if v, ok := d.GetOk("attribute_name"); ok {
         input.AttributeName = aws.Bool(v.(bool))
     }
     ```
-    
+
     To write:
-    
+
     ```go
     d.Set("attribute_name", output.Thing.AttributeName)
     ```
@@ -691,14 +691,14 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if !plan.AttributeName.IsNull() {
         input.AttributeName = plan.AttributeName.ValueFloat64Pointer()
     }
     ```
-    
+
     To write:
-    
+
     ```go
     plan.AttributeName = flex.Float64ToFramework(output.Thing.AttributeName)
     ```
@@ -708,14 +708,14 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if v, ok := d.GetOk("attribute_name"); ok {
         input.AttributeName = aws.Float64(v.(float64))
     }
     ```
-    
+
     To write:
-    
+
     ```go
     d.Set("attribute_name", output.Thing.AttributeName)
     ```
@@ -727,14 +727,14 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if !plan.AttributeName.IsNull() {
         input.AttributeName = plan.AttributeName.ValueInt64Pointer()
     }
     ```
-    
+
     To write:
-    
+
     ```go
     plan.AttributeName = flex.Int64ToFramework(output.Thing.AttributeName)
     ```
@@ -744,14 +744,14 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if v, ok := d.GetOk("attribute_name"); ok {
         input.AttributeName = aws.Int64(int64(v.(int)))
     }
     ```
-    
+
     To write:
-    
+
     ```go
     d.Set("attribute_name", output.Thing.AttributeName)
     ```
@@ -763,7 +763,7 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if !plan.AttributeName.IsNull() {
         var tfList []attributeNameData
         resp.Diagnostics.Append(plan.AttributeName.ElementsAs(ctx, &tfList, false)...)
@@ -774,9 +774,9 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
         input.AttributeName = expandStructures(tfList)
     }
     ```
-    
+
     To write:
-    
+
     ```go
     attributeName, d := flattenStructures(ctx, output.Thing.AttributeName))
     resp.Diagnostics.Append(d...)
@@ -788,14 +788,14 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if v, ok := d.GetOk("attribute_name"); ok && len(v.([]interface{})) > 0 {
         input.AttributeName = expandStructures(v.([]interface{}))
     }
     ```
-    
+
     To write:
-    
+
     ```go
     if err := d.Set("attribute_name", flattenStructures(output.Thing.AttributeName)); err != nil {
         return sdkdiag.AppendErrorf(diags, "setting attribute_name: %s", err)
@@ -809,7 +809,7 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if !plan.AttributeName.IsNull() {
         var tfList []attributeNameData
         resp.Diagnostics.Append(plan.AttributeName.ElementsAs(ctx, &tfList, false)...)
@@ -821,9 +821,9 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
         input.AttributeName = expandStructure(tfList)
     }
     ```
-    
+
     To write:
-    
+
     ```go
     // flattener handles nil output, returning the equivalent null Terraform type
     attributeName, d := flattenStructures(ctx, output.Thing.AttributeName))
@@ -836,14 +836,14 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if v, ok := d.GetOk("attribute_name"); ok && len(v.([]interface{})) > 0 && v.([]interface{})[0] != nil {
         input.AttributeName = expandStructure(v.([]interface{})[0].(map[string]interface{}))
     }
     ```
-    
+
     To write (_likely to have helper function introduced soon_):
-    
+
     ```go
     if output.Thing.AttributeName != nil {
         if err := d.Set("attribute_name", []interface{}{flattenStructure(output.Thing.AttributeName)}); err != nil {
@@ -861,14 +861,14 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if !plan.AttributeName.IsNull() {
         input.AttributeName = flex.ExpandFrameworkStringValueList(ctx, plan.AttributeName)
     }
     ```
-    
+
     To write:
-    
+
     ```go
     plan.AttributeName = flex.FlattenFrameworkStringValueList(output.Thing.AttributeName)
     ```
@@ -878,14 +878,14 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if v, ok := d.GetOk("attribute_name"); ok && len(v.([]interface{})) > 0 {
         input.AttributeName = flex.ExpandStringList(v.([]interface{}))
     }
     ```
-    
+
     To write:
-    
+
     ```go
     d.Set("attribute_name", aws.StringValueSlice(output.Thing.AttributeName))
     ```
@@ -897,14 +897,14 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if !plan.AttributeName.IsNull() {
         input.AttributeName = flex.ExpandFrameworkStringValueMap(ctx, plan.AttributeName)
     }
     ```
-    
+
     To write:
-    
+
     ```go
     plan.AttributeName = flex.FlattenFrameworkStringValueMap(output.Thing.AttributeName)
     ```
@@ -914,7 +914,7 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if v, ok := d.GetOk("attribute_name"); ok && len(v.(map[string]interface{})) > 0 {
         input.AttributeName = flex.ExpandStringMap(v.(map[string]interface{}))
     }
@@ -933,7 +933,7 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if !plan.AttributeName.IsNull() {
         var tfList []attributeNameData
         resp.Diagnostics.Append(plan.AttributeName.ElementsAs(ctx, &tfList, false)...)
@@ -944,9 +944,9 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
         input.AttributeName = expandStructure(tfList)
     }
     ```
-    
+
     To write:
-    
+
     ```go
     // flattener handles nil output, returning the equivalent null Terraform type
     attributeName, d := flattenStructures(ctx, output.Thing.AttributeName))
@@ -959,7 +959,7 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if v, ok := d.GetOk("attribute_name"); ok && v.(*schema.Set).Len() > 0 {
         input.AttributeName = expandStructures(v.(*schema.Set).List())
     }
@@ -980,14 +980,14 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if !plan.AttributeName.IsNull() {
         input.AttributeName = flex.ExpandFrameworkStringValueSet(ctx, plan.AttributeName)
     }
     ```
-    
+
     To write:
-    
+
     ```go
     plan.AttributeName = flex.FlattenFrameworkStringValueSet(output.Thing.AttributeName)
     ```
@@ -997,7 +997,7 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if v, ok := d.GetOk("attribute_name"); ok && v.(*schema.Set).Len() > 0 {
         input.AttributeName = flex.ExpandStringSet(v.(*schema.Set))
     }
@@ -1016,14 +1016,14 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if !plan.AttributeName.IsNull() {
         input.AttributeName = plan.AttributeName.ValueStringPointer()
     }
     ```
-    
+
     To write:
-    
+
     ```go
     plan.AttributeName = flex.StringToFramework(output.Thing.AttributeName)
     ```
@@ -1033,7 +1033,7 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if v, ok := d.GetOk("attribute_name"); ok {
         input.AttributeName = aws.String(v.(string))
     }
@@ -1054,16 +1054,16 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if !plan.AttributeName.IsNull() {
         attributeName, d := plan.AttributeName.ValueRFC3339Time()
         resp.Diagnostics.Append(d...)
         input.AttributeName = aws.Time(attributeName)
     }
     ```
-    
+
     To write:
-    
+
     ```go
     plan.AttributeName = timetypes.NewRFC3339ValueMust(aws.ToTime(output.Thing.AttributeName).Format(time.RFC3339))
     ```
@@ -1083,10 +1083,10 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if v, ok := d.GetOk("attribute_name"); ok {
         v, _ := time.Parse(time.RFC3339, v.(string))
-    
+
         input.AttributeName = aws.Time(v)
     }
     ```
@@ -1135,10 +1135,10 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(ctx context.Context, apiObject *service.Structure) (types.List, diag.Diagnostics) {
         // ...
-    
+
         // flex will handle setting null when appropriate
         obj["nested_attribute_name"] = flex.BoolToFramework(ctx, apiObject.NestedAttributeName)
-    
+
         // ...
     }
     ```
@@ -1149,11 +1149,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func expandStructure(tfMap map[string]interface{}) *service.Structure {
         // ...
-    
+
         if v, ok := tfMap["nested_attribute_name"].(bool); ok {
             apiObject.NestedAttributeName = aws.Bool(v)
         }
-    
+
         // ...
     }
     ```
@@ -1163,11 +1163,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func expandStructure(tfMap map[string]interface{}) *service.Structure {
         // ...
-    
+
         if v, ok := tfMap["nested_attribute_name"].(bool); ok && v {
             apiObject.NestedAttributeName = aws.Bool(v)
         }
-    
+
         // ...
     }
     ```
@@ -1177,11 +1177,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(apiObject *service.Structure) map[string]interface{} {
         // ...
-    
+
         if v := apiObject.NestedAttributeName; v != nil {
             tfMap["nested_attribute_name"] = aws.ToBool(v)
         }
-    
+
         // ...
     }
     ```
@@ -1208,10 +1208,10 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(ctx context.Context, apiObject *service.Structure) (types.List, diag.Diagnostics) {
         // ...
-    
+
         // flex will handle setting null when appropriate
         obj["nested_attribute_name"] = flex.Float64ToFramework(ctx, apiObject.NestedAttributeName)
-    
+
         // ...
     }
     ```
@@ -1222,11 +1222,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func expandStructure(tfMap map[string]interface{}) *service.Structure {
         // ...
-    
+
         if v, ok := tfMap["nested_attribute_name"].(float64); ok && v != 0.0 {
             apiObject.NestedAttributeName = aws.Float64(v)
         }
-    
+
         // ...
     }
     ```
@@ -1236,11 +1236,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(apiObject *service.Structure) map[string]interface{} {
         // ...
-    
+
         if v := apiObject.NestedAttributeName; v != nil {
             tfMap["nested_attribute_name"] = aws.ToFloat64(v)
         }
-    
+
         // ...
     }
     ```
@@ -1267,10 +1267,10 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(ctx context.Context, apiObject *service.Structure) (types.List, diag.Diagnostics) {
         // ...
-    
+
         // flex will handle setting null when appropriate
         obj["nested_attribute_name"] = flex.Int64ToFramework(ctx, apiObject.NestedAttributeName)
-    
+
         // ...
     }
     ```
@@ -1281,11 +1281,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func expandStructure(tfMap map[string]interface{}) *service.Structure {
         // ...
-    
+
         if v, ok := tfMap["nested_attribute_name"].(int); ok && v != 0 {
             apiObject.NestedAttributeName = aws.Int64(int64(v))
         }
-    
+
         // ...
     }
     ```
@@ -1295,11 +1295,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(apiObject *service.Structure) map[string]interface{} {
         // ...
-    
+
         if v := apiObject.NestedAttributeName; v != nil {
             tfMap["nested_attribute_name"] = aws.ToInt64(v)
         }
-    
+
         // ...
     }
     ```
@@ -1328,10 +1328,10 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(ctx context.Context, apiObject *service.Structure) (types.List, diag.Diagnostics) {
         // ...
-    
+
         // flatten will handle setting null when appropriate
         obj["nested_attribute_name"] = flattenNestedAttributeName(ctx, v)
-    
+
         // ...
     }
     ```
@@ -1342,11 +1342,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func expandStructure(tfMap map[string]interface{}) *service.Structure {
         // ...
-    
+
         if v, ok := tfMap["nested_attribute_name"].([]interface{}); ok && len(v) > 0 {
             apiObject.NestedAttributeName = expandStructures(v)
         }
-    
+
         // ...
     }
     ```
@@ -1356,11 +1356,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(apiObject *service.Structure) map[string]interface{} {
         // ...
-    
+
         if v := apiObject.NestedAttributeName; v != nil {
             tfMap["nested_attribute_name"] = flattenNestedStructures(v)
         }
-    
+
         // ...
     }
     ```
@@ -1389,10 +1389,10 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(ctx context.Context, apiObject *service.Structure) (types.List, diag.Diagnostics) {
         // ...
-    
+
         // flatten will handle setting null when appropriate
         obj["nested_attribute_name"] = flattenNestedAttributeName(ctx, v)
-    
+
         // ...
     }
     ```
@@ -1403,11 +1403,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func expandStructure(tfMap map[string]interface{}) *service.Structure {
         // ...
-    
+
         if v, ok := tfMap["nested_attribute_name"].([]interface{}); ok && len(v) > 0 && v[0] != nil {
             apiObject.NestedAttributeName = expandStructure(v[0].(map[string]interface{}))
         }
-    
+
         // ...
     }
     ```
@@ -1417,11 +1417,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(apiObject *service.Structure) map[string]interface{} {
         // ...
-    
+
         if v := apiObject.NestedAttributeName; v != nil {
             tfMap["nested_attribute_name"] = []interface{}{flattenNestedStructure(v)}
         }
-    
+
         // ...
     }
     ```
@@ -1448,10 +1448,10 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(ctx context.Context, apiObject *service.Structure) (types.List, diag.Diagnostics) {
         // ...
-    
+
         // flex will handle setting null when appropriate
         obj["nested_attribute_name"] = flex.FlattenFrameworkStringList(ctx, v)
-    
+
         // ...
     }
     ```
@@ -1462,11 +1462,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func expandStructure(tfMap map[string]interface{}) *service.Structure {
         // ...
-    
+
         if v, ok := tfMap["nested_attribute_name"].([]interface{}); ok && len(v) > 0 {
             apiObject.NestedAttributeName = flex.ExpandStringList(v)
         }
-    
+
         // ...
     }
     ```
@@ -1476,11 +1476,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(apiObject *service.Structure) map[string]interface{} {
         // ...
-    
+
         if v := apiObject.NestedAttributeName; v != nil {
             tfMap["nested_attribute_name"] = aws.StringValueSlice(v)
         }
-    
+
         // ...
     }
     ```
@@ -1507,10 +1507,10 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(ctx context.Context, apiObject *service.Structure) (types.List, diag.Diagnostics) {
         // ...
-    
+
         // flex will handle setting null when appropriate
         obj["nested_attribute_name"] = flex.FlattenFrameworkStringMap(ctx, v)
-    
+
         // ...
     }
     ```
@@ -1520,7 +1520,7 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
 
     ```go
     input := service.ExampleOperationInput{}
-    
+
     if v, ok := tfMap["nested_attribute_name"].(map[string]interface{}); ok && len(v) > 0 {
         apiObject.NestedAttributeName = flex.ExpandStringMap(v)
     }
@@ -1531,11 +1531,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(apiObject *service.Structure) map[string]interface{} {
         // ...
-    
+
         if v := apiObject.NestedAttributeName; v != nil {
             tfMap["nested_attribute_name"] = aws.StringValueMap(v)
         }
-    
+
         // ...
     }
     ```
@@ -1564,10 +1564,10 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(ctx context.Context, apiObject *service.Structure) (types.List, diag.Diagnostics) {
         // ...
-    
+
         // flatten will handle setting null when appropriate
         obj["nested_attribute_name"] = flattenNestedAttributeName(ctx, v)
-    
+
         // ...
     }
     ```
@@ -1578,11 +1578,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func expandStructure(tfMap map[string]interface{}) *service.Structure {
         // ...
-    
+
         if v, ok := tfMap["nested_attribute_name"].(*schema.Set); ok && v.Len() > 0 {
             apiObject.NestedAttributeName = expandStructures(v.List())
         }
-    
+
         // ...
     }
     ```
@@ -1592,11 +1592,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(apiObject *service.Structure) map[string]interface{} {
         // ...
-    
+
         if v := apiObject.NestedAttributeName; v != nil {
             tfMap["nested_attribute_name"] = flattenNestedStructures(v)
         }
-    
+
         // ...
     }
     ```
@@ -1623,10 +1623,10 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(ctx context.Context, apiObject *service.Structure) (types.List, diag.Diagnostics) {
         // ...
-    
+
         // flex will handle setting null when appropriate
         obj["nested_attribute_name"] = flex.FlattenFrameworkStringSet(ctx, v)
-    
+
         // ...
     }
     ```
@@ -1637,11 +1637,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func expandStructure(tfMap map[string]interface{}) *service.Structure {
         // ...
-    
+
         if v, ok := tfMap["nested_attribute_name"].(*schema.Set); ok && v.Len() > 0 {
             apiObject.NestedAttributeName = flex.ExpandStringSet(v)
         }
-    
+
         // ...
     }
     ```
@@ -1651,11 +1651,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(apiObject *service.Structure) map[string]interface{} {
         // ...
-    
+
         if v := apiObject.NestedAttributeName; v != nil {
             tfMap["nested_attribute_name"] = aws.StringValueSlice(v)
         }
-    
+
         // ...
     }
     ```
@@ -1682,10 +1682,10 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(ctx context.Context, apiObject *service.Structure) (types.List, diag.Diagnostics) {
         // ...
-    
+
         // flex will handle setting null when appropriate
         obj["nested_attribute_name"] = flex.StringToFramework(ctx, apiObject.NestedAttributeName)
-    
+
         // ...
     }
     ```
@@ -1696,11 +1696,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func expandStructure(tfMap map[string]interface{}) *service.Structure {
         // ...
-    
+
         if v, ok := tfMap["nested_attribute_name"].(string); ok && v != "" {
             apiObject.NestedAttributeName = aws.String(v)
         }
-    
+
         // ...
     }
     ```
@@ -1710,11 +1710,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(apiObject *service.Structure) map[string]interface{} {
         // ...
-    
+
         if v := apiObject.NestedAttributeName; v != nil {
             tfMap["nested_attribute_name"] = aws.ToString(v)
         }
-    
+
         // ...
     }
     ```
@@ -1746,10 +1746,10 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(ctx context.Context, apiObject *service.Structure) (types.List, diag.Diagnostics) {
         // ...
-    
+
         obj["nested_attribute_name"] = timetypes.NewRFC3339ValueMust(aws.ToTime(apiObject.NestedAttributeName).Format(time.RFC3339))
 
-    
+
         // ...
     }
     ```
@@ -1770,13 +1770,13 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func expandStructure(tfMap map[string]interface{}) *service.Structure {
         // ...
-    
+
         if v, ok := tfMap["nested_attribute_name"].(string); ok && v != "" {
             v, _ := time.Parse(time.RFC3339, v)
-    
+
             apiObject.NestedAttributeName = aws.Time(v)
         }
-    
+
         // ...
     }
     ```
@@ -1786,11 +1786,11 @@ Define FLatten and EXpand (i.e., flex) functions at the _most local level_ possi
     ```go
     func flattenStructure(apiObject *service.Structure) map[string]interface{} {
         // ...
-    
+
         if v := apiObject.NestedAttributeName; v != nil {
             tfMap["nested_attribute_name"] = aws.ToTime(v).Format(time.RFC3339)
         }
-    
+
         // ...
     }
     ```

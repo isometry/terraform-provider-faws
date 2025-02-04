@@ -21,7 +21,7 @@ This step is generally only necessary for the first implementation and may have 
 
 More details about this code generation,
 including fixes for potential error messages in this process,
-can be found in the [`generate` package documentation](https://github.com/hashicorp/terraform-provider-aws/tree/main/internal/generate/tags/README.md).
+can be found in the [`generate` package documentation](https://github.com/isometry/terraform-provider-faws/tree/main/internal/generate/tags/README.md).
 
 The generator will create several types of tagging-related code.
 All services that support tagging will generate the function `KeyValueTags`, which converts from service-specific structs returned by the AWS SDK into a common format used by the provider,
@@ -60,7 +60,7 @@ To indicate the additional type, include the flag `-TagType2=<struct name>`.
 For example, the Auto Scaling uses the struct `Tag` as part of resource calls, but returns the struct `TagDescription` from the `DescribeTags` API call. The flag used is `-TagType2=TagDescription`.
 
 For more details on flags for generating service keys, see the
-[documentation for the tag generator](https://github.com/hashicorp/terraform-provider-aws/tree/main/internal/generate/tags/README.md)
+[documentation for the tag generator](https://github.com/isometry/terraform-provider-faws/tree/main/internal/generate/tags/README.md)
 
 ### Generating Standalone Tag Listing Functions
 
@@ -82,7 +82,7 @@ In some cases, it can be useful to retrieve single tags.
 Pass the flag `-GetTag` to generate a function to do so.
 
 For more details on flags for generating tag listing functions, see the
-[documentation for the tag generator](https://github.com/hashicorp/terraform-provider-aws/tree/main/internal/generate/tags/README.md)
+[documentation for the tag generator](https://github.com/isometry/terraform-provider-faws/tree/main/internal/generate/tags/README.md)
 
 ### Generating Standalone Tag Updating Functions
 
@@ -105,7 +105,7 @@ If the API call to remove tags uses a field other than `ResourceArn` to identify
 For example, the Route 53 service uses the field `Keys`, so the flag is `-UntagInTagsElem=Keys`.
 
 For more details on flags for generating tag updating functions, see the
-[documentation for the tag generator](https://github.com/hashicorp/terraform-provider-aws/tree/main/internal/generate/tags/README.md)
+[documentation for the tag generator](https://github.com/isometry/terraform-provider-faws/tree/main/internal/generate/tags/README.md)
 
 #### Generating Standalone Post-Creation Tag Updating Functions
 
@@ -126,9 +126,9 @@ Add the following imports to the resource's Go source file:
 ```go
 imports (
     /* ... other imports ... */
-    tftags "github.com/hashicorp/terraform-provider-aws/internal/tags"
-    "github.com/hashicorp/terraform-provider-aws/internal/verify"
-    "github.com/hashicorp/terraform-provider-aws/names"
+    tftags "github.com/isometry/terraform-provider-faws/internal/tags"
+    "github.com/isometry/terraform-provider-faws/internal/verify"
+    "github.com/isometry/terraform-provider-faws/names"
 )
 ```
 

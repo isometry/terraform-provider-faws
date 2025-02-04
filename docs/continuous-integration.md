@@ -24,7 +24,7 @@ Additionally, these tests provide rapid feedback to contributors, enabling them 
 
 ## Using `make` to Run Specific Tests Locally
 
-**NOTE:** We've made a great effort to ensure that tests running on GitHub have a close-as-possible equivalent in the Makefile. If you notice a difference, please [open an issue](https://github.com/hashicorp/terraform-provider-aws/issues/new/choose) to let us know.
+**NOTE:** We've made a great effort to ensure that tests running on GitHub have a close-as-possible equivalent in the Makefile. If you notice a difference, please [open an issue](https://github.com/isometry/terraform-provider-faws/issues/new/choose) to let us know.
 
 The Makefile included with the Terraform AWS Provider allows you to run many of the CI tests locally before submitting your PR. The file is located in the provider's root directory and is called `GNUmakefile`. You should be able to use `make` with a variety of Linux-type shells that support `bash`, such as a macOS terminal.
 
@@ -398,7 +398,7 @@ make sweeper-unlinked
 
 ### ProviderLint Checks / providerlint
 
-ProviderLint checks for a variety of best practices. For more details on specific checks and errors, see [providerlint](https://github.com/hashicorp/terraform-provider-aws/tree/main/.ci/providerlint).
+ProviderLint checks for a variety of best practices. For more details on specific checks and errors, see [providerlint](https://github.com/isometry/terraform-provider-faws/tree/main/.ci/providerlint).
 
 Use the `provider-lint` target to run the check just as it runs in CI:
 

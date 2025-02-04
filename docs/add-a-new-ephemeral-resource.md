@@ -40,9 +40,9 @@ package something
 
 import (
 	"context"
-	
+
 	"github.com/hashicorp/terraform-plugin-framework/ephemeral"
-	"github.com/hashicorp/terraform-provider-aws/internal/framework"
+	"github.com/isometry/terraform-provider-faws/internal/framework"
 )
 
 // @EphemeralResource(name="Example")

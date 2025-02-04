@@ -30,7 +30,7 @@ When done creating the resource using the Framework run `make gen` to remove the
 
 Terraform Plugin Framework introduced `null` values, which differ from `zero` values. Since the Plugin SDKv2 marked both `null` and `zero` values as the same, it will be necessary to use the [State Upgrader](https://developer.hashicorp.com/terraform/plugin/framework/migrating/resources/state-upgrade).
 
-An example of a resource with an upgraded state, while migrating, can be found [here](https://github.com/hashicorp/terraform-provider-aws/blob/88447d09f85dc737597243b31c5d0c8e212d055b/internal/service/batch/job_queue.go#L330).
+An example of a resource with an upgraded state, while migrating, can be found [here](https://github.com/isometry/terraform-provider-faws/blob/88447d09f85dc737597243b31c5d0c8e212d055b/internal/service/batch/job_queue.go#L330).
 
 ### Custom Types
 
@@ -46,12 +46,12 @@ SDKv2 `ARN` attribute.
 ```go
 func ResourceExampleResource {
     return &schema.Schema{
-        "arn_attribute": {		
+        "arn_attribute": {
 	        Type:         schema.TypeString,
 	        Optional:     true,
 	        ValidateFunc: verify.ValidARN,
         },
-        
+
         // other schema attributes
     }
 }

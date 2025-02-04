@@ -26,7 +26,7 @@ Support for region validation requires that the provider has an updated [AWS SDK
 
 ### Update Terraform AWS Provider
 
-[provider](https://github.com/hashicorp/terraform-provider-aws)
+[provider](https://github.com/isometry/terraform-provider-faws)
 
 - Update [aws-go-sdk-v2](https://github.com/aws/aws-sdk-go-v2)
 - Update [aws-go-sdk-base](https://github.com/hashicorp/aws-sdk-go-base)
@@ -44,8 +44,8 @@ See the [Changelog Process](changelog-process.md) document for example changelog
 
 Some data sources include static values specific to regions that are not available via a standard AWS API call. These will need to be manually updated. AWS employees can code search previous region values to find new region values in internal packages like RIPStaticConfig if they are not documented yet.
 
-- Check [Elastic Load Balancing endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/elb.html#elb_region) and add Route53 Hosted Zone ID if available to [`internal/service/elb/hosted_zone_id_data_source.go`](https://github.com/hashicorp/terraform-provider-aws/tree/main/internal/service/elb/hosted_zone_id_data_source.go) and [`internal/service/elbv2/hosted_zone_id_data_source.go`](https://github.com/hashicorp/terraform-provider-aws/tree/main/internal/service/elbv2/hosted_zone_id_data_source.go)
-- Check [Amazon Simple Storage Service endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints) and add Route53 Hosted Zone ID if available to [`internal/service/s3/hosted_zones.go`](https://github.com/hashicorp/terraform-provider-aws/tree/main/internal/service/s3/hosted_zones.go)
-- Check [AWS Elastic Beanstalk endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/elasticbeanstalk.html) and add Route53 Hosted Zone ID if available to [`internal/service/elasticbeanstalk/hosted_zone_data_source.go`](https://github.com/hashicorp/terraform-provider-aws/tree/main/internal/service/elasticbeanstalk/hosted_zone_data_source.go)
-- Check [SageMaker docs](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html) and add AWS Account IDs if available to [`internal/service/sagemaker/prebuilt_ecr_image_data_source.go`](https://github.com/hashicorp/terraform-provider-aws/tree/main/internal/service/sagemaker/prebuilt_ecr_image_data_source.go)
-- Check [App Runner docs](https://docs.aws.amazon.com/general/latest/gr/apprunner.html#apprunner_region) and add Route53 Hosted Zone ID if available to [`internal/service/apprunner/hosted_zone_id_data_source.go`](https://github.com/hashicorp/terraform-provider-aws/tree/main/internal/service/apprunner/hosted_zone_id_data_source.go)
+- Check [Elastic Load Balancing endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/elb.html#elb_region) and add Route53 Hosted Zone ID if available to [`internal/service/elb/hosted_zone_id_data_source.go`](https://github.com/isometry/terraform-provider-faws/tree/main/internal/service/elb/hosted_zone_id_data_source.go) and [`internal/service/elbv2/hosted_zone_id_data_source.go`](https://github.com/isometry/terraform-provider-faws/tree/main/internal/service/elbv2/hosted_zone_id_data_source.go)
+- Check [Amazon Simple Storage Service endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints) and add Route53 Hosted Zone ID if available to [`internal/service/s3/hosted_zones.go`](https://github.com/isometry/terraform-provider-faws/tree/main/internal/service/s3/hosted_zones.go)
+- Check [AWS Elastic Beanstalk endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/elasticbeanstalk.html) and add Route53 Hosted Zone ID if available to [`internal/service/elasticbeanstalk/hosted_zone_data_source.go`](https://github.com/isometry/terraform-provider-faws/tree/main/internal/service/elasticbeanstalk/hosted_zone_data_source.go)
+- Check [SageMaker docs](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html) and add AWS Account IDs if available to [`internal/service/sagemaker/prebuilt_ecr_image_data_source.go`](https://github.com/isometry/terraform-provider-faws/tree/main/internal/service/sagemaker/prebuilt_ecr_image_data_source.go)
+- Check [App Runner docs](https://docs.aws.amazon.com/general/latest/gr/apprunner.html#apprunner_region) and add Route53 Hosted Zone ID if available to [`internal/service/apprunner/hosted_zone_id_data_source.go`](https://github.com/isometry/terraform-provider-faws/tree/main/internal/service/apprunner/hosted_zone_id_data_source.go)

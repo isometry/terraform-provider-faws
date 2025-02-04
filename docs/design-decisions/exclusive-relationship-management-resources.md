@@ -1,8 +1,8 @@
 # Exclusive Relationship Management Resources
 
-**Summary:** A proposal describing the use case for "exclusive relationship management" resources and their function within the Terraform AWS provider.  
-**Created**: 2024-09-06  
-**Author**: [@jar-b](https://github.com/jar-b)  
+**Summary:** A proposal describing the use case for "exclusive relationship management" resources and their function within the Terraform AWS provider.
+**Created**: 2024-09-06
+**Author**: [@jar-b](https://github.com/jar-b)
 
 ---
 
@@ -44,7 +44,7 @@ resource "aws_iam_role_policy" "example" {
 }
 ```
 
-While this separates the lifecycle of distinct resource types to more closely align with the underlying AWS APIs, this approach alone does not provide a mechanism for exclusive management of all relationships to the parent. The absence of this benefit is often [cited by the community](https://github.com/hashicorp/terraform-provider-aws/issues/22336#issuecomment-1586581208) as a reason not to move away from the argument-based definitions to standalone resources. The lack of parity has also prevented maintainers from formally deprecating and removing arguments on the parent resource for configuring relationships.
+While this separates the lifecycle of distinct resource types to more closely align with the underlying AWS APIs, this approach alone does not provide a mechanism for exclusive management of all relationships to the parent. The absence of this benefit is often [cited by the community](https://github.com/isometry/terraform-provider-faws/issues/22336#issuecomment-1586581208) as a reason not to move away from the argument-based definitions to standalone resources. The lack of parity has also prevented maintainers from formally deprecating and removing arguments on the parent resource for configuring relationships.
 
 ### Existing Resources
 
@@ -84,7 +84,7 @@ resource "aws_iam_role_policies_exclusive" "example" {
 }
 ```
 
-A working implementation can be found on [this branch](https://github.com/hashicorp/terraform-provider-aws/tree/f-iam_role_policies_lock). The `_exclusive` resource will detect any additional inline policies assigned to the role during `plan` operations and remove them during `apply`. This behavior provides parity with the `inline_policy` argument on the `aws_iam_role` resource, allowing maintainers to formally deprecate this argument and suggest practitioners migrate to the standalone inline policy resource, optionally including an `_exclusive` resource when exclusive management of assignments is desired.
+A working implementation can be found on [this branch](https://github.com/isometry/terraform-provider-faws/tree/f-iam_role_policies_lock). The `_exclusive` resource will detect any additional inline policies assigned to the role during `plan` operations and remove them during `apply`. This behavior provides parity with the `inline_policy` argument on the `aws_iam_role` resource, allowing maintainers to formally deprecate this argument and suggest practitioners migrate to the standalone inline policy resource, optionally including an `_exclusive` resource when exclusive management of assignments is desired.
 
 ### Potential Resources
 

@@ -89,7 +89,7 @@ func (p *servicePackage) NewClient(ctx context.Context, config map[string]any) (
 		withBaseEndpoint(config[names.AttrEndpoint].(string)),
 		func(o *s3_sdkv2.Options) {
 			// ..other configuration..
-	
+
 			o.Retryer = conns.AddIsErrorRetryables(cfg.Retryer().(aws_sdkv2.RetryerV2), retry_sdkv2.IsErrorRetryableFunc(func(err error) aws_sdkv2.Ternary {
 				if tfawserr_sdkv2.ErrMessageContains(err, errCodeOperationAborted, "A conflicting conditional operation is currently in progress against this resource. Please try again.") {
 					return aws_sdkv2.TrueTernary
@@ -186,7 +186,7 @@ Each AWS service API (and sometimes even operations within the same API) varies 
 
 import (
 	// ... other imports ...
-	tfiam "github.com/hashicorp/terraform-provider-aws/internal/service/iam"
+	tfiam "github.com/isometry/terraform-provider-faws/internal/service/iam"
 )
 
 // ... Create and typically Update function ...
@@ -226,7 +226,7 @@ The below code example highlights this situation for a resource creation that al
 
 import (
 	// ... other imports ...
-	tfiam "github.com/hashicorp/terraform-provider-aws/internal/service/iam"
+	tfiam "github.com/isometry/terraform-provider-faws/internal/service/iam"
 )
 
 // ... Create function ...
@@ -413,10 +413,10 @@ const (
     ```
 
     Some other general guidelines are:
-    
+
     - If the `Create` function uses `retry.StateChangeConf`, the underlying `resource.RefreshStateFunc` should `return nil, "", nil` instead of the API "not found" error. This way the `StateChangeConf` logic will automatically retry.
     - If the `Create` function uses `retry.RetryContext()`, the API "not found" error should be caught and `return retry.RetryableError(err)` to automatically retry.
-    
+
     In rare cases, it may be easier to duplicate all `Read` function logic in the `Create` function to handle all retries in one place.
 
 ### Resource Attribute Value Waiters

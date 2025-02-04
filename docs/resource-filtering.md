@@ -19,7 +19,7 @@ Implementing server-side filtering support for Terraform AWS Provider resources 
 
 This step is only necessary for the first implementation and may have been previously completed. If so, move on to the next section.
 
-More details about this code generation can be found in the [namevaluesfilters documentation](https://github.com/hashicorp/terraform-provider-aws/blob/main/internal/generate/namevaluesfilters/README.md).
+More details about this code generation can be found in the [namevaluesfilters documentation](https://github.com/isometry/terraform-provider-faws/blob/main/internal/generate/namevaluesfilters/README.md).
 
 Add the AWS Go SDK service name (e.g., `rds`) to `sliceServiceNames` in `internal/generate/namevaluesfilters/generators/servicefilters/main.go`.
 
@@ -27,7 +27,7 @@ Add the AWS Go SDK service name (e.g., `rds`) to `sliceServiceNames` in `interna
 
 ### Resource Filter Code Implementation
 
-- In the resource's equivalent data source Go file (e.g., `internal/service/ec2/internet_gateway_data_source.go`), add the following Go import: `"github.com/hashicorp/terraform-provider-aws/internal/generate/namevaluesfilters"`
+- In the resource's equivalent data source Go file (e.g., `internal/service/ec2/internet_gateway_data_source.go`), add the following Go import: `"github.com/isometry/terraform-provider-faws/internal/generate/namevaluesfilters"`
 - In the resource schema, add `"filter": namevaluesfilters.Schema(),`
 - Implement the logic to build the list of filters:
 

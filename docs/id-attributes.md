@@ -14,7 +14,7 @@ As net-new resources [must be implemented](terraform-plugin-development-packages
 
 !!! info "`id` Attribute Standard"
     For all net-new resources, the `id` attribute should be omitted if it is redundant with an existing argument or is a combination of multiple arguments.
-    When the unique identifier is a combination of arguments, these should be delimited with a comma (`,`), and rely on the internal [`ExpandResourceID`](https://github.com/hashicorp/terraform-provider-aws/blob/v5.51.1/internal/flex/flex.go#L326-L354) function to handle splitting values within the `ImportState` method.
+    When the unique identifier is a combination of arguments, these should be delimited with a comma (`,`), and rely on the internal [`ExpandResourceID`](https://github.com/isometry/terraform-provider-faws/blob/v5.51.1/internal/flex/flex.go#L326-L354) function to handle splitting values within the `ImportState` method.
     In all other cases the `id` attribute should continue to be used as it has been historically.
 
 ## Examples

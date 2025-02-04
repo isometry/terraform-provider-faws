@@ -22,7 +22,7 @@ From Nov - Jan 2025, we will be prioritizing the following areas of work:
 
 ### Amazon S3 Tables
 
-Issue: [#40407](https://github.com/hashicorp/terraform-provider-aws/issues/40407)
+Issue: [#40407](https://github.com/isometry/terraform-provider-faws/issues/40407)
 
 [Amazon S3 Tables](https://aws.amazon.com/about-aws/whats-new/2024/12/amazon-s3-tables-apache-iceberg-tables-analytics-workloads/) Amazon S3 Tables deliver the first cloud object store with built-in Apache Iceberg support and the easiest way to store tabular data at scale. S3 Tables are specifically optimized for analytics workloads, resulting in up to 3x faster query throughput and up to 10x higher transactions per second than self-managed tables.
 
@@ -38,7 +38,7 @@ New Resource(s):
 
 ### Amazon S3 Express Bucket Lifecycle Configuration
 
-Issue: [#40261](https://github.com/hashicorp/terraform-provider-aws/issues/40261)
+Issue: [#40261](https://github.com/isometry/terraform-provider-faws/issues/40261)
 
 [Amazon S3 Express Bucket Lifecycle Configuration](https://aws.amazon.com/about-aws/whats-new/2024/11/amazon-s3-express-one-zone-s3-lifecycle-expirations/) Amazon S3 Express One Zone, a high-performance S3 storage class for latency-sensitive applications, now supports object expiration using S3 Lifecycle. S3 Lifecycle can expire objects based on age to help you automatically optimize storage costs.
 
@@ -50,13 +50,13 @@ Affected Resource(s):
 
 ### Amazon EKS: Auto Mode
 
-Issue: [#40373](https://github.com/hashicorp/terraform-provider-aws/issues/40373)
+Issue: [#40373](https://github.com/isometry/terraform-provider-faws/issues/40373)
 
 [Amazon EKS: Auto Mode](https://aws.amazon.com/about-aws/whats-new/2024/12/amazon-eks-auto-mode/) a new feature that fully automates compute, storage, and networking management for Kubernetes clusters. Amazon EKS Auto Mode simplifies running Kubernetes by offloading cluster operations to AWS, improves the performance and security of your applications, and helps optimize compute costs.
 
 ### Amazon ECS: Availability Zone Rebalancing
 
-Issue: [#40221](https://github.com/hashicorp/terraform-provider-aws/issues/40221)
+Issue: [#40221](https://github.com/isometry/terraform-provider-faws/issues/40221)
 
 [ECS: Availability Zone Rebalancing](https://aws.amazon.com/about-aws/whats-new/2024/11/amazon-ecs-az-rebalancing-speeds-mean-time-recovery-event/) a new feature that automatically redistributes containerized workloads across AZs. This capability helps reduce the mean time to recovery after infrastructure events, enabling applications to maintain high availability without requiring manual intervention.
 
@@ -64,11 +64,11 @@ Issue: [#40221](https://github.com/hashicorp/terraform-provider-aws/issues/40221
 
 This quarter most of our efforts will be focused on enhancements and stability improvements of our core services, rather than adding brand new services to the provider. The following list comprises the items most important to the community.
 
-- [Enable Deletion Protection for DynamoDB Table Replicas](https://github.com/hashicorp/terraform-provider-aws/issues/30213)
-- [WAFv2 update rules shared with Firewall Manager](https://github.com/hashicorp/terraform-provider-aws/issues/36941)
-- [Add support for enabling primary ipv6 address on EC2 instance](https://github.com/hashicorp/terraform-provider-aws/pull/36425)
-- [Timestream Scheduled Query](https://github.com/hashicorp/terraform-provider-aws/issues/22507)
-- [Log Anomaly Detector](https://github.com/hashicorp/terraform-provider-aws/issues/22507)
+- [Enable Deletion Protection for DynamoDB Table Replicas](https://github.com/isometry/terraform-provider-faws/issues/30213)
+- [WAFv2 update rules shared with Firewall Manager](https://github.com/isometry/terraform-provider-faws/issues/36941)
+- [Add support for enabling primary ipv6 address on EC2 instance](https://github.com/isometry/terraform-provider-faws/pull/36425)
+- [Timestream Scheduled Query](https://github.com/isometry/terraform-provider-faws/issues/22507)
+- [Log Anomaly Detector](https://github.com/isometry/terraform-provider-faws/issues/22507)
 
 ## Disclosures
 

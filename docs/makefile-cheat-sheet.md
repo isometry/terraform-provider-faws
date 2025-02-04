@@ -11,7 +11,7 @@ If you're new to our Makefile, this section will bring you up to speed.
 
 ### Location
 
-The Makefile is located in the root of the provider repository and is called [GNUmakefile](https://github.com/hashicorp/terraform-provider-aws/blob/main/GNUmakefile).
+The Makefile is located in the root of the provider repository and is called [GNUmakefile](https://github.com/isometry/terraform-provider-faws/blob/main/GNUmakefile).
 
 ### Phony Targets
 

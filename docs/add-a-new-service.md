@@ -27,7 +27,7 @@ To add an AWS SDK for Go service client:
 
 1. Otherwise, determine the service identifier using the rule described in [the Naming Guide](naming.md#service-identifier).
 
-1. In `names/data/names_data.hcl`, add a new hcl block with all the requested information for the service following the guidance in the [`names` README](https://github.com/hashicorp/terraform-provider-aws/blob/main/names/README.md).
+1. In `names/data/names_data.hcl`, add a new hcl block with all the requested information for the service following the guidance in the [`names` README](https://github.com/isometry/terraform-provider-faws/blob/main/names/README.md).
 
     !!! tip
         Be very careful when adding or changing data in `names_data.hcl`!
@@ -70,7 +70,7 @@ Once the service client has been added, implement the first [resource](./add-a-n
 
 If the service API's endpoint must be accessed via a single AWS Region, then:
 
-1. Add a `endpoint_region_overrides` map attribute to the `endpoint_info` for the service in [`names/data/names_data.hcl`](https://github.com/hashicorp/terraform-provider-aws/blob/main/names/README.md)
+1. Add a `endpoint_region_overrides` map attribute to the `endpoint_info` for the service in [`names/data/names_data.hcl`](https://github.com/isometry/terraform-provider-faws/blob/main/names/README.md)
 
 ```terraform
   endpoint_info {
@@ -99,7 +99,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/shield"
 	"github.com/hashicorp/aws-sdk-go-base/v2/endpoints"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
-	"github.com/hashicorp/terraform-provider-aws/names"
+	"github.com/isometry/terraform-provider-faws/names"
 )
 
 // NewClient returns a new AWS SDK for Go v2 client for this service package's AWS API.

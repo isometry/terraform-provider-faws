@@ -5,7 +5,7 @@
 
 ---
 
-The AWS Terraform provider has a [prioritized issue](https://github.com/hashicorp/terraform-provider-aws/issues/9183) requesting a Terraform AWS provider implementation of the CloudFormation [`AWS::SecretsManager::SecretTargetAttachment`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html) function.
+The AWS Terraform provider has a [prioritized issue](https://github.com/isometry/terraform-provider-faws/issues/9183) requesting a Terraform AWS provider implementation of the CloudFormation [`AWS::SecretsManager::SecretTargetAttachment`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html) function.
 This document will assess the feasibility of replicating this functionality in the AWS Terraform provider and document the alternative options available using existing SecretsManager resources.
 
 ## Background
@@ -182,9 +182,9 @@ With existing options already available in the provider, and no clear path forwa
 
 No work will be done to implement the requested functionality from the original issue. However, the investigation phase did uncover other potential enhancements to improve managed credential workflows in the AWS provider.
 
-- The previous implementation of the `aws_secretsmanager_secret_rotation` resource did not allow for managed secret rotations to be modified (`rotation_lambda_arn` is required, but managed secrets omit this value on update). An [enhancement issue](https://github.com/hashicorp/terraform-provider-aws/issues/34108) was opened to support this use case, and the implementation was completed with [#34180](https://github.com/hashicorp/terraform-provider-aws/pull/34180).
+- The previous implementation of the `aws_secretsmanager_secret_rotation` resource did not allow for managed secret rotations to be modified (`rotation_lambda_arn` is required, but managed secrets omit this value on update). An [enhancement issue](https://github.com/isometry/terraform-provider-faws/issues/34108) was opened to support this use case, and the implementation was completed with [#34180](https://github.com/isometry/terraform-provider-faws/pull/34180).
 
-- The `aws_redshift_cluster` resource did not implement support for managing master passwords. An [enhancement issue](https://github.com/hashicorp/terraform-provider-aws/issues/34169) was opened to support this use case, and the implementation was completed with [#34182](https://github.com/hashicorp/terraform-provider-aws/pull/34182).
+- The `aws_redshift_cluster` resource did not implement support for managing master passwords. An [enhancement issue](https://github.com/isometry/terraform-provider-faws/issues/34169) was opened to support this use case, and the implementation was completed with [#34182](https://github.com/isometry/terraform-provider-faws/pull/34182).
 
 ## References
 

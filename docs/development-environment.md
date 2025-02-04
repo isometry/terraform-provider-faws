@@ -20,7 +20,7 @@ mkdir -p $HOME/development/hashicorp/; cd $HOME/development/hashicorp/
 ```
 
 ```console
- git clone git@github.com:hashicorp/terraform-provider-aws
+ git clone git@github.com:isometry/terraform-provider-faws
 ```
 
 Enter the provider directory and run `make tools`. This will install the tools for provider development.

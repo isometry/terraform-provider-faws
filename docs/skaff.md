@@ -11,7 +11,7 @@ These files are heavily commented with instructions, serving as the best way to 
     * [Name it](naming.md).
     !!! tip
         Net-new resources should be implemented with Terraform Plugin Framework (i.e. the default `skaff` settings).
-        See [Terraform Plugin Development Packages](terraform-plugin-development-packages.md) and [this issue](https://github.com/hashicorp/terraform-provider-aws/issues/32917) for additional information.
+        See [Terraform Plugin Development Packages](terraform-plugin-development-packages.md) and [this issue](https://github.com/isometry/terraform-provider-faws/issues/32917) for additional information.
 1. Use `skaff` to generate provider code.
 1. Go through the generated code, customizing as necessary.
 1. Run, test, refine.
@@ -20,7 +20,7 @@ These files are heavily commented with instructions, serving as the best way to 
 
 ## Running `skaff`
 
-1. Clone the [Terraform AWS Provider](https://github.com/hashicorp/terraform-provider-aws) repository.
+1. Clone the [Terraform AWS Provider](https://github.com/isometry/terraform-provider-faws) repository.
 1. Install `skaff`.
 
     ```sh

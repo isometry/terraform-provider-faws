@@ -98,17 +98,17 @@ TF_ACC=1 go test ./internal/service/ec2/... -v -count 1 -parallel 20 -run='TestA
 === PAUSE TestAccVPCFlowLog_destinationError
 === CONT  TestAccVPCFlowLog_destinationError
     vpc_flow_log_test.go:297: Step 1/1 error: Error running apply: exit status 1
-        
+
         Error: creating Flow Log (vpc-0c2635533cef2be79): 1 error occurred:
         	* vpc-0c2635533cef2be79: 400: Access Denied for LogDestination: does-not-exist. Please check LogDestination permission
 
           with aws_flow_log.test,
           on terraform_plugin_test.tf line 34, in resource "aws_flow_log" "test":
           34: resource "aws_flow_log" "test" {
-        
+
 --- FAIL: TestAccVPCFlowLog_destinationError (13.79s)
 FAIL
-FAIL	github.com/hashicorp/terraform-provider-aws/internal/service/ec2	15.373s
+FAIL	github.com/isometry/terraform-provider-faws/internal/service/ec2	15.373s
 FAIL
 make: *** [testacc] Error 1
 ```
@@ -165,7 +165,7 @@ TF_ACC=1 go test ./internal/service/ec2/... -v -count 1 -parallel 20 -run='TestA
     vpc_flow_log_test.go:269: Step 1/2 error: Check failed: Check 3/4 error: aws_flow_log.test: Attribute 'log_group_name' expected "abc-123", got ""
 --- FAIL: TestAccVPCFlowLog_LogDestinationType_s3 (15.49s)
 FAIL
-FAIL	github.com/hashicorp/terraform-provider-aws/internal/service/ec2	17.358s
+FAIL	github.com/isometry/terraform-provider-faws/internal/service/ec2	17.358s
 FAIL
 make: *** [testacc] Error 1
 ```
@@ -204,7 +204,7 @@ func TestAccVPCFlowLog_destinationError(t *testing.T) {
 			{
 				Config:      testAccVPCFlowLogConfig_destinationError(rName),
                 // This error should not happen!
-                // See https://github.com/hashicorp/terraform-provider-aws/issues/45912
+                // See https://github.com/isometry/terraform-provider-faws/issues/45912
 				ExpectError: regexache.MustCompile(`invalid destination`),
 			},
 		},
@@ -242,7 +242,7 @@ func TestAccVPCFlowLog_destinationError(t *testing.T) {
 				Check: resource.ComposeTestCheckFunc(
 					testAccCheckFlowLogExists(ctx, resourceName, &flowLog),
                      // log_group_name should be "xyz-123"
-                     // See https://github.com/hashicorp/terraform-provider-aws/issues/45912
+                     // See https://github.com/isometry/terraform-provider-faws/issues/45912
 					resource.TestCheckResourceAttr(resourceName, "log_group_name", ""),
 				),
 			},

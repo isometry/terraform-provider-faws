@@ -100,7 +100,7 @@ Then referencing code can use it via:
 
 ```go
 // imports
-tf{SERVICE} "github.com/hashicorp/terraform-provider-aws/internal/service/{SERVICE}"
+tf{SERVICE} "github.com/isometry/terraform-provider-faws/internal/service/{SERVICE}"
 
 // logic
 tfawserr.ErrCodeEquals(err, tf{SERVICE}.ErrCodeInvalidParameterException)
