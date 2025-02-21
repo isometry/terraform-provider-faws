@@ -11,10 +11,10 @@ require (
 	github.com/YakDriver/go-version v0.1.0
 	github.com/YakDriver/regexache v0.24.0
 	github.com/aws/aws-sdk-go v1.55.6
-	github.com/aws/aws-sdk-go-v2 v1.34.0
-	github.com/aws/aws-sdk-go-v2/config v1.29.2
-	github.com/aws/aws-sdk-go-v2/credentials v1.17.55
-	github.com/aws/aws-sdk-go-v2/feature/ec2/imds v1.16.25
+	github.com/aws/aws-sdk-go-v2 v1.36.0
+	github.com/aws/aws-sdk-go-v2/config v1.29.4
+	github.com/aws/aws-sdk-go-v2/credentials v1.17.57
+	github.com/aws/aws-sdk-go-v2/feature/ec2/imds v1.16.27
 	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.17.54
 	github.com/aws/aws-sdk-go-v2/service/accessanalyzer v1.36.9
 	github.com/aws/aws-sdk-go-v2/service/account v1.22.5
@@ -100,7 +100,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/docdb v1.40.6
 	github.com/aws/aws-sdk-go-v2/service/docdbelastic v1.14.9
 	github.com/aws/aws-sdk-go-v2/service/drs v1.30.12
-	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.39.6
+	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.39.8
 	github.com/aws/aws-sdk-go-v2/service/ec2 v1.202.0
 	github.com/aws/aws-sdk-go-v2/service/ecr v1.38.7
 	github.com/aws/aws-sdk-go-v2/service/ecrpublic v1.29.5
@@ -132,7 +132,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/groundstation v1.31.13
 	github.com/aws/aws-sdk-go-v2/service/guardduty v1.52.6
 	github.com/aws/aws-sdk-go-v2/service/healthlake v1.29.0
-	github.com/aws/aws-sdk-go-v2/service/iam v1.38.8
+	github.com/aws/aws-sdk-go-v2/service/iam v1.38.10
 	github.com/aws/aws-sdk-go-v2/service/identitystore v1.27.13
 	github.com/aws/aws-sdk-go-v2/service/imagebuilder v1.40.4
 	github.com/aws/aws-sdk-go-v2/service/inspector v1.25.12
@@ -216,7 +216,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/route53recoveryreadiness v1.21.12
 	github.com/aws/aws-sdk-go-v2/service/route53resolver v1.34.9
 	github.com/aws/aws-sdk-go-v2/service/rum v1.21.12
-	github.com/aws/aws-sdk-go-v2/service/s3 v1.74.1
+	github.com/aws/aws-sdk-go-v2/service/s3 v1.75.2
 	github.com/aws/aws-sdk-go-v2/service/s3control v1.53.0
 	github.com/aws/aws-sdk-go-v2/service/s3outposts v1.28.12
 	github.com/aws/aws-sdk-go-v2/service/s3tables v1.0.5
@@ -237,16 +237,16 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/shield v1.29.12
 	github.com/aws/aws-sdk-go-v2/service/signer v1.26.13
 	github.com/aws/aws-sdk-go-v2/service/sns v1.33.15
-	github.com/aws/aws-sdk-go-v2/service/sqs v1.37.10
+	github.com/aws/aws-sdk-go-v2/service/sqs v1.37.12
 	github.com/aws/aws-sdk-go-v2/service/ssm v1.56.8
 	github.com/aws/aws-sdk-go-v2/service/ssmcontacts v1.26.12
 	github.com/aws/aws-sdk-go-v2/service/ssmincidents v1.34.13
 	github.com/aws/aws-sdk-go-v2/service/ssmquicksetup v1.3.6
 	github.com/aws/aws-sdk-go-v2/service/ssmsap v1.19.5
-	github.com/aws/aws-sdk-go-v2/service/sso v1.24.12
+	github.com/aws/aws-sdk-go-v2/service/sso v1.24.14
 	github.com/aws/aws-sdk-go-v2/service/ssoadmin v1.29.12
 	github.com/aws/aws-sdk-go-v2/service/storagegateway v1.34.12
-	github.com/aws/aws-sdk-go-v2/service/sts v1.33.10
+	github.com/aws/aws-sdk-go-v2/service/sts v1.33.12
 	github.com/aws/aws-sdk-go-v2/service/swf v1.27.15
 	github.com/aws/aws-sdk-go-v2/service/synthetics v1.31.9
 	github.com/aws/aws-sdk-go-v2/service/taxsettings v1.7.6
@@ -273,8 +273,8 @@ require (
 	github.com/gertd/go-pluralize v0.2.1
 	github.com/google/go-cmp v0.6.0
 	github.com/hashicorp/aws-cloudformation-resource-schema-sdk-go v0.23.0
-	github.com/hashicorp/aws-sdk-go-base/v2 v2.0.0-beta.61
-	github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2 v2.0.0-beta.62
+	github.com/hashicorp/aws-sdk-go-base/v2 v2.0.0-beta.62
+	github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2 v2.0.0-beta.63
 	github.com/hashicorp/awspolicyequivalence v1.7.0
 	github.com/hashicorp/cli v1.1.6
 	github.com/hashicorp/go-cleanhttp v0.5.2
@@ -321,16 +321,16 @@ require (
 	github.com/apparentlymart/go-textseg/v15 v15.0.0 // indirect
 	github.com/armon/go-radix v1.0.0 // indirect
 	github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream v1.6.8 // indirect
-	github.com/aws/aws-sdk-go-v2/internal/configsources v1.3.29 // indirect
-	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.6.29 // indirect
+	github.com/aws/aws-sdk-go-v2/internal/configsources v1.3.31 // indirect
+	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.6.31 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/ini v1.8.2 // indirect
-	github.com/aws/aws-sdk-go-v2/internal/v4a v1.3.29 // indirect
+	github.com/aws/aws-sdk-go-v2/internal/v4a v1.3.31 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.12.2 // indirect
-	github.com/aws/aws-sdk-go-v2/service/internal/checksum v1.5.3 // indirect
-	github.com/aws/aws-sdk-go-v2/service/internal/endpoint-discovery v1.10.10 // indirect
-	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.12.10 // indirect
-	github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.18.10 // indirect
-	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.28.11 // indirect
+	github.com/aws/aws-sdk-go-v2/service/internal/checksum v1.5.5 // indirect
+	github.com/aws/aws-sdk-go-v2/service/internal/endpoint-discovery v1.10.12 // indirect
+	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.12.12 // indirect
+	github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.18.12 // indirect
+	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.28.13 // indirect
 	github.com/bgentry/speakeasy v0.2.0 // indirect
 	github.com/boombuler/barcode v1.0.1 // indirect
 	github.com/bufbuild/protocompile v0.6.0 // indirect
@@ -369,10 +369,10 @@ require (
 	github.com/xeipuuv/gojsonschema v1.2.0 // indirect
 	github.com/zclconf/go-cty v1.15.1 // indirect
 	go.opentelemetry.io/auto/sdk v1.1.0 // indirect
-	go.opentelemetry.io/contrib/instrumentation/github.com/aws/aws-sdk-go-v2/otelaws v0.58.0 // indirect
-	go.opentelemetry.io/otel v1.33.0 // indirect
-	go.opentelemetry.io/otel/metric v1.33.0 // indirect
-	go.opentelemetry.io/otel/trace v1.33.0 // indirect
+	go.opentelemetry.io/contrib/instrumentation/github.com/aws/aws-sdk-go-v2/otelaws v0.59.0 // indirect
+	go.opentelemetry.io/otel v1.34.0 // indirect
+	go.opentelemetry.io/otel/metric v1.34.0 // indirect
+	go.opentelemetry.io/otel/trace v1.34.0 // indirect
 	golang.org/x/net v0.34.0 // indirect
 	golang.org/x/sync v0.10.0 // indirect
 	golang.org/x/sys v0.29.0 // indirect
