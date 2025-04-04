@@ -1,11 +1,11 @@
 module github.com/isometry/terraform-provider-faws/ci/providerlint
 
 go 1.23
-toolchain go1.23.5
+toolchain go1.24.1
 
 require (
 	github.com/bflad/tfproviderlint v0.30.0
-	github.com/hashicorp/aws-sdk-go-base/v2 v2.0.0-beta.62
+	github.com/hashicorp/aws-sdk-go-base/v2 v2.0.0-beta.64
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.35.0
 	golang.org/x/tools v0.31.0
 )
@@ -18,7 +18,7 @@ require (
 	github.com/cloudflare/circl v1.5.0 // indirect
 	github.com/fatih/color v1.18.0 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
-	github.com/google/go-cmp v0.6.0 // indirect
+	github.com/google/go-cmp v0.7.0 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-checkpoint v0.5.0 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
@@ -40,7 +40,7 @@ require (
 	github.com/hashicorp/terraform-svchost v0.1.1 // indirect
 	github.com/hashicorp/yamux v0.1.2 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
-	github.com/mattn/go-colorable v0.1.13 // indirect
+	github.com/mattn/go-colorable v0.1.14 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/mitchellh/copystructure v1.2.0 // indirect
 	github.com/mitchellh/go-testing-interface v1.14.1 // indirect
@@ -56,7 +56,7 @@ require (
 	github.com/zclconf/go-cty v1.15.0 // indirect
 	golang.org/x/crypto v0.36.0 // indirect
 	golang.org/x/mod v0.24.0 // indirect
-	golang.org/x/net v0.37.0 // indirect
+	golang.org/x/net v0.38.0 // indirect
 	golang.org/x/sync v0.12.0 // indirect
 	golang.org/x/sys v0.31.0 // indirect
 	golang.org/x/text v0.23.0 // indirect
