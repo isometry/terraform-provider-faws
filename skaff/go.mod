@@ -5,7 +5,7 @@ go 1.23.5
 toolchain go1.24.1
 
 require (
-	github.com/YakDriver/regexache v0.24.0
+	github.com/YakDriver/regexache v0.25.0
 	github.com/isometry/terraform-provider-faws v1.60.1-0.20220322001452-8f7a597d0c24
 	github.com/spf13/cobra v1.9.1
 )
